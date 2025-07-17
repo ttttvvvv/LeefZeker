@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+---
+
+<Layout title="Reparatie Service - LeefZeker" description="Professionele reparatie service voor uw traplift. Snelle diagnose, originele onderdelen en ervaren monteurs.">
+  <Header />
+  
+  <PageHeader 
+    title="Reparatie Service" 
+    subtitle="Vakkundige reparaties voor alle merken trapliften"
+  />
+
+  <ContentSection>
+    <div class="service-features">
+      <FeatureBox 
+        title="Snelle diagnose" 
+        description="Binnen 30 minuten weten we wat er aan de hand is en wat de kosten zijn."
+        variant="highlighted"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Originele onderdelen" 
+        description="Wij werken alleen met originele onderdelen voor optimale werking."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Ervaren monteurs" 
+        description="Onze gecertificeerde monteurs hebben 15+ jaar ervaring met alle merken."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Meest voorkomende reparaties</h3>
+    <div class="repair-types">
+      <div class="repair-item">
+        <h4>Mechanische problemen</h4>
+        <ul>
+          <li>Tandheugel slijtage</li>
+          <li>Motor defect</li>
+          <li>Kabel problemen</li>
+          <li>Lager vervanging</li>
+        </ul>
+        <div class="price-range">€ 150 - € 450</div>
+      </div>
+      
+      <div class="repair-item">
+        <h4>Elektronische storingen</h4>
+        <ul>
+          <li>Besturingspaneel defect</li>
+          <li>Sensor problemen</li>
+          <li>Afstandsbediening</li>
+          <li>Batterij systeem</li>
+        </ul>
+        <div class="price-range">€ 85 - € 295</div>
+      </div>
+      
+      <div class="repair-item">
+        <h4>Comfort onderdelen</h4>
+        <ul>
+          <li>Stoelbekleding</li>
+          <li>Armsteunen</li>
+          <li>Veiligheidsgordel</li>
+          <li>Voetensteun</li>
+        </ul>
+        <div class="price-range">€ 45 - € 185</div>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Reparatie proces</h3>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Melding & Afspraak</h4>
+          <p>Bel 020 123 45 67 voor een afspraak. Beschrijf het probleem zo precies mogelijk.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Diagnose ter plaatse</h4>
+          <p>Onze monteur komt langs voor een grondige diagnose en geeft direct een prijsopgave.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Reparatie uitvoering</h4>
+          <p>Na uw goedkeuring voeren we de reparatie direct uit, meestal binnen 1-2 uur.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>Test & Garantie</h4>
+          <p>Uitgebreide test en 1 jaar garantie op alle uitgevoerde reparaties.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Reparatie nodig?</h3>
+      <p>Neem contact op voor een snelle reparatie door onze ervaren monteurs.</p>
+      <a href="/contact" class="btn btn-primary">Reparatie aanvragen</a>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Reparatie kosten</h3>
+    <div class="cost-info">
+      <div class="cost-item">
+        <h4>Standaard uitrukkosten</h4>
+        <p>€ 85,- (gratis bij reparatie boven €150,-)</p>
+      </div>
+      
+      <div class="cost-item">
+        <h4>Diagnose</h4>
+        <p>€ 45,- (wordt verrekend bij reparatie)</p>
+      </div>
+      
+      <div class="cost-item">
+        <h4>Spoeddienst (buiten kantoortijd)</h4>
+        <p>€ 125,- extra (avond/weekend)</p>
+      </div>
+    </div>
+    
+    <p class="cost-note">Alle prijzen zijn inclusief BTW. Onderdelen en arbeid worden apart berekend.</p>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .service-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .repair-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .repair-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .repair-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .repair-item ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .repair-item li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .repair-item li:before {
+    content: "🔧";
+    position: absolute;
+    left: 0;
+    font-size: 0.875rem;
+  }
+
+  .price-range {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  .cost-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .cost-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .cost-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .cost-note {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .service-features {
+      grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

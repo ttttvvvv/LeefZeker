@@ -1,0 +1,96 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  breadcrumbs?: { name: string; href: string }[];
+}
+
+const { title, subtitle, breadcrumbs = [] } = Astro.props;
+---
+
+<section class="page-header">
+  <div class="container">
+    {breadcrumbs.length > 0 && (
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          {breadcrumbs.map((item) => (
+            <li>
+              <span class="separator">/</span>
+              <a href={item.href}>{item.name}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+    <h1 class="page-title">{title}</h1>
+    {subtitle && <p class="page-subtitle">{subtitle}</p>}
+  </div>
+</section>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: var(--white);
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb ol {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+  }
+
+  .breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--white);
+  }
+
+  .separator {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0.5rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .page-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 2rem 0;
+    }
+
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+    }
+
+    .breadcrumb {
+      font-size: 0.875rem;
+    }
+  }
+</style> 

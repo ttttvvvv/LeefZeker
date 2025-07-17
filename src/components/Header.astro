@@ -34,16 +34,43 @@ const currentPath = Astro.url.pathname;
               <a href="/producten/trapliften" class="dropdown-link">Trapliften</a>
               <a href="/producten/platformliften" class="dropdown-link">Platformliften</a>
               <a href="/producten/hulpmiddelen" class="dropdown-link">Mobiliteitshulpmiddelen</a>
+              <a href="/producten/tweedehands" class="dropdown-link">Tweedehands Trapliften</a>
+              <a href="/producten/verhuur" class="dropdown-link">Verhuur & Lease</a>
+              <a href="/producten/onderdelen" class="dropdown-link">Onderdelen & Accessoires</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a href="/diensten" class={`nav-link ${currentPath === '/diensten' ? 'active' : ''}`}>Diensten</a>
+          <li class="nav-item dropdown">
+            <a href="/diensten" class={`nav-link ${currentPath === '/diensten' ? 'active' : ''}`}>
+              Diensten
+              <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="/diensten" class="dropdown-link">Installatie</a>
+              <a href="/onderhoud" class="dropdown-link">Onderhoud & Service</a>
+              <a href="/reparatie" class="dropdown-link">Reparatie Service</a>
+              <a href="/nooddienst" class="dropdown-link">24/7 Nooddienst</a>
+              <a href="/financiering" class="dropdown-link">Financiering & Subsidies</a>
+            </div>
           </li>
           <li class="nav-item">
             <a href="/blog" class={`nav-link ${currentPath.startsWith('/blog') ? 'active' : ''}`}>Blog</a>
           </li>
-          <li class="nav-item">
-            <a href="/over-ons" class={`nav-link ${currentPath === '/over-ons' ? 'active' : ''}`}>Over Ons</a>
+          <li class="nav-item dropdown">
+            <a href="/over-ons" class={`nav-link ${currentPath === '/over-ons' ? 'active' : ''}`}>
+              Info
+              <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="/over-ons" class="dropdown-link">Over LeefZeker</a>
+              <a href="/faq" class="dropdown-link">Veelgestelde Vragen</a>
+              <a href="/garantie" class="dropdown-link">Garantie</a>
+              <a href="/veiligheid" class="dropdown-link">Veiligheid & Certificeringen</a>
+              <a href="/installatie-proces" class="dropdown-link">Installatie Proces</a>
+            </div>
           </li>
           <li class="nav-item">
             <a href="/contact" class={`nav-link ${currentPath === '/contact' ? 'active' : ''}`}>Contact</a>

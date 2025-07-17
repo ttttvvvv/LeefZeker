@@ -1,0 +1,294 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import ContentSection from '../../components/ContentSection.astro';
+import FeatureBox from '../../components/FeatureBox.astro';
+---
+
+<Layout title="Tweedehands Trapliften - LeefZeker" description="Kwalitatieve tweedehands trapliften voor een scherpe prijs. Volledig gereviseerd met 2 jaar garantie.">
+  <Header />
+  
+  <PageHeader 
+    title="Tweedehands Trapliften" 
+    subtitle="Kwaliteit voor een scherpe prijs"
+    breadcrumbs={[
+      { name: 'Producten', href: '/producten' }
+    ]}
+  />
+
+  <ContentSection>
+    <div class="benefits-grid">
+      <FeatureBox 
+        title="Tot 50% goedkoper" 
+        description="Bespaar tot de helft van de prijs van een nieuwe traplift zonder kwaliteitsverlies."
+        variant="highlighted"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13h10l4-8H5.4L7 13zM7 13L5.4 5H2"/><circle cx="17" cy="20" r="1"/><circle cx="9" cy="20" r="1"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Volledig gereviseerd" 
+        description="Elk onderdeel wordt grondig gecontroleerd en waar nodig vervangen."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="2 jaar garantie" 
+        description="Volledige garantie op alle onderdelen en werking van de traplift."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11L12 14L22 4"/><path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C13.3 3 14.5 3.3 15.6 3.8"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Ons revisieproces</h3>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Demontage & Inspectie</h4>
+          <p>Volledige demontage en grondige inspectie van alle onderdelen</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Vervangen & Repareren</h4>
+          <p>Vervanging van slijtageonderdelen en reparatie waar nodig</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Testen & Certificeren</h4>
+          <p>Uitgebreide tests en certificering volgens veiligheidsnormen</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>Nieuwe Bekleding</h4>
+          <p>Frisse, nieuwe bekleding in de kleur van uw keuze</p>
+        </div>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Wat wordt altijd vervangen?</h3>
+    <div class="replacement-grid">
+      <div class="replacement-item">
+        <h4>Veiligheidsonderdelen</h4>
+        <ul>
+          <li>Veiligheidsgordels</li>
+          <li>Noodstopschakelaars</li>
+          <li>Sensoren</li>
+          <li>Eindschakelaars</li>
+        </ul>
+      </div>
+      
+      <div class="replacement-item">
+        <h4>Slijtageonderdelen</h4>
+        <ul>
+          <li>Batterijen</li>
+          <li>Tandwielen</li>
+          <li>Kabels</li>
+          <li>Lagers</li>
+        </ul>
+      </div>
+      
+      <div class="replacement-item">
+        <h4>Comfort onderdelen</h4>
+        <ul>
+          <li>Stoelbekleding</li>
+          <li>Armsteun padding</li>
+          <li>Voetensteun</li>
+          <li>Afstandsbediening</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Bekijk onze voorraad</h3>
+      <p>Bel voor de actuele voorraad tweedehands trapliften en prijzen.</p>
+      <a href="/contact" class="btn btn-secondary">Voorraad bekijken</a>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Prijsvoorbeeld tweedehands trapliften</h3>
+    <div class="price-comparison">
+      <div class="price-card">
+        <h4>Rechte trap</h4>
+        <div class="price-row">
+          <span>Nieuw:</span>
+          <span class="old-price">€ 3.495,-</span>
+        </div>
+        <div class="price-row">
+          <span>Tweedehands:</span>
+          <span class="new-price">€ 1.995,-</span>
+        </div>
+        <div class="savings">Besparing: € 1.500,-</div>
+      </div>
+      
+      <div class="price-card">
+        <h4>Bochtige trap</h4>
+        <div class="price-row">
+          <span>Nieuw:</span>
+          <span class="old-price">€ 8.995,-</span>
+        </div>
+        <div class="price-row">
+          <span>Tweedehands:</span>
+          <span class="new-price">€ 4.995,-</span>
+        </div>
+        <div class="savings">Besparing: € 4.000,-</div>
+      </div>
+    </div>
+    
+    <p class="price-note">Prijzen zijn inclusief BTW, installatie en 2 jaar garantie. Afhankelijk van beschikbaarheid.</p>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  .replacement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .replacement-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .replacement-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .replacement-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .replacement-item li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .replacement-item li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 600;
+  }
+
+  .price-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .price-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .price-card h4 {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    color: var(--text-gray);
+  }
+
+  .new-price {
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .savings {
+    background: var(--success-green);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  .price-note {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

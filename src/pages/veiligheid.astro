@@ -1,0 +1,257 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+---
+
+<Layout title="Veiligheid & Certificeringen - LeefZeker" description="Alle informatie over veiligheid en certificeringen van onze trapliften. CE-markering, keuringen en veiligheidsnormen.">
+  <Header />
+  
+  <PageHeader 
+    title="Veiligheid & Certificeringen" 
+    subtitle="Uw veiligheid staat bij ons voorop"
+  />
+
+  <ContentSection>
+    <div class="safety-features">
+      <FeatureBox 
+        title="CE-gecertificeerd" 
+        description="Alle trapliften voldoen aan de Europese veiligheidsnormen en zijn CE-gekeurd."
+        variant="highlighted"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Jaarlijkse keuring" 
+        description="Verplichte jaarlijkse veiligheidskeuring door gecertificeerde inspecteurs."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11L12 14L22 4"/><path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C13.3 3 14.5 3.3 15.6 3.8"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Veiligheidssystemen" 
+        description="Meerdere veiligheidssystemen beschermen u tegen ongevallen en storingen."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Veiligheidssystemen</h3>
+    <div class="safety-systems">
+      <div class="safety-item">
+        <h4>🛡️ Veiligheidsgordel</h4>
+        <p>Driepuntsgordel voor optimale bescherming tijdens het rijden</p>
+      </div>
+      
+      <div class="safety-item">
+        <h4>🔴 Noodstop knoppen</h4>
+        <p>Meerdere noodstop knoppen voor directe stop in noodsituaties</p>
+      </div>
+      
+      <div class="safety-item">
+        <h4>👁️ Obstakel sensoren</h4>
+        <p>Automatische stop bij obstakels op de trap</p>
+      </div>
+      
+      <div class="safety-item">
+        <h4>🔋 Batterij back-up</h4>
+        <p>Blijft werken bij stroomuitval dankzij batterij systeem</p>
+      </div>
+      
+      <div class="safety-item">
+        <h4>🔒 Eindschakelaars</h4>
+        <p>Automatische stop aan begin en einde van de trap</p>
+      </div>
+      
+      <div class="safety-item">
+        <h4>⚖️ Gewichtssensor</h4>
+        <p>Controleert het maximale gewicht voor veilig gebruik</p>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Certificeringen en Normen</h3>
+    <div class="certifications">
+      <div class="cert-item">
+        <h4>CE-markering</h4>
+        <p>Alle trapliften voldoen aan de Europese richtlijnen voor veiligheid, gezondheid en milieubescherming.</p>
+      </div>
+      
+      <div class="cert-item">
+        <h4>EN 81-40 norm</h4>
+        <p>Specifieke Europese norm voor veiligheid van trapliften en platformliften.</p>
+      </div>
+      
+      <div class="cert-item">
+        <h4>ISO 9001 kwaliteit</h4>
+        <p>Onze processen voldoen aan de internationale kwaliteitsnorm ISO 9001.</p>
+      </div>
+      
+      <div class="cert-item">
+        <h4>ARBO-wet compliant</h4>
+        <p>Installatie en onderhoud conform Nederlandse arbeidsomstandigheden wetgeving.</p>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Veiligheid tijdens installatie</h3>
+    <ul>
+      <li><strong>Gecertificeerde monteurs:</strong> Alle monteurs zijn gecertificeerd en regelmatig bijgeschoold</li>
+      <li><strong>Veiligheidsprotocol:</strong> Strikte veiligheidsprotocollen tijdens installatie</li>
+      <li><strong>Kwaliteitscontrole:</strong> Uitgebreide test na installatie</li>
+      <li><strong>Instructie:</strong> Volledige instructie voor veilig gebruik</li>
+      <li><strong>Documentatie:</strong> Alle veiligheidsdocumenten en handleidingen</li>
+    </ul>
+
+    <h3>Onderhoud voor veiligheid</h3>
+    <p>Regelmatig onderhoud is essentieel voor veilig gebruik:</p>
+    <ul>
+      <li><strong>Jaarlijkse keuring:</strong> Verplichte veiligheidskeuring door gecertificeerde inspecteur</li>
+      <li><strong>Preventief onderhoud:</strong> Voorkom storingen en onveilige situaties</li>
+      <li><strong>Snelle service:</strong> 24/7 bereikbaar voor storingen</li>
+      <li><strong>Originele onderdelen:</strong> Alleen originele onderdelen voor optimale veiligheid</li>
+    </ul>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Veiligheid bij verschillende gebruikers</h3>
+    <div class="user-safety">
+      <div class="user-type">
+        <h4>Senioren</h4>
+        <ul>
+          <li>Eenvoudige bediening</li>
+          <li>Stabiele instap</li>
+          <li>Zachte start/stop</li>
+          <li>Duidelijke instructies</li>
+        </ul>
+      </div>
+      
+      <div class="user-type">
+        <h4>Rolstoelgebruikers</h4>
+        <ul>
+          <li>Platformlift met hekwerk</li>
+          <li>Rolstoel vergrendeling</li>
+          <li>Noodcommunicatie</li>
+          <li>Ruime afmetingen</li>
+        </ul>
+      </div>
+      
+      <div class="user-type">
+        <h4>Kinderen</h4>
+        <ul>
+          <li>Sleutelschakelaar</li>
+          <li>Ouderlijke controle</li>
+          <li>Beknelling bescherming</li>
+          <li>Veiligheidsuitleg</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Vragen over veiligheid?</h3>
+      <p>Neem contact op voor meer informatie over veiligheid en certificeringen.</p>
+      <a href="/contact" class="btn btn-primary">Contact opnemen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .safety-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .safety-systems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .safety-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .safety-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .cert-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-green);
+  }
+
+  .cert-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .user-safety {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .user-type {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .user-type h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .user-type ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .user-type li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .user-type li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .safety-features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

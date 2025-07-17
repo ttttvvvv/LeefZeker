@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+
+const city = "Amsterdam";
+const region = "Noord-Holland";
+const phone = "020 123 45 67";
+---
+
+<Layout title={`Trapliften ${city} - LeefZeker`} description={`Professionele traplift installatie in ${city}. Snelle service, 5 jaar garantie en gratis advies aan huis. Bel ${phone}.`}>
+  <Header />
+  
+  <PageHeader 
+    title={`Trapliften ${city}`} 
+    subtitle={`Professionele traplift installatie in ${city} en omgeving`}
+  />
+
+  <ContentSection>
+    <p>Bent u op zoek naar een betrouwbare traplift in <strong>{city}</strong>? LeefZeker is al meer dan 15 jaar dé specialist voor trapliften in {city} en heel {region}. Onze ervaren monteurs installeren jaarlijks honderden trapliften in {city} en zorgen ervoor dat u weer veilig en zelfstandig de trap op en af kunt.</p>
+
+    <div class="local-features">
+      <FeatureBox 
+        title="Lokale service" 
+        description={`Onze monteurs kennen ${city} en omgeving. Snelle service binnen 2 uur.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Gratis huisbezoek" 
+        description={`Vrijblijvend advies en meting bij u thuis in ${city}.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Snelle installatie" 
+        description={`Meestal binnen 1 week geïnstalleerd in ${city}.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Waarom kiezen voor LeefZeker in {city}?</h3>
+    <ul>
+      <li><strong>Lokale expertise:</strong> Uitgebreide kennis van woningen in {city}</li>
+      <li><strong>Snelle service:</strong> Binnen 2 uur ter plaatse bij storingen</li>
+      <li><strong>Bekend in de buurt:</strong> Vele tevreden klanten in {city}</li>
+      <li><strong>Subsidie hulp:</strong> Ondersteuning bij WMO-aanvragen in {city}</li>
+      <li><strong>Garantie:</strong> 5 jaar volledige garantie op alle trapliften</li>
+    </ul>
+
+    <h3>Veelgestelde vragen over trapliften in {city}</h3>
+    <div class="faq-local">
+      <h4>Hoe lang duurt de installatie in {city}?</h4>
+      <p>Een standaard traplift installatie in {city} duurt gemiddeld 2-3 uur. Bij complexere trappen kan dit iets langer duren.</p>
+      
+      <h4>Zijn er subsidies beschikbaar in {city}?</h4>
+      <p>Ja, inwoners van {city} kunnen een WMO-aanvraag doen bij de gemeente. Wij helpen u graag met het aanvraagproces.</p>
+      
+      <h4>Wat zijn de kosten voor een traplift in {city}?</h4>
+      <p>De kosten variëren afhankelijk van uw situatie. Een rechte traplift in {city} kost vanaf €3.495,-. Bel voor een gratis prijsopgave.</p>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Onze service in {city}</h3>
+    <div class="service-areas">
+      <div class="service-area">
+        <h4>Installatie in heel {city}</h4>
+        <ul>
+          <li>Centrum</li>
+          <li>Noord</li>
+          <li>Oost</li>
+          <li>West</li>
+          <li>Zuid</li>
+          <li>Zuidoost</li>
+          <li>Nieuw-West</li>
+        </ul>
+      </div>
+      
+      <div class="service-area">
+        <h4>Ook service in omliggende gemeenten</h4>
+        <ul>
+          <li>Amstelveen</li>
+          <li>Diemen</li>
+          <li>Ouderkerk aan de Amstel</li>
+          <li>Landsmeer</li>
+          <li>Waterland</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Gratis advies in {city}</h3>
+      <p>Bel vandaag nog voor een gratis huisbezoek en persoonlijk advies over de mogelijkheden in uw woning.</p>
+      <div class="contact-info">
+        <p><strong>Telefoon:</strong> <a href="tel:0201234567">{phone}</a></p>
+        <p><strong>Werkgebied:</strong> {city} en omgeving</p>
+      </div>
+      <a href="/offerte" class="btn btn-primary">Gratis offerte aanvragen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .local-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .faq-local {
+    margin-top: 2rem;
+  }
+
+  .faq-local h4 {
+    color: var(--primary-green);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-area {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-area h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .service-area ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-area li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .service-area li:before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.875rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .contact-info p {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .local-features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

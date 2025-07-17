@@ -1,0 +1,134 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+  href?: string;
+  variant?: 'default' | 'highlighted' | 'service';
+}
+
+const { title, description, icon, href, variant = 'default' } = Astro.props;
+const Component = href ? 'a' : 'div';
+---
+
+<Component class={`feature-box ${variant}`} href={href}>
+  {icon && (
+    <div class="icon">
+      <Fragment set:html={icon} />
+    </div>
+  )}
+  <h3 class="title">{title}</h3>
+  <p class="description">{description}</p>
+  {href && (
+    <div class="arrow">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+      </svg>
+    </div>
+  )}
+</Component>
+
+<style>
+  .feature-box {
+    background-color: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    position: relative;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-green);
+  }
+
+  .feature-box.highlighted {
+    background: linear-gradient(135deg, var(--primary-green-light) 0%, var(--primary-green) 100%);
+    color: var(--white);
+    border-color: var(--primary-green);
+  }
+
+  .feature-box.highlighted .title {
+    color: var(--white);
+  }
+
+  .feature-box.highlighted .description {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .feature-box.service {
+    border-color: var(--primary-green);
+    border-width: 2px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-green-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-green);
+  }
+
+  .feature-box.highlighted .icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+  }
+
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+
+  .description {
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .feature-box:hover .arrow {
+    opacity: 1;
+  }
+
+  .feature-box.highlighted .arrow {
+    color: var(--white);
+  }
+
+  @media (max-width: 768px) {
+    .feature-box {
+      padding: 1.5rem;
+    }
+
+    .title {
+      font-size: 1.125rem;
+    }
+
+    .description {
+      font-size: 0.95rem;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style> 

@@ -1,0 +1,326 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+---
+
+<Layout title="Garantie Afhandeling - LeefZeker" description="Stap voor stap uitleg voor het claimen van uw garantie bij LeefZeker. Snelle en professionele afhandeling.">
+  <Header />
+  
+  <PageHeader 
+    title="Garantie Afhandeling" 
+    subtitle="Stap voor stap proces voor het claimen van uw garantie"
+  />
+
+  <ContentSection>
+    <div class="guarantee-process">
+      <FeatureBox 
+        title="Binnen 24 uur reactie" 
+        description="Wij reageren binnen 24 uur op uw garantieclaim."
+        variant="highlighted"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Gratis binnen garantie" 
+        description="Alle reparaties zijn gratis binnen de garantieperiode."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Originele onderdelen" 
+        description="Vervanging met originele onderdelen van de fabrikant."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11L12 14L22 4"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Garantie claimen in 4 stappen</h3>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Contact opnemen</h4>
+          <p>Bel 020 123 45 67 of mail naar service@leefzeker.nl</p>
+          <p>Vermeld: klantennummer, probleem omschrijving, installatiedatum</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Claim beoordeling</h4>
+          <p>Wij beoordelen uw claim binnen 24 uur</p>
+          <p>Eventueel vragen wij om foto's of video van het probleem</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Reparatie afspraak</h4>
+          <p>Binnen 48 uur plannen wij een reparatie afspraak</p>
+          <p>Onze monteur komt met de juiste onderdelen</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>Reparatie & Test</h4>
+          <p>Professionele reparatie en uitgebreide test</p>
+          <p>Nieuwe garantieperiode op het gerepareerde onderdeel</p>
+        </div>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Wat valt onder garantie?</h3>
+    <div class="warranty-coverage">
+      <div class="covered-item">
+        <h4>✅ Wel onder garantie</h4>
+        <ul>
+          <li>Materiaalfouten van fabrikant</li>
+          <li>Defecte onderdelen</li>
+          <li>Storingen door productiefouten</li>
+          <li>Installatie gerelateerde problemen</li>
+          <li>Elektronische defecten</li>
+        </ul>
+      </div>
+      
+      <div class="not-covered-item">
+        <h4>❌ Niet onder garantie</h4>
+        <ul>
+          <li>Normale slijtage</li>
+          <li>Schade door verkeerd gebruik</li>
+          <li>Reparaties door derden</li>
+          <li>Ongevalschade</li>
+          <li>Schade door weersomstandigheden</li>
+        </ul>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Benodigde informatie</h3>
+    <p>Voor een snelle afhandeling van uw garantieclaim hebben wij nodig:</p>
+    <ul>
+      <li><strong>Klantennummer:</strong> Te vinden op uw factuur of garantiecertificaat</li>
+      <li><strong>Installatiedatum:</strong> Wanneer is de traplift geïnstalleerd?</li>
+      <li><strong>Probleem omschrijving:</strong> Wat is er precies aan de hand?</li>
+      <li><strong>Contactgegevens:</strong> Telefoonnummer voor afspraak</li>
+      <li><strong>Foto/video:</strong> Eventueel visueel materiaal van het probleem</li>
+    </ul>
+
+    <div class="contact-methods">
+      <div class="contact-method">
+        <h4>📞 Telefonisch</h4>
+        <p><strong>020 123 45 67</strong></p>
+        <p>Ma-Vr: 8:00-17:00<br>Za: 9:00-15:00</p>
+      </div>
+      
+      <div class="contact-method">
+        <h4>📧 E-mail</h4>
+        <p><strong>service@leefzeker.nl</strong></p>
+        <p>Reactie binnen 24 uur</p>
+      </div>
+      
+      <div class="contact-method">
+        <h4>🚨 Noodgevallen</h4>
+        <p><strong>020 123 45 67</strong></p>
+        <p>24/7 bereikbaar</p>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Veelgestelde vragen</h3>
+    <div class="faq-warranty">
+      <div class="faq-item">
+        <h4>Hoe lang duurt garantie afhandeling?</h4>
+        <p>Wij streven ernaar om binnen 48 uur een reparatie afspraak te plannen na goedkeuring van uw claim.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>Zijn er kosten verbonden aan garantie?</h4>
+        <p>Nee, binnen de garantieperiode zijn alle reparaties, onderdelen en uitrukkosten gratis.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>Wat als mijn garantie is verlopen?</h4>
+        <p>Ook na de garantieperiode helpen wij u graag. Wel brengen wij dan kosten in rekening voor onderdelen en arbeid.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h4>Kan ik de garantie overdragen?</h4>
+        <p>Ja, bij verkoop van uw woning kunt u de garantie overdragen aan de nieuwe eigenaar.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Garantie claimen?</h3>
+      <p>Neem direct contact op voor het claimen van uw garantie.</p>
+      <a href="/contact" class="btn btn-primary">Contact opnemen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .guarantee-process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  .warranty-coverage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .covered-item,
+  .not-covered-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .covered-item h4 {
+    color: var(--success-green);
+    margin-bottom: 1rem;
+  }
+
+  .not-covered-item h4 {
+    color: var(--error-red);
+    margin-bottom: 1rem;
+  }
+
+  .covered-item ul,
+  .not-covered-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .covered-item li,
+  .not-covered-item li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .covered-item li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 600;
+  }
+
+  .not-covered-item li:before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: var(--error-red);
+    font-weight: 600;
+  }
+
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .contact-method {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .contact-method h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .faq-warranty {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .faq-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .guarantee-process {
+      grid-template-columns: 1fr;
+    }
+    
+    .steps-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .step {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style> 

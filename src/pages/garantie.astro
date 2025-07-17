@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+---
+
+<Layout title="Garantie - LeefZeker" description="Uitgebreide garantievoorwaarden voor uw traplift van LeefZeker. 5 jaar garantie op nieuwe trapliften.">
+  <Header />
+  
+  <PageHeader 
+    title="Garantie" 
+    subtitle="Uitgebreide garantie voor uw gemoedsrust"
+  />
+
+  <ContentSection>
+    <div class="guarantee-grid">
+      <FeatureBox 
+        title="5 jaar garantie" 
+        description="Volledige garantie op nieuwe trapliften voor 5 jaar na installatie"
+        variant="highlighted"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="2 jaar garantie" 
+        description="Tweedehands trapliften krijgen 2 jaar garantie na revisie"
+        variant="service"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="24/7 support" 
+        description="Altijd bereikbaar voor storingen en noodgevallen"
+        variant="service"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Wat valt onder de garantie?</h3>
+    <ul>
+      <li><strong>Mechanische onderdelen:</strong> Motor, tandheugel, kabelsysteem</li>
+      <li><strong>Elektronica:</strong> Besturingspaneel, sensoren, veiligheidssystemen</li>
+      <li><strong>Stoeltje:</strong> Mechanisme, bekleding, armsteunen</li>
+      <li><strong>Installatie:</strong> Bevestiging, rails, eindschakelaars</li>
+      <li><strong>Materiaalfouten:</strong> Productiefout van fabrikant</li>
+      <li><strong>Gratis reparatie:</strong> Arbeid en onderdelen binnen garantieperiode</li>
+    </ul>
+
+    <h3>Wat valt NIET onder de garantie?</h3>
+    <ul>
+      <li>Normale slijtage van bewegende onderdelen</li>
+      <li>Batterijen (1 jaar aparte garantie)</li>
+      <li>Schade door verkeerd gebruik of ongeval</li>
+      <li>Wijzigingen door derden</li>
+      <li>Schade door overmacht (storm, brand, water)</li>
+      <li>Cosmetische schade na 1 jaar</li>
+    </ul>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Garantie activeren</h3>
+    <p>Uw garantie wordt automatisch geactiveerd op de dag van installatie. U ontvangt:</p>
+    <ul>
+      <li>Schriftelijke garantiebevestiging</li>
+      <li>Gebruikershandleiding</li>
+      <li>Contactgegevens voor service</li>
+      <li>Onderhoudsadvies</li>
+    </ul>
+
+    <h3>Garantie claimen</h3>
+    <p>Bij problemen binnen de garantieperiode:</p>
+    <ol>
+      <li>Bel onze service: <strong>020 123 45 67</strong></li>
+      <li>Vermeld uw klantennummer en probleem</li>
+      <li>Onze technicus komt langs voor diagnose</li>
+      <li>Reparatie binnen 48 uur (werkdagen)</li>
+    </ol>
+
+    <div class="cta-box">
+      <h3>Garantie-afhandeling</h3>
+      <p>Probleem met uw traplift? Wij helpen u graag verder.</p>
+      <a href="/garantie-afhandeling" class="btn btn-secondary">Garantie claimen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .guarantee-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

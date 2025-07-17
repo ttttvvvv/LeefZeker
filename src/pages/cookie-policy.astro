@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+---
+
+<Layout title="Cookie Policy - LeefZeker" description="Lees hier hoe LeefZeker cookies gebruikt op onze website voor functionaliteit en gebruikservaring">
+  <Header />
+  
+  <PageHeader 
+    title="Cookie Policy" 
+    subtitle="Hoe wij cookies gebruiken op onze website"
+  />
+
+  <ContentSection>
+    <h3>Wat zijn cookies?</h3>
+    <p>Cookies zijn kleine tekstbestanden die op uw computer of mobiele apparaat worden opgeslagen wanneer u onze website bezoekt. Ze helpen ons de website beter te laten functioneren en uw ervaring te verbeteren.</p>
+
+    <h3>Welke cookies gebruiken wij?</h3>
+    <p>LeefZeker gebruikt alleen strikt noodzakelijke cookies voor de basisfunctionaliteit van de website:</p>
+
+    <h4>Functionele cookies</h4>
+    <ul>
+      <li><strong>Sessie cookies:</strong> Voor het bewaren van uw voorkeuren tijdens uw bezoek</li>
+      <li><strong>Formulier cookies:</strong> Voor het onthouden van ingevulde gegevens</li>
+      <li><strong>Navigatie cookies:</strong> Voor het bijhouden van uw positie op de website</li>
+    </ul>
+
+    <h4>Veiligheids cookies</h4>
+    <ul>
+      <li><strong>CSRF tokens:</strong> Voor beveiliging tegen cross-site aanvallen</li>
+      <li><strong>Sessie beveiliging:</strong> Voor veilige communicatie met onze servers</li>
+    </ul>
+
+    <h3>Cookies die wij NIET gebruiken</h3>
+    <p>Wij maken geen gebruik van:</p>
+    <ul>
+      <li>Tracking cookies van derden</li>
+      <li>Advertising cookies</li>
+      <li>Social media cookies</li>
+      <li>Analytics cookies (zoals Google Analytics)</li>
+    </ul>
+
+    <h3>Hoe lang worden cookies bewaard?</h3>
+    <ul>
+      <li><strong>Sessie cookies:</strong> Worden verwijderd wanneer u de browser sluit</li>
+      <li><strong>Functionele cookies:</strong> Maximaal 1 jaar</li>
+      <li><strong>Veiligheids cookies:</strong> Maximaal 24 uur</li>
+    </ul>
+
+    <h3>Cookies beheren</h3>
+    <p>U kunt cookies op verschillende manieren beheren:</p>
+
+    <h4>Browser instellingen</h4>
+    <ul>
+      <li>Alle cookies blokkeren</li>
+      <li>Alleen third-party cookies blokkeren</li>
+      <li>Cookies automatisch verwijderen</li>
+      <li>Bestaande cookies verwijderen</li>
+    </ul>
+
+    <h4>Gevolgen van cookies blokkeren</h4>
+    <p>Als u alle cookies blokkeert, kan dit invloed hebben op:</p>
+    <ul>
+      <li>Het invullen van formulieren</li>
+      <li>Het bewaren van uw voorkeuren</li>
+      <li>De veiligheid van de website</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Vragen over cookies?</h3>
+      <p>Neem contact op als u vragen heeft over ons cookiebeleid.</p>
+      <a href="/contact" class="btn btn-secondary">Contact opnemen</a>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Browser-specifieke instructies</h3>
+    
+    <h4>Google Chrome</h4>
+    <p>Ga naar Instellingen → Privacy en veiligheid → Cookies en andere sitegegevens</p>
+    
+    <h4>Mozilla Firefox</h4>
+    <p>Ga naar Instellingen → Privacy & Beveiliging → Cookies en sitegegevens</p>
+    
+    <h4>Safari</h4>
+    <p>Ga naar Voorkeuren → Privacy → Cookies en websitegegevens</p>
+    
+    <h4>Microsoft Edge</h4>
+    <p>Ga naar Instellingen → Cookies en sitemachtigingen → Cookies en sitegegevens</p>
+
+    <p><strong>Laatste update:</strong> Deze cookie policy is voor het laatst bijgewerkt op 1 januari 2024.</p>
+  </ContentSection>
+
+  <Footer />
+</Layout> 

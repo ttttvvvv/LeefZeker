@@ -1,0 +1,123 @@
+---
+export interface Props {
+  title?: string;
+  class?: string;
+  background?: 'white' | 'gray' | 'green';
+}
+
+const { title, class: className = '', background = 'white' } = Astro.props;
+---
+
+<section class={`content-section ${className} bg-${background}`}>
+  <div class="container">
+    {title && <h2 class="section-title">{title}</h2>}
+    <div class="content">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .content-section {
+    padding: 3rem 0;
+  }
+
+  .bg-white {
+    background-color: var(--white);
+  }
+
+  .bg-gray {
+    background-color: var(--warm-gray);
+  }
+
+  .bg-green {
+    background-color: var(--primary-green-light);
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+  }
+
+  .content {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+  }
+
+  .content :global(h3) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+
+  .content :global(h4) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+  }
+
+  .content :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .content :global(strong) {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .content :global(.highlight) {
+    background-color: var(--primary-green-light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+  }
+
+  .content :global(.cta-box) {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .content :global(.cta-box h3) {
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .content :global(.cta-box p) {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  @media (max-width: 768px) {
+    .content-section {
+      padding: 2rem 0;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+
+    .content {
+      font-size: 1rem;
+    }
+  }
+</style> 
