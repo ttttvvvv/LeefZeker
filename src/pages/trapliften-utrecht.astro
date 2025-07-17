@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+
+const city = "Utrecht";
+const region = "Utrecht";
+const phone = "030 123 45 67";
+---
+
+<Layout title={`Trapliften ${city} - LeefZeker`} description={`Professionele traplift installatie in ${city}. Snelle service, 5 jaar garantie en gratis advies aan huis. Bel ${phone}.`}>
+  <Header />
+  
+  <PageHeader 
+    title={`Trapliften ${city}`} 
+    subtitle={`Professionele traplift installatie in ${city} en omgeving`}
+  />
+
+  <ContentSection>
+    <p>Zoekt u een betrouwbare traplift in <strong>{city}</strong>? LeefZeker is al jarenlang dé specialist voor trapliften in {city} en provincie {region}. Van de binnenstad tot Leidsche Rijn, wij verzorgen professionele installaties in heel {city}.</p>
+
+    <div class="local-features">
+      <FeatureBox 
+        title="Lokale expertise" 
+        description={`Bekend met alle woningtypes in ${city}, van grachtenpanden tot nieuwbouw.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Snelle service" 
+        description={`Altijd binnen 2 uur ter plaatse bij storingen in ${city}.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Gemeente kennis" 
+        description={`Wij kennen alle subsidieregels van gemeente ${city}.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Onze service in {city}</h3>
+    <div class="service-areas">
+      <div class="service-area">
+        <h4>Alle wijken van {city}</h4>
+        <ul>
+          <li>Binnenstad</li>
+          <li>Leidsche Rijn</li>
+          <li>Nieuwegein</li>
+          <li>Overvecht</li>
+          <li>Wittevrouwen</li>
+          <li>Zuilen</li>
+          <li>Lombok</li>
+          <li>Oudwijk</li>
+        </ul>
+      </div>
+      
+      <div class="service-area">
+        <h4>Gemeente {region}</h4>
+        <ul>
+          <li>De Bilt</li>
+          <li>Bunnik</li>
+          <li>Houten</li>
+          <li>Zeist</li>
+          <li>Nieuwegein</li>
+          <li>IJsselstein</li>
+        </ul>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Waarom LeefZeker in {city}?</h3>
+    <ul>
+      <li><strong>Lokale aanwezigheid:</strong> Bekend met monumentale panden en moderne nieuwbouw in {city}</li>
+      <li><strong>Gemeente ervaring:</strong> Ruime ervaring met WMO-aanvragen bij gemeente {city}</li>
+      <li><strong>Snelle montage:</strong> Meestal binnen 1 week geïnstalleerd</li>
+      <li><strong>24/7 service:</strong> Altijd bereikbaar voor storingen</li>
+      <li><strong>Garantie:</strong> 5 jaar volledige garantie</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Gratis advies in {city}</h3>
+      <p>Bel vandaag nog voor een gratis huisbezoek en persoonlijk advies.</p>
+      <div class="contact-info">
+        <p><strong>Telefoon:</strong> <a href="tel:0301234567">{phone}</a></p>
+        <p><strong>Werkgebied:</strong> {city} en omgeving</p>
+      </div>
+      <a href="/offerte" class="btn btn-primary">Gratis offerte aanvragen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .local-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .service-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-area {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-area h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .service-area ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-area li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .service-area li:before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.875rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .contact-info p {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .local-features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

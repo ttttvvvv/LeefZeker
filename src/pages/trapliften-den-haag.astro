@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+
+const city = "Den Haag";
+const region = "Zuid-Holland";
+const phone = "070 123 45 67";
+---
+
+<Layout title={`Trapliften ${city} - LeefZeker`} description={`Professionele traplift installatie in ${city}. Ervaring met monumentale panden en moderne nieuwbouw. Bel ${phone}.`}>
+  <Header />
+  
+  <PageHeader 
+    title={`Trapliften ${city}`} 
+    subtitle={`Vakkundige traplift installatie in ${city} en omgeving`}
+  />
+
+  <ContentSection>
+    <p>Zoekt u een traplift in <strong>{city}</strong>? LeefZeker heeft uitgebreide ervaring met trapliften in {city}. Van monumentale panden in het centrum tot moderne nieuwbouw in Leidschenveen, wij kennen alle uitdagingen van {city}.</p>
+
+    <div class="local-features">
+      <FeatureBox 
+        title="Monumentale panden" 
+        description={`Specialist in installaties in historische panden in ${city}.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Gemeente kennis" 
+        description={`Uitgebreide kennis van vergunningen en subsidies in ${city}.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Snelle service" 
+        description={`24/7 storingsdienst en binnen 2 uur ter plaatse in ${city}.`}
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Service in alle wijken van {city}</h3>
+    <div class="service-areas">
+      <div class="service-area">
+        <h4>Centrum & Scheveningen</h4>
+        <ul>
+          <li>Centrum</li>
+          <li>Scheveningen</li>
+          <li>Duinoord</li>
+          <li>Statenkwartier</li>
+        </ul>
+      </div>
+      
+      <div class="service-area">
+        <h4>Haagse Hout & Voorburg</h4>
+        <ul>
+          <li>Haagse Hout</li>
+          <li>Voorburg</li>
+          <li>Leidschenveen</li>
+          <li>Ypenburg</li>
+        </ul>
+      </div>
+      
+      <div class="service-area">
+        <h4>Regio Haaglanden</h4>
+        <ul>
+          <li>Wassenaar</li>
+          <li>Rijswijk</li>
+          <li>Leidschendam</li>
+          <li>Delft</li>
+        </ul>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <div class="cta-box">
+      <h3>Gratis advies in {city}</h3>
+      <p>Neem contact op voor een gratis huisbezoek en persoonlijk advies voor uw situatie.</p>
+      <div class="contact-info">
+        <p><strong>Telefoon:</strong> <a href="tel:0701234567">{phone}</a></p>
+        <p><strong>E-mail:</strong> denhaag@leefzeker.nl</p>
+      </div>
+      <a href="/offerte" class="btn btn-primary">Gratis offerte aanvragen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .local-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .service-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-area {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-area h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .service-area ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-area li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .service-area li:before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.875rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .contact-info p {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .local-features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

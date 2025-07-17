@@ -1,0 +1,239 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+---
+
+<Layout title="Onderhoud & Service Contracten - LeefZeker" description="Professioneel onderhoud voor uw traplift. Verschillende servicepakketten vanaf €19 per maand.">
+  <Header />
+  
+  <PageHeader 
+    title="Onderhoud & Service Contracten" 
+    subtitle="Houd uw traplift in topconditie"
+  />
+
+  <ContentSection>
+    <div class="service-packages">
+      <div class="package basic">
+        <h3>Basis</h3>
+        <div class="price">€19,-<span>/maand</span></div>
+        <ul>
+          <li>Jaarlijkse inspectie</li>
+          <li>Kleine reparaties</li>
+          <li>Telefonische support</li>
+          <li>Gratis uitruk bij storing</li>
+        </ul>
+        <a href="/offerte" class="btn btn-secondary">Aanvragen</a>
+      </div>
+      
+      <div class="package premium featured">
+        <h3>Premium</h3>
+        <div class="price">€35,-<span>/maand</span></div>
+        <ul>
+          <li>2x per jaar inspectie</li>
+          <li>Preventief onderhoud</li>
+          <li>Alle reparaties inclusief</li>
+          <li>24/7 nooddienst</li>
+          <li>Onderdelen inclusief</li>
+        </ul>
+        <a href="/offerte" class="btn btn-primary">Meest gekozen</a>
+      </div>
+      
+      <div class="package complete">
+        <h3>Complete</h3>
+        <div class="price">€55,-<span>/maand</span></div>
+        <ul>
+          <li>Maandelijkse controle</li>
+          <li>Volledige service</li>
+          <li>Alle reparaties</li>
+          <li>Vervanging bij defect</li>
+          <li>Upgrade mogelijkheden</li>
+        </ul>
+        <a href="/offerte" class="btn btn-secondary">Aanvragen</a>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Wat houdt onderhoud in?</h3>
+    <div class="maintenance-grid">
+      <FeatureBox 
+        title="Visuele inspectie" 
+        description="Controle van alle zichtbare onderdelen op slijtage en beschadigingen."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Technische controle" 
+        description="Test van alle elektronische en mechanische componenten."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Veiligheidstest" 
+        description="Uitgebreide test van alle veiligheidssystemen en noodfuncties."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Smering & reiniging" 
+        description="Smering van bewegende delen en reiniging van alle componenten."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13h10l4-8H5.4L7 13zM7 13L5.4 5H2"/><circle cx="17" cy="20" r="1"/><circle cx="9" cy="20" r="1"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Waarom preventief onderhoud?</h3>
+    <div class="benefits-list">
+      <ul>
+        <li><strong>Voorkom storingen:</strong> 80% van de storingen zijn te voorkomen</li>
+        <li><strong>Langere levensduur:</strong> Verhoogt de levensduur met 30-50%</li>
+        <li><strong>Veiligheid:</strong> Waarborgt veilig gebruik voor u en uw familie</li>
+        <li><strong>Bespaar kosten:</strong> Preventief onderhoud is goedkoper dan reparaties</li>
+        <li><strong>Garantie behoud:</strong> Onderhoud is vaak vereist voor garantie</li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h3>Gratis onderhoudscheck</h3>
+      <p>Laat uw traplift gratis controleren door onze technicus. Geen verplichtingen.</p>
+      <a href="/contact" class="btn btn-secondary">Gratis check aanvragen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .service-packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .package {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid var(--border-light);
+    position: relative;
+  }
+
+  .package.featured {
+    border-color: var(--primary-green);
+    transform: scale(1.05);
+  }
+
+  .package.featured::before {
+    content: "Meest gekozen";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .package h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+  }
+
+  .price span {
+    font-size: 1rem;
+    color: var(--text-gray);
+  }
+
+  .package ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .package li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .package li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 600;
+  }
+
+  .package li:last-child {
+    border-bottom: none;
+  }
+
+  .maintenance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .benefits-list ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .benefits-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .benefits-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .benefits-list li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    .service-packages {
+      grid-template-columns: 1fr;
+    }
+    
+    .package.featured {
+      transform: none;
+    }
+    
+    .price {
+      font-size: 2rem;
+    }
+  }
+</style> 

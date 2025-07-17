@@ -1,0 +1,365 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentSection from '../components/ContentSection.astro';
+import FeatureBox from '../components/FeatureBox.astro';
+---
+
+<Layout title="Financiering & Subsidies - LeefZeker" description="Informatie over financiering en subsidies voor trapliften. WMO-aanvragen, huurkoop en betaling in termijnen.">
+  <Header />
+  
+  <PageHeader 
+    title="Financiering & Subsidies" 
+    subtitle="Maak uw traplift betaalbaar met onze financieringsopties"
+  />
+
+  <ContentSection>
+    <div class="financing-options">
+      <FeatureBox 
+        title="WMO Subsidie" 
+        description="Tot 100% vergoeding via de Wet Maatschappelijke Ondersteuning van uw gemeente."
+        variant="highlighted"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Huurkoop" 
+        description="Spreid de kosten over 36-60 maanden met eigendomsoverdracht."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/><path d="M8 5v4"/><path d="M16 5v4"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Betaling in termijnen" 
+        description="Flexibele betalingsregeling zonder rente bij bedragen tot €5.000."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13h10l4-8H5.4L7 13zM7 13L5.4 5H2"/><circle cx="17" cy="20" r="1"/><circle cx="9" cy="20" r="1"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>WMO Subsidie: Stap voor stap</h3>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Aanvraag gemeente</h4>
+          <p>Dien een WMO-aanvraag in bij uw gemeente. Wij helpen u graag met het invullen van de formulieren.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Huisbezoek</h4>
+          <p>Een adviseur van de gemeente bezoekt u thuis om de situatie te beoordelen.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Beschikking</h4>
+          <p>De gemeente geeft binnen 8 weken een beschikking over uw aanvraag.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>Installatie</h4>
+          <p>Na goedkeuring kunnen wij direct overgaan tot installatie van uw traplift.</p>
+        </div>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Financieringsopties vergelijken</h3>
+    <div class="comparison-table">
+      <div class="comparison-header">
+        <div class="option-title">Optie</div>
+        <div class="option-detail">Voordelen</div>
+        <div class="option-detail">Geschikt voor</div>
+        <div class="option-detail">Looptijd</div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="option-title">WMO Subsidie</div>
+        <div class="option-detail">
+          <ul>
+            <li>Vaak 100% vergoeding</li>
+            <li>Geen rente</li>
+            <li>Geen terugbetaling</li>
+          </ul>
+        </div>
+        <div class="option-detail">Mensen met medische indicatie</div>
+        <div class="option-detail">Eenmalig</div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="option-title">Huurkoop</div>
+        <div class="option-detail">
+          <ul>
+            <li>Eigendom na afloop</li>
+            <li>Lage maandlasten</li>
+            <li>Belastingvoordeel</li>
+          </ul>
+        </div>
+        <div class="option-detail">Mensen met vast inkomen</div>
+        <div class="option-detail">36-60 maanden</div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="option-title">Termijnbetaling</div>
+        <div class="option-detail">
+          <ul>
+            <li>Geen rente tot €5.000</li>
+            <li>Flexibele termijnen</li>
+            <li>Direct eigendom</li>
+          </ul>
+        </div>
+        <div class="option-detail">Kleinere bedragen</div>
+        <div class="option-detail">12-36 maanden</div>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Subsidies per gemeente</h3>
+    <p>Elke gemeente heeft eigen regels voor WMO-subsidies. Hier vindt u informatie over enkele grote steden:</p>
+    
+    <div class="gemeente-info">
+      <div class="gemeente-card">
+        <h4>Amsterdam</h4>
+        <ul>
+          <li>Vaak 100% vergoeding</li>
+          <li>Eigen bijdrage: €0 - €19 per maand</li>
+          <li>Doorlooptijd: 6-8 weken</li>
+        </ul>
+      </div>
+      
+      <div class="gemeente-card">
+        <h4>Rotterdam</h4>
+        <ul>
+          <li>Vergoeding tot €12.000</li>
+          <li>Eigen bijdrage: €0 - €17 per maand</li>
+          <li>Doorlooptijd: 4-6 weken</li>
+        </ul>
+      </div>
+      
+      <div class="gemeente-card">
+        <h4>Utrecht</h4>
+        <ul>
+          <li>Vaak volledige vergoeding</li>
+          <li>Eigen bijdrage: €0 - €18 per maand</li>
+          <li>Doorlooptijd: 6-8 weken</li>
+        </ul>
+      </div>
+      
+      <div class="gemeente-card">
+        <h4>Den Haag</h4>
+        <ul>
+          <li>Vergoeding tot €10.000</li>
+          <li>Eigen bijdrage: €0 - €16 per maand</li>
+          <li>Doorlooptijd: 4-6 weken</li>
+        </ul>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Belastingvoordelen</h3>
+    <div class="tax-benefits">
+      <div class="tax-item">
+        <h4>Aftrek zorgkosten</h4>
+        <p>Trapliften kunnen als zorgkosten worden afgetrokken van de belasting. Dit geldt voor het deel boven de drempel.</p>
+      </div>
+      
+      <div class="tax-item">
+        <h4>BTW-vrijstelling</h4>
+        <p>Voor mensen met een medische indicatie geldt vaak BTW-vrijstelling op trapliften.</p>
+      </div>
+      
+      <div class="tax-item">
+        <h4>Huurkoop voordeel</h4>
+        <p>Bij huurkoop kunt u vaak de rente en afschrijving aftrekken, wat tot flinke besparingen kan leiden.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Gratis financieringsadvies</h3>
+      <p>Welke optie past het beste bij uw situatie? Onze adviseurs helpen u graag met het vinden van de beste financiering.</p>
+      <a href="/offerte" class="btn btn-primary">Advies aanvragen</a>
+    </div>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .financing-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  .comparison-table {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .comparison-header {
+    display: contents;
+  }
+
+  .comparison-header > div {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .comparison-row {
+    display: contents;
+  }
+
+  .comparison-row > div {
+    background: var(--white);
+    padding: 1rem;
+    border: 1px solid var(--border-light);
+  }
+
+  .option-title {
+    font-weight: 600;
+    color: var(--primary-green);
+  }
+
+  .option-detail ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .option-detail li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .option-detail li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: 600;
+  }
+
+  .gemeente-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .gemeente-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .gemeente-card h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .gemeente-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .gemeente-card li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .gemeente-card li:before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.875rem;
+  }
+
+  .tax-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .tax-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .tax-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .financing-options {
+      grid-template-columns: 1fr;
+    }
+    
+    .comparison-table {
+      grid-template-columns: 1fr;
+    }
+    
+    .comparison-header > div,
+    .comparison-row > div {
+      margin-bottom: 0.5rem;
+    }
+  }
+</style> 

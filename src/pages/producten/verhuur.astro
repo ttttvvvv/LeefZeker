@@ -1,0 +1,317 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import ContentSection from '../../components/ContentSection.astro';
+import FeatureBox from '../../components/FeatureBox.astro';
+---
+
+<Layout title="Verhuur & Lease Opties - LeefZeker" description="Huur of lease een traplift voor tijdelijk gebruik. Flexibele oplossingen vanaf €95 per maand.">
+  <Header />
+  
+  <PageHeader 
+    title="Verhuur & Lease Opties" 
+    subtitle="Flexibele oplossingen voor tijdelijk gebruik"
+    breadcrumbs={[
+      { name: 'Producten', href: '/producten' }
+    ]}
+  />
+
+  <ContentSection>
+    <div class="options-grid">
+      <FeatureBox 
+        title="Korte termijn verhuur" 
+        description="Perfect voor tijdelijk gebruik tijdens herstel of tijdelijke verblijven."
+        variant="highlighted"
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Lange termijn lease" 
+        description="Spreid de kosten over een langere periode met flexibele lease opties."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/><path d="M8 5v4"/><path d="M16 5v4"/></svg>'
+      />
+      
+      <FeatureBox 
+        title="Koop na verhuur" 
+        description="Verhuur kan altijd omgezet worden naar koop met verrekening van betaalde huur."
+        icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11L12 14L22 4"/><path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C13.3 3 14.5 3.3 15.6 3.8"/></svg>'
+      />
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Verhuur tarieven</h3>
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h4>Rechte trap</h4>
+        <div class="price-main">€ 95,-</div>
+        <div class="price-period">per maand</div>
+        <ul class="price-features">
+          <li>Installatie & montage</li>
+          <li>Onderhoud & service</li>
+          <li>24/7 storingsdienst</li>
+          <li>Verzekering inclusief</li>
+        </ul>
+        <div class="price-note">Minimum 3 maanden</div>
+      </div>
+      
+      <div class="pricing-card featured">
+        <h4>Bochtige trap</h4>
+        <div class="price-main">€ 195,-</div>
+        <div class="price-period">per maand</div>
+        <ul class="price-features">
+          <li>Maatwerk installatie</li>
+          <li>Onderhoud & service</li>
+          <li>24/7 storingsdienst</li>
+          <li>Verzekering inclusief</li>
+        </ul>
+        <div class="price-note">Minimum 6 maanden</div>
+      </div>
+      
+      <div class="pricing-card">
+        <h4>Platformlift</h4>
+        <div class="price-main">€ 145,-</div>
+        <div class="price-period">per maand</div>
+        <ul class="price-features">
+          <li>Installatie & montage</li>
+          <li>Onderhoud & service</li>
+          <li>24/7 storingsdienst</li>
+          <li>Verzekering inclusief</li>
+        </ul>
+        <div class="price-note">Minimum 3 maanden</div>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection>
+    <h3>Lease opties</h3>
+    <div class="lease-options">
+      <div class="lease-option">
+        <h4>Financial Lease</h4>
+        <ul>
+          <li>Eigendom gaat over na afloop</li>
+          <li>Looptijd: 36-60 maanden</li>
+          <li>Rente vanaf 2.9%</li>
+          <li>Geen aanbetaling nodig</li>
+        </ul>
+      </div>
+      
+      <div class="lease-option">
+        <h4>Operational Lease</h4>
+        <ul>
+          <li>All-in maandtarief</li>
+          <li>Inclusief onderhoud</li>
+          <li>Looptijd: 24-48 maanden</li>
+          <li>Geen eigendom</li>
+        </ul>
+      </div>
+      
+      <div class="lease-option">
+        <h4>Lease met koopoptie</h4>
+        <ul>
+          <li>Koopoptie na 12 maanden</li>
+          <li>Verrekening betaalde lease</li>
+          <li>Flexibele voorwaarden</li>
+          <li>Ideaal voor uitproberen</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Persoonlijk advies</h3>
+      <p>Welke optie past het best bij uw situatie? Laat u vrijblijvend adviseren.</p>
+      <a href="/offerte" class="btn btn-secondary">Gratis advies</a>
+    </div>
+  </ContentSection>
+
+  <ContentSection background="gray">
+    <h3>Voordelen van verhuur/lease</h3>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <h4>💰 Lagere startkosten</h4>
+        <p>Geen grote investering vooraf nodig</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h4>🔧 Onderhoud inclusief</h4>
+        <p>Wij zorgen voor al het onderhoud</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h4>📞 24/7 service</h4>
+        <p>Altijd bereikbaar voor storingen</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h4>🛡️ Verzekering</h4>
+        <p>Volledig verzekerd tegen schade</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h4>🔄 Flexibiliteit</h4>
+        <p>Aanpassen naar wensen mogelijk</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h4>⚡ Snelle installatie</h4>
+        <p>Binnen 1 week geïnstalleerd</p>
+      </div>
+    </div>
+
+    <h3>Wie kiest voor verhuur/lease?</h3>
+    <ul>
+      <li><strong>Tijdelijk herstel:</strong> Na operatie of ongeval</li>
+      <li><strong>Seizoensgebruik:</strong> Vakantiehuizen of tijdelijke verblijven</li>
+      <li><strong>Financiële spreiding:</strong> Voorkeur voor maandelijkse kosten</li>
+      <li><strong>Uitproberen:</strong> Eerst ervaren voor aankoop</li>
+      <li><strong>Bedrijfsmatig:</strong> Zorginstellingen en hotels</li>
+    </ul>
+  </ContentSection>
+
+  <Footer />
+</Layout>
+
+<style>
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .pricing-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--border-light);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--primary-green);
+    transform: scale(1.05);
+  }
+
+  .pricing-card h4 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .price-main {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+  }
+
+  .price-period {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .price-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .price-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .price-features li:last-child {
+    border-bottom: none;
+  }
+
+  .price-note {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    font-style: italic;
+  }
+
+  .lease-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .lease-option {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .lease-option h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+
+  .lease-option ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .lease-option li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .lease-option li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-green);
+    font-weight: 600;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefit-item {
+    text-align: center;
+  }
+
+  .benefit-item h4 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  .benefit-item p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .options-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.featured {
+      transform: none;
+    }
+    
+    .price-main {
+      font-size: 2rem;
+    }
+  }
+</style> 
