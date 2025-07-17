@@ -4,8 +4,65 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="LeefZeker - Trapliften & Mobiliteitshulpmiddelen voor Senioren">
+<Layout 
+  title="Trapliften & Mobiliteitshulpmiddelen – LeefZeker"
+  description="LeefZeker levert trapliften, platformliften en mobiliteitshulpmiddelen met WMO-advies. Gratis thuisadvies, 5 jaar garantie."
+>
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LeefZeker",
+    "image": "https://www.leefzeker.nl/leefzekerLogo.png",
+    "telephone": "020-123-45-67",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NL"
+    },
+    "sameAs": [
+      "https://www.facebook.com/leefzeker",
+      "https://www.linkedin.com/company/leefzeker"
+    ],
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "priceRange": "€€€",
+    "areaServed": "Nederland",
+    "description": "Specialist in trapliften, platformliften en mobiliteitshulpmiddelen met WMO-advies en subsidiebegeleiding",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Trapliften & Mobiliteitshulpmiddelen",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "name": "Rechte Trapliften",
+          "description": "WMO-gepast, subsidie mogelijk",
+          "offers": {
+            "@type": "Offer",
+            "price": "3500",
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "Product", 
+          "name": "Gebogen Trapliften",
+          "description": "WMO-pakket standaard inbegrepen",
+          "offers": {
+            "@type": "Offer",
+            "price": "8500",
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "Platformliften",
+          "description": "Subsidie-controle via WMO-loket"
+        }
+      ]
+    }
+  }
+  </script>
   
   <main>
     <!-- Hero Section -->
@@ -14,22 +71,21 @@ import Footer from '../components/Footer.astro';
         <div class="hero-content">
           <div class="hero-text">
             <h1 class="hero-title">
-              Veilig en zelfstandig blijven wonen met een <span class="highlight">traplift</span>
+              Trapliften, Advies & Mobiliteitshulpmiddelen – <span class="highlight">Veilig, Zelfstandig, Thuis</span>
             </h1>
-            <p class="hero-description">
-              Al meer dan 15 jaar helpen wij senioren om comfortabel en veilig thuis te blijven wonen. 
-              Ontdek onze hoogwaardige trapliften en mobiliteitshulpmiddelen, perfect afgestemd op uw behoeften.
-            </p>
+            <h2 class="hero-subtitle">
+              Trapliften op maat, platform en mobiliteitshulpmiddelen voor senioren – inclusief WMO-advies & subsidiebegeleiding.
+            </h2>
             <div class="hero-actions">
-              <a href="/offerte" class="btn btn-primary">
+              <a href="/offerte" class="btn btn-primary" id="cta-hero-offerte">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"></path>
                   <polyline points="9,11 12,14 15,11"></polyline>
                   <line x1="12" y1="2" x2="12" y2="14"></line>
                 </svg>
-                Gratis Offerte Aanvragen
+                Offerte traplift aanvragen
               </a>
-              <a href="/producten" class="btn btn-secondary">Bekijk Producten</a>
+              <a href="/producten" class="btn btn-secondary" id="cta-hero-producten">Bekijk Producten</a>
             </div>
             <div class="hero-features">
               <div class="feature-item">
@@ -51,12 +107,12 @@ import Footer from '../components/Footer.astro';
                   <path d="M9 12l2 2 4-4"></path>
                   <circle cx="12" cy="12" r="10"></circle>
                 </svg>
-                <span>24/7 service</span>
+                <span>WMO-ondersteuning</span>
               </div>
             </div>
           </div>
           <div class="hero-image">
-            <img src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Senior vrouw gebruikt traplift veilig" class="hero-img" />
+            <img src="/src/assets/img_site/stairlift.jpg" alt="traplift veilige woning WMO" class="hero-img" loading="lazy" />
             <div class="hero-badge">
               <div class="badge-content">
                 <span class="badge-title">Gratis thuisadvies</span>
@@ -79,68 +135,72 @@ import Footer from '../components/Footer.astro';
         </p>
         
         <div class="products-grid">
-          <div class="product-card">
+          <div class="product-card" itemscope itemtype="https://schema.org/Product">
             <div class="product-image">
-              <img src="https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Rechte traplift" />
+              <img src="/src/assets/img_site/stairlift.jpg" alt="Rechte traplift WMO-subsidie" loading="lazy" />
               <div class="product-badge">Populair</div>
             </div>
             <div class="product-content">
-              <h3 class="product-title">Rechte Trapliften</h3>
-              <p class="product-description">
+              <h3 class="product-title" itemprop="name">Rechte Trapliften</h3>
+              <p class="product-description" itemprop="description">
                 Perfect voor rechte trappen. Eenvoudig te installeren en gebruiken, 
                 met alle veiligheidsvoorzieningen die u nodig heeft.
               </p>
               <ul class="product-features">
-                <li>Geschikt voor alle rechte trappen</li>
-                <li>Veilige en comfortabele zitting</li>
+                <li><strong>WMO-gepast</strong> - Geschikt voor alle rechte trappen</li>
+                <li><strong>Subsidie mogelijk</strong> - Veilige en comfortabele zitting</li>
                 <li>Eenvoudige bediening</li>
               </ul>
               <div class="product-actions">
-                <a href="/producten/trapliften" class="btn btn-primary">Meer Info</a>
-                <span class="product-price">Vanaf €3.500</span>
+                <a href="/producten/trapliften" class="btn btn-primary" id="cta-rechtetrap-wmo">Meer Info</a>
+                <span class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  Vanaf €3.500
+                </span>
               </div>
             </div>
           </div>
 
-          <div class="product-card">
+          <div class="product-card" itemscope itemtype="https://schema.org/Product">
             <div class="product-image">
-              <img src="https://images.pexels.com/photos/6195123/pexels-photo-6195123.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gebogen traplift" />
+              <img src="/src/assets/img_site/stairlift installation.jpg" alt="Gebogen traplift WMO-pakket" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3 class="product-title">Gebogen Trapliften</h3>
-              <p class="product-description">
+              <h3 class="product-title" itemprop="name">Gebogen Trapliften</h3>
+              <p class="product-description" itemprop="description">
                 Op maat gemaakt voor trappen met bochten. Elke traplift wordt 
                 speciaal aangepast aan uw unieke trapsituatie.
               </p>
               <ul class="product-features">
+                <li><strong>WMO-pakket standaard inbegrepen</strong></li>
                 <li>Maatwerk voor elke trap</li>
                 <li>Soepele bochten en wendingen</li>
-                <li>Hoogwaardige afwerking</li>
               </ul>
               <div class="product-actions">
-                <a href="/producten/trapliften" class="btn btn-primary">Meer Info</a>
-                <span class="product-price">Vanaf €8.500</span>
+                <a href="/producten/trapliften" class="btn btn-primary" id="cta-gebogentrap-wmo">Meer Info</a>
+                <span class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  Vanaf €8.500
+                </span>
               </div>
             </div>
           </div>
 
-          <div class="product-card">
+          <div class="product-card" itemscope itemtype="https://schema.org/Product">
             <div class="product-image">
-              <img src="https://images.pexels.com/photos/6195124/pexels-photo-6195124.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Platformlift" />
+              <img src="/src/assets/img_site/Wheelchair-Lift-Installation-Process-DME-Elevators-Lifts-scaled-1.jpg" alt="Platformlift subsidie-controle WMO" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3 class="product-title">Platformliften</h3>
-              <p class="product-description">
+              <h3 class="product-title" itemprop="name">Platformliften</h3>
+              <p class="product-description" itemprop="description">
                 Ideaal voor rolstoelgebruikers. Veilig en betrouwbaar transport 
                 tussen verschillende verdiepingen.
               </p>
               <ul class="product-features">
+                <li><strong>Subsidie-controle via WMO-loket</strong></li>
                 <li>Geschikt voor rolstoelen</li>
                 <li>Binnen en buiten plaatsing</li>
-                <li>Robuuste constructie</li>
               </ul>
               <div class="product-actions">
-                <a href="/producten/platformliften" class="btn btn-primary">Meer Info</a>
+                <a href="/producten/platformliften" class="btn btn-primary" id="cta-platformlift-wmo">Meer Info</a>
                 <span class="product-price">Op aanvraag</span>
               </div>
             </div>
@@ -168,8 +228,8 @@ import Footer from '../components/Footer.astro';
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <h3 class="benefit-title">15+ jaar ervaring</h3>
-                  <p class="benefit-description">Ruime ervaring met alle soorten trappen en situaties</p>
+                  <h3 class="benefit-title">WMO-indicatie & subsidieproces</h3>
+                  <p class="benefit-description">Volledige ondersteuning bij WMO-aanvragen en subsidiebegeleiding</p>
                 </div>
               </div>
 
@@ -181,8 +241,8 @@ import Footer from '../components/Footer.astro';
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <h3 class="benefit-title">5 jaar garantie</h3>
-                  <p class="benefit-description">Uitgebreide garantie op alle onze producten en installaties</p>
+                  <h3 class="benefit-title">5 jaar garantie, onderhoudscontract</h3>
+                  <p class="benefit-description">Uitgebreide garantie en fix-on-demand service</p>
                 </div>
               </div>
 
@@ -194,8 +254,8 @@ import Footer from '../components/Footer.astro';
                   </svg>
                 </div>
                 <div class="benefit-content">
-                  <h3 class="benefit-title">24/7 service</h3>
-                  <p class="benefit-description">Altijd bereikbaar voor onderhoud en spoedgevallen</p>
+                  <h3 class="benefit-title">Digitale offerte, planning en onderhoud</h3>
+                  <p class="benefit-description">Moderne digitale aanpak voor snelle service</p>
                 </div>
               </div>
 
@@ -214,7 +274,7 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
           <div class="why-choose-image">
-            <img src="https://images.pexels.com/photos/7551660/pexels-photo-7551660.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tevreden klant met traplift" />
+            <img src="/src/assets/img_site/pexels-olly-3768131.jpg" alt="Tevreden klant met traplift" loading="lazy" />
           </div>
         </div>
       </div>
@@ -230,61 +290,73 @@ import Footer from '../components/Footer.astro';
         </p>
         
         <div class="testimonials-grid">
-          <div class="testimonial-card">
+          <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
             <div class="testimonial-content">
-              <div class="stars">
+              <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                 <span>★★★★★</span>
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5">
               </div>
-              <p class="testimonial-text">
+              <p class="testimonial-text" itemprop="reviewBody">
                 "Uitstekende service! De traplift is perfect geïnstalleerd en werkt fantastisch. 
-                Het team was zeer professioneel en vriendelijk. Ik kan LeefZeker van harte aanbevelen."
+                Het WMO-proces werd volledig voor ons geregeld. Ik kan LeefZeker van harte aanbevelen."
               </p>
             </div>
-            <div class="testimonial-author">
-              <img src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Maria van der Berg" class="author-image" />
+            <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <img src="/src/assets/img_site/pexels-olly-3768131.jpg" alt="Maria van der Berg" class="author-image" loading="lazy" />
               <div class="author-info">
-                <h4 class="author-name">Maria van der Berg</h4>
+                <h4 class="author-name" itemprop="name">Maria van der Berg</h4>
                 <span class="author-location">Amsterdam</span>
               </div>
             </div>
+            <meta itemprop="itemReviewed" content="LeefZeker Trapliften">
+            <meta itemprop="datePublished" content="2024-01-15">
           </div>
 
-          <div class="testimonial-card">
+          <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
             <div class="testimonial-content">
-              <div class="stars">
+              <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                 <span>★★★★★</span>
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5">
               </div>
-              <p class="testimonial-text">
+              <p class="testimonial-text" itemprop="reviewBody">
                 "Na een heupoperatie was de trap een groot probleem. Dankzij de traplift van LeefZeker 
-                kan ik weer naar boven. De installatie was snel en netjes uitgevoerd."
+                kan ik weer naar boven. De subsidie-aanvraag ging vlot en installatie was perfect."
               </p>
             </div>
-            <div class="testimonial-author">
-              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Jan Bakker" class="author-image" />
+            <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="Jan Bakker" class="author-image" loading="lazy" />
               <div class="author-info">
-                <h4 class="author-name">Jan Bakker</h4>
+                <h4 class="author-name" itemprop="name">Jan Bakker</h4>
                 <span class="author-location">Utrecht</span>
               </div>
             </div>
+            <meta itemprop="itemReviewed" content="LeefZeker Trapliften">
+            <meta itemprop="datePublished" content="2024-01-10">
           </div>
 
-          <div class="testimonial-card">
+          <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
             <div class="testimonial-content">
-              <div class="stars">
+              <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                 <span>★★★★★</span>
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5">
               </div>
-              <p class="testimonial-text">
+              <p class="testimonial-text" itemprop="reviewBody">
                 "Zeer tevreden over de service en kwaliteit. Het gratis thuisadvies was zeer waardevol 
-                en de prijs-kwaliteitverhouding is uitstekend. Bedankt LeefZeker!"
+                en de WMO-begeleiding maakte alles zo eenvoudig. Bedankt LeefZeker!"
               </p>
             </div>
-            <div class="testimonial-author">
-              <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Els Jansen" class="author-image" />
+            <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="Els Jansen" class="author-image" loading="lazy" />
               <div class="author-info">
-                <h4 class="author-name">Els Jansen</h4>
+                <h4 class="author-name" itemprop="name">Els Jansen</h4>
                 <span class="author-location">Den Haag</span>
               </div>
             </div>
+            <meta itemprop="itemReviewed" content="LeefZeker Trapliften">
+            <meta itemprop="datePublished" content="2024-01-05">
           </div>
         </div>
       </div>
@@ -300,14 +372,15 @@ import Footer from '../components/Footer.astro';
             om veilig en zelfstandig te blijven wonen.
           </p>
           <div class="cta-actions">
-            <a href="/offerte" class="btn btn-primary btn-large">
+            <a href="tel:020-123-45-67" class="btn btn-primary btn-large" id="cta-phone-hero">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Bel nu: 020 123 45 67
             </a>
-            <a href="/offerte" class="btn btn-secondary btn-large">Gratis Offerte</a>
+            <a href="/offerte" class="btn btn-secondary btn-large" id="cta-offerte-hero">Gratis Offerte</a>
           </div>
+          <p class="cta-note">Binnen 24 uur reactie gegarandeerd</p>
         </div>
       </div>
     </section>
@@ -335,18 +408,19 @@ import Footer from '../components/Footer.astro';
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
   }
 
   .highlight {
-    color: var(--primary-red);
-  }
-
-  .hero-description {
-    font-size: 1.25rem;
-    color: var(--text-gray);
-    margin-bottom: 2rem;
-    line-height: 1.6;
+    color: var(--primary-green);
   }
 
   .hero-actions {
@@ -397,7 +471,7 @@ import Footer from '../components/Footer.astro';
 
   .badge-title {
     font-weight: 600;
-    color: var(--primary-red);
+    color: var(--primary-green);
     display: block;
     margin-bottom: 0.5rem;
   }
@@ -410,7 +484,7 @@ import Footer from '../components/Footer.astro';
   }
 
   .badge-link {
-    color: var(--primary-red);
+    color: var(--primary-green);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.875rem;
@@ -562,7 +636,7 @@ import Footer from '../components/Footer.astro';
   }
 
   .benefit-icon {
-    background: var(--primary-red);
+    background: var(--primary-green);
     color: var(--white);
     padding: 0.75rem;
     border-radius: 0.75rem;
@@ -603,7 +677,7 @@ import Footer from '../components/Footer.astro';
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid var(--primary-red);
+    border-left: 4px solid var(--primary-green);
   }
 
   .stars {
@@ -644,7 +718,7 @@ import Footer from '../components/Footer.astro';
   }
 
   .cta-section {
-    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
     color: var(--white);
     text-align: center;
   }
@@ -669,6 +743,13 @@ import Footer from '../components/Footer.astro';
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .cta-note {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    font-style: italic;
   }
 
   .btn-large {
@@ -678,7 +759,7 @@ import Footer from '../components/Footer.astro';
 
   .cta-section .btn-secondary {
     background-color: var(--white);
-    color: var(--primary-red);
+    color: var(--primary-green);
     border-color: var(--white);
   }
 
@@ -709,6 +790,10 @@ import Footer from '../components/Footer.astro';
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
     }
 
     .hero-actions {

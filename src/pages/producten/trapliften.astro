@@ -5,25 +5,85 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout 
-  title="Trapliften - Rechte en Gebogen Trapliften | LeefZeker"
-  description="Ontdek onze hoogwaardige trapliften voor rechte en gebogen trappen. Gratis thuisadvies, 5 jaar garantie en professionele installatie. Vanaf €3.500."
+  title="Trapliften – WMO Subsidiëring | LeefZeker"
+  description="Op maat gemaakte trapliften met WMO-indicatie en subsidiebegeleiding. Gratis thuisadvies, 5 jaar garantie, digitale offerte."
 >
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Trapliften",
+    "description": "Trapliften op maat met WMO-ondersteuning en subsidiebegeleiding",
+    "brand": {
+      "@type": "Brand",
+      "name": "LeefZeker"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Rechte Trapliften",
+        "price": "3500",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "description": "Inclusief WMO-check, subsidie-aanvraag & 5 jaar garantie"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Gebogen Trapliften",
+        "price": "8500",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "description": "WMO-pakket standaard inbegrepen"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "500"
+    }
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hoe werkt de WMO-aanvraag?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wij begeleiden u volledig bij de WMO-aanvraag: van indicatiestelling tot subsidie-aanvraag bij uw gemeente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welke subsidies zijn mogelijk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Via de WMO kunt u subsidie aanvragen bij uw gemeente voor trapliften en mobiliteitshulpmiddelen."
+        }
+      }
+    ]
+  }
+  </script>
   
   <main>
     <!-- Hero Section -->
     <section class="page-hero">
       <div class="container">
         <div class="hero-content">
-          <h1 class="hero-title">Trapliften</h1>
-          <p class="hero-description">
-            Veilig en comfortabel de trap op en af met onze hoogwaardige trapliften. 
-            Geschikt voor alle soorten trappen, van recht tot complex gebogen.
-          </p>
+          <h1 class="hero-title">Trapliften – Veilig en zelfstandig thuis met WMO-ondersteuning</h1>
+          <h2 class="hero-subtitle">Trapliften op maat – van aanvraag tot installatie, inclusief subsidiebegeleiding.</h2>
           <div class="hero-stats">
             <div class="stat-item">
-              <span class="stat-number">15+</span>
-              <span class="stat-label">jaar ervaring</span>
+              <span class="stat-number">WMO</span>
+              <span class="stat-label">ondersteuning</span>
             </div>
             <div class="stat-item">
               <span class="stat-number">5</span>
@@ -41,54 +101,122 @@ import Footer from '../../components/Footer.astro';
     <!-- Types Section -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Types Trapliften</h2>
+        <h2 class="section-title">Productcategorieën</h2>
         <div class="types-grid">
-          <div class="type-card featured">
+          <div class="type-card featured" itemscope itemtype="https://schema.org/Product">
             <div class="type-image">
-              <img src="https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rechte traplift" />
+              <img src="/src/assets/img_site/stairlift.jpg" alt="traplift veilige woning WMO" loading="lazy" />
               <div class="type-badge">Meest Populair</div>
             </div>
             <div class="type-content">
-              <h3 class="type-title">Rechte Trapliften</h3>
-              <p class="type-description">
+              <h3 class="type-title" itemprop="name">Rechte Trapliften</h3>
+              <p class="type-description" itemprop="description">
                 Ideaal voor rechte trappen zonder bochten. Snelle installatie en uitstekende prijs-kwaliteitverhouding.
               </p>
+              <div class="wmo-highlight">
+                <strong>Inclusief WMO-check, subsidie-aanvraag & 5 jaar garantie.</strong>
+              </div>
               <ul class="type-features">
-                <li>Installatie binnen 1 dag</li>
-                <li>Geschikt voor alle rechte trappen</li>
+                <li>WMO-gepast - Installatie binnen 1 dag</li>
+                <li>Subsidie mogelijk - Geschikt voor alle rechte trappen</li>
                 <li>Verschillende stoelcomfort opties</li>
                 <li>Automatische veiligheidssensoren</li>
-                <li>Opklapbare rail en stoel</li>
               </ul>
-              <div class="type-price">
+              <div class="type-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€3.500</span>
+                <span class="price-amount" itemprop="price">€3.500</span>
+                <meta itemprop="priceCurrency" content="EUR">
               </div>
-              <a href="/offerte" class="btn btn-primary">Gratis Offerte</a>
+              <a href="/offerte" class="btn btn-primary" id="cta-rechtetrap-wmo">Meer Info</a>
             </div>
           </div>
 
-          <div class="type-card">
+          <div class="type-card" itemscope itemtype="https://schema.org/Product">
             <div class="type-image">
-              <img src="https://images.pexels.com/photos/6195123/pexels-photo-6195123.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gebogen traplift" />
+              <img src="/src/assets/img_site/stairlift installation.jpg" alt="gebogen traplift WMO-pakket" loading="lazy" />
             </div>
             <div class="type-content">
-              <h3 class="type-title">Gebogen Trapliften</h3>
-              <p class="type-description">
+              <h3 class="type-title" itemprop="name">Gebogen Trapliften</h3>
+              <p class="type-description" itemprop="description">
                 Maatwerk voor trappen met bochten, overlopjes of complexe vormen. Elke rail wordt speciaal voor uw trap gemaakt.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-pakket standaard inbegrepen.</strong>
+              </div>
               <ul class="type-features">
                 <li>100% maatwerk voor uw trap</li>
                 <li>Soepele bochten en wendingen</li>
                 <li>Meerdere stopplaatsen mogelijk</li>
                 <li>Hoogwaardige afwerking</li>
-                <li>Stil en comfortabel</li>
+              </ul>
+              <div class="type-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span class="price-from">Vanaf</span>
+                <span class="price-amount" itemprop="price">€8.500</span>
+                <meta itemprop="priceCurrency" content="EUR">
+              </div>
+              <a href="/offerte" class="btn btn-primary" id="cta-gebogentrap-wmo">Meer Info</a>
+            </div>
+          </div>
+
+          <div class="type-card" itemscope itemtype="https://schema.org/Product">
+            <div class="type-image">
+              <img src="/src/assets/img_site/senioronstairlift].webp" alt="buitentraplift subsidie WMO" loading="lazy" />
+            </div>
+            <div class="type-content">
+              <h3 class="type-title" itemprop="name">Buitentrapliften</h3>
+              <p class="type-description" itemprop="description">
+                Weerbestendige trapliften voor buitentrappen. Perfect voor toegang tot tuin, terras of voordeur.
+              </p>
+              <div class="wmo-highlight">
+                <strong>Subsidie-controle via WMO-loket.</strong>
+              </div>
+              <ul class="type-features">
+                <li>Weerbestendig en robuust</li>
+                <li>Speciaal voor buitengebruik</li>
+                <li>Antislip zitting en voetensteun</li>
+                <li>Automatische afdekking</li>
               </ul>
               <div class="type-price">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€8.500</span>
+                <span class="price-amount">€6.500</span>
               </div>
-              <a href="/offerte" class="btn btn-primary">Gratis Offerte</a>
+              <a href="/offerte" class="btn btn-primary" id="cta-buitentrap-wmo">Meer Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WMO Process Section -->
+    <section class="section wmo-process-section" id="wmo-aanvraag">
+      <div class="container">
+        <h2 class="section-title">Hoe werkt de WMO-aanvraag?</h2>
+        <div class="wmo-accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Stap 1: WMO-indicatie aanvragen</h3>
+              <span class="accordion-toggle">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Wij helpen u bij het aanvragen van een WMO-indicatie bij uw gemeente. Dit is de eerste stap voor subsidiëring.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Stap 2: Subsidie-aanvraag indienen</h3>
+              <span class="accordion-toggle">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Na goedkeuring van de indicatie dienen wij samen de subsidie-aanvraag in bij uw gemeente.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Stap 3: Goedkeuring & installatie</h3>
+              <span class="accordion-toggle">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Bij goedkeuring plannen wij de installatie van uw traplift inclusief volledige begeleiding.</p>
             </div>
           </div>
         </div>
@@ -98,20 +226,8 @@ import Footer from '../../components/Footer.astro';
     <!-- Features Section -->
     <section class="section features-section">
       <div class="container">
-        <h2 class="section-title">Waarom kiezen voor onze trapliften?</h2>
+        <h2 class="section-title">Voordelen</h2>
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-            </div>
-            <h3 class="feature-title">Veiligheid Voorop</h3>
-            <p class="feature-description">
-              Alle trapliften zijn voorzien van veiligheidsgordels, automatische stopfunctie en noodstop-knop.
-            </p>
-          </div>
-
           <div class="feature-card">
             <div class="feature-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -119,9 +235,22 @@ import Footer from '../../components/Footer.astro';
                 <polyline points="14,2 14,8 20,8"></polyline>
               </svg>
             </div>
-            <h3 class="feature-title">CE Gecertificeerd</h3>
+            <h3 class="feature-title">WMO-indicatie & subsidieproces</h3>
             <p class="feature-description">
-              Alle producten voldoen aan Europese veiligheidsnormen EN 81-40 en zijn volledig gecertificeerd.
+              Volledige ondersteuning bij WMO-aanvragen en subsidiebegeleiding van A tot Z.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3 class="feature-title">Digitale offerte, planning en onderhoud</h3>
+            <p class="feature-description">
+              Moderne digitale aanpak voor snelle service en transparante communicatie.
             </p>
           </div>
 
@@ -131,9 +260,9 @@ import Footer from '../../components/Footer.astro';
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
               </svg>
             </div>
-            <h3 class="feature-title">5 Jaar Garantie</h3>
+            <h3 class="feature-title">5 jaar garantie, onderhoudscontract</h3>
             <p class="feature-description">
-              Uitgebreide garantie op alle onderdelen en installatie voor uw volledige gemoedsrust.
+              Uitgebreide garantie en fix-on-demand service voor uw volledige gemoedsrust.
             </p>
           </div>
 
@@ -146,7 +275,7 @@ import Footer from '../../components/Footer.astro';
             </div>
             <h3 class="feature-title">Gratis Thuisadvies</h3>
             <p class="feature-description">
-              Wij komen gratis bij u langs om de beste oplossing voor uw trap te bespreken.
+              Persoonlijk advies bij u thuis, geheel vrijblijvend met WMO-expertise.
             </p>
           </div>
         </div>
@@ -163,7 +292,7 @@ import Footer from '../../components/Footer.astro';
             <div class="step-content">
               <h3 class="step-title">Gratis Thuisadvies</h3>
               <p class="step-description">
-                Wij komen bij u langs om uw trap te bekijken en de beste oplossing te bespreken.
+                Wij komen bij u langs om uw trap te bekijken en WMO-mogelijkheden te bespreken.
               </p>
             </div>
           </div>
@@ -171,9 +300,9 @@ import Footer from '../../components/Footer.astro';
           <div class="step">
             <div class="step-number">2</div>
             <div class="step-content">
-              <h3 class="step-title">Offerte op Maat</h3>
+              <h3 class="step-title">Digitale Offerte op Maat</h3>
               <p class="step-description">
-                U ontvangt een persoonlijke offerte zonder verplichtingen.
+                U ontvangt een persoonlijke digitale offerte inclusief WMO-begeleiding.
               </p>
             </div>
           </div>
@@ -193,7 +322,7 @@ import Footer from '../../components/Footer.astro';
             <div class="step-content">
               <h3 class="step-title">Uitleg & Nazorg</h3>
               <p class="step-description">
-                Wij leggen alles uit en zorgen voor onderhoud en service.
+                Wij leggen alles uit en zorgen voor onderhoud en fix-on-demand service.
               </p>
             </div>
           </div>
@@ -210,14 +339,15 @@ import Footer from '../../components/Footer.astro';
             Vraag een gratis thuisadvies aan en ontdek welke traplift het beste bij uw situatie past.
           </p>
           <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary btn-large">
+            <a href="tel:020-123-45-67" class="btn btn-primary btn-large" id="cta-phone-trapliften">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Bel 020 123 45 67
             </a>
-            <a href="/offerte" class="btn btn-secondary btn-large">Gratis Offerte</a>
+            <a href="/offerte" class="btn btn-secondary btn-large" id="cta-offerte-trapliften">Gratis Offerte</a>
           </div>
+          <p class="cta-note">Binnen 24 uur reactie</p>
         </div>
       </div>
     </section>
@@ -240,12 +370,13 @@ import Footer from '../../components/Footer.astro';
     margin-bottom: 1rem;
   }
 
-  .hero-description {
-    font-size: 1.25rem;
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
     opacity: 0.9;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto 2rem;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   .hero-stats {
@@ -273,8 +404,8 @@ import Footer from '../../components/Footer.astro';
 
   .types-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
   }
 
   .type-card {
@@ -296,7 +427,7 @@ import Footer from '../../components/Footer.astro';
 
   .type-image {
     position: relative;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
   }
 
@@ -328,7 +459,7 @@ import Footer from '../../components/Footer.astro';
   }
 
   .type-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 1rem;
@@ -336,8 +467,17 @@ import Footer from '../../components/Footer.astro';
 
   .type-description {
     color: var(--text-gray);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.6;
+  }
+
+  .wmo-highlight {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
   }
 
   .type-features {
@@ -378,8 +518,58 @@ import Footer from '../../components/Footer.astro';
     color: var(--primary-green);
   }
 
-  .features-section {
+  .wmo-process-section {
     background-color: var(--warm-gray);
+  }
+
+  .wmo-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .accordion-item {
+    background: var(--white);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-header:hover {
+    background-color: var(--warm-gray);
+  }
+
+  .accordion-header h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .accordion-toggle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-green);
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-content {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  .features-section {
+    background-color: var(--white);
   }
 
   .features-grid {
@@ -426,7 +616,7 @@ import Footer from '../../components/Footer.astro';
   }
 
   .process-section {
-    background-color: var(--white);
+    background-color: var(--warm-gray);
   }
 
   .process-steps {
@@ -494,6 +684,13 @@ import Footer from '../../components/Footer.astro';
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .cta-note {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    font-style: italic;
   }
 
   .btn-large {
@@ -517,6 +714,10 @@ import Footer from '../../components/Footer.astro';
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
     }
 
     .hero-stats {
@@ -561,7 +762,7 @@ import Footer from '../../components/Footer.astro';
     }
 
     .type-title {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     .cta-title {

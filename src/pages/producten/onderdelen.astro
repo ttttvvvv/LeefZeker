@@ -7,12 +7,57 @@ import ContentSection from '../../components/ContentSection.astro';
 import FeatureBox from '../../components/FeatureBox.astro';
 ---
 
-<Layout title="Onderdelen & Accessoires - LeefZeker" description="Originele onderdelen en accessoires voor uw traplift. Snel leverbaar met garantie.">
+<Layout 
+  title="Onderdelen & Accessoires - LeefZeker"
+  description="Originele onderdelen altijd op voorraad. Batterijen, afstandsbedieningen, veiligheidsgordels en meer. Snelle levering met garantie."
+>
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Traplift Onderdelen",
+    "description": "Originele onderdelen altijd op voorraad",
+    "itemListElement": [
+      {
+        "@type": "Product",
+        "name": "Batterij (12V)",
+        "description": "Reservebatterijen voor stroomuitval",
+        "offers": {
+          "@type": "Offer",
+          "price": "89",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Afstandsbediening",
+        "description": "Extra of vervangende afstandsbediening",
+        "offers": {
+          "@type": "Offer",
+          "price": "45",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Veiligheidsgordel",
+        "description": "Vervangende veiligheidsgordel",
+        "offers": {
+          "@type": "Offer",
+          "price": "35",
+          "priceCurrency": "EUR"
+        }
+      }
+    ]
+  }
+  </script>
   
   <PageHeader 
     title="Onderdelen & Accessoires" 
-    subtitle="Originele onderdelen en accessoires voor uw traplift"
+    subtitle="Originele onderdelen altijd op voorraad."
     breadcrumbs={[
       { name: 'Producten', href: '/producten' }
     ]}
@@ -80,7 +125,10 @@ import FeatureBox from '../../components/FeatureBox.astro';
     <div class="cta-box">
       <h3>Onderdeel nodig?</h3>
       <p>Neem contact op voor het bestellen van onderdelen of een onderhoudsabonnement.</p>
-      <a href="/contact" class="btn btn-secondary">Contact opnemen</a>
+      <div class="cta-actions">
+        <a href="/offerte" class="btn btn-primary" id="cta-bestel-onderdeel">Bestellen</a>
+        <a href="/contact" class="btn btn-secondary" id="cta-montage-aanvragen">Montage aanvragen</a>
+      </div>
     </div>
   </ContentSection>
 
@@ -126,6 +174,30 @@ import FeatureBox from '../../components/FeatureBox.astro';
     margin-bottom: 3rem;
   }
 
+  .cta-box {
+    background: var(--warm-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .cta-box h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .cta-box p {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
   .price-table {
     background: var(--white);
     border-radius: 0.5rem;
@@ -166,6 +238,11 @@ import FeatureBox from '../../components/FeatureBox.astro';
   @media (max-width: 768px) {
     .products-grid {
       grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style> 
