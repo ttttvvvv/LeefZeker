@@ -5,28 +5,90 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout 
-  title="Platformliften - Rolstoelliften & Toegankelijke Liften | LeefZeker"
-  description="Ontdek onze platformliften voor rolstoelgebruikers en mensen met een rollator. Binnen en buiten plaatsing mogelijk. Gratis thuisadvies en offerte."
+  title="Platform- & Plateauliften – WMO & Subsidie | LeefZeker"
+  description="Platformliften met volledige WMO- en subsidieondersteuning. Binnen- en buitenoplossingen, gratis thuisadvies, 5 jaar garantie."
 >
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Platformliften",
+    "description": "Platform- en plateauliften met WMO-ondersteuning en subsidiebegeleiding",
+    "brand": {
+      "@type": "Brand",
+      "name": "LeefZeker"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Binnen Platformliften",
+        "availability": "https://schema.org/InStock",
+        "description": "WMO-gepast voor binnen gebruik"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Buiten Platformliften",
+        "availability": "https://schema.org/InStock",
+        "description": "Subsidie-controle via WMO-loket"
+      },
+      {
+        "@type": "Offer",
+        "name": "Commerciële Platformliften",
+        "availability": "https://schema.org/InStock",
+        "description": "Voor zakelijk gebruik met WMO-mogelijkheden"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150"
+    }
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hoe werkt subsidie voor platformliften?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Via de WMO kunt u subsidie aanvragen voor platformliften. Wij begeleiden u volledig bij dit proces."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat zijn de kosten van een platformlift?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De kosten variëren per type en situatie. Neem contact op voor een persoonlijke offerte met WMO-advies."
+        }
+      }
+    ]
+  }
+  </script>
   
   <main>
     <!-- Hero Section -->
     <section class="page-hero">
       <div class="container">
         <div class="hero-content">
-          <h1 class="hero-title">Platformliften</h1>
-          <p class="hero-description">
-            Toegankelijke liften voor rolstoelgebruikers en mensen met een rollator. 
-            Veilig en betrouwbaar verticaal transport tussen verdiepingen.
-          </p>
+          <h1 class="hero-title">Platform- & plateauliften – Toegankelijkheid met WMO-ondersteuning</h1>
+          <h2 class="hero-subtitle">Binnen- en buitenoplossingen inclusief subsidiecheck en 5 jaar garantie.</h2>
           <div class="hero-features">
             <div class="hero-feature">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 6v6l4 2"></path>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
               </svg>
-              <span>Binnen 2 weken geleverd</span>
+              <span>WMO-begeleiding</span>
             </div>
             <div class="hero-feature">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -49,23 +111,25 @@ import Footer from '../../components/Footer.astro';
     <!-- Types Section -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Types Platformliften</h2>
+        <h2 class="section-title">Liftcategorieën</h2>
         <div class="types-grid">
-          <div class="type-card">
+          <div class="type-card" itemscope itemtype="https://schema.org/Product">
             <div class="type-image">
-              <img src="https://images.pexels.com/photos/6195124/pexels-photo-6195124.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Binnen platformlift" />
+              <img src="/src/assets/img_site/Wheelchair-Lift-Installation-Process-DME-Elevators-Lifts-scaled-1.jpg" alt="binnen platformlift WMO-gepast" loading="lazy" />
             </div>
             <div class="type-content">
-              <h3 class="type-title">Binnen Platformliften</h3>
-              <p class="type-description">
+              <h3 class="type-title" itemprop="name">Binnen Platformliften</h3>
+              <p class="type-description" itemprop="description">
                 Ideaal voor gebruik binnen in huis. Compact design en stille werking voor optimaal comfort.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-gepast - Subsidie mogelijk</strong>
+              </div>
               <ul class="type-features">
                 <li>Geschikt voor rolstoelen en rollatoren</li>
                 <li>Stil en soepel in werking</li>
                 <li>Compact design</li>
                 <li>Verschillende afmetingen beschikbaar</li>
-                <li>Geïntegreerde veiligheidsvoorzieningen</li>
               </ul>
               <div class="type-specs">
                 <div class="spec-item">
@@ -77,25 +141,27 @@ import Footer from '../../components/Footer.astro';
                   <span class="spec-value">250 kg</span>
                 </div>
               </div>
-              <a href="/offerte" class="btn btn-primary">Offerte Aanvragen</a>
+              <a href="/offerte" class="btn btn-primary" id="cta-platformbinnen-wmo">Offerte Aanvragen</a>
             </div>
           </div>
 
-          <div class="type-card">
+          <div class="type-card" itemscope itemtype="https://schema.org/Product">
             <div class="type-image">
-              <img src="https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Buiten platformlift" />
+              <img src="/src/assets/img_site/stairlift.jpg" alt="buiten platformlift subsidie-controle" loading="lazy" />
             </div>
             <div class="type-content">
-              <h3 class="type-title">Buiten Platformliften</h3>
-              <p class="type-description">
+              <h3 class="type-title" itemprop="name">Buiten Platformliften</h3>
+              <p class="type-description" itemprop="description">
                 Weerbestendige platformliften voor buitengebruik. Perfect voor entrees, terrassen en tuinen.
               </p>
+              <div class="wmo-highlight">
+                <strong>Subsidie-controle via WMO-loket</strong>
+              </div>
               <ul class="type-features">
                 <li>Weerbestendig materiaal</li>
                 <li>Robuuste constructie</li>
                 <li>Geschikt voor alle weersomstandigheden</li>
                 <li>Anti-slip platform</li>
-                <li>Noodstroom voorziening</li>
               </ul>
               <div class="type-specs">
                 <div class="spec-item">
@@ -107,25 +173,27 @@ import Footer from '../../components/Footer.astro';
                   <span class="spec-value">300 kg</span>
                 </div>
               </div>
-              <a href="/offerte" class="btn btn-primary">Offerte Aanvragen</a>
+              <a href="/offerte" class="btn btn-primary" id="cta-platformbuiten-wmo">Offerte Aanvragen</a>
             </div>
           </div>
 
-          <div class="type-card">
+          <div class="type-card" itemscope itemtype="https://schema.org/Product">
             <div class="type-image">
-              <img src="https://images.pexels.com/photos/6195126/pexels-photo-6195126.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Commerciële platformlift" />
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="goederenlift commercieel WMO" loading="lazy" />
             </div>
             <div class="type-content">
-              <h3 class="type-title">Commerciële Platformliften</h3>
-              <p class="type-description">
-                Zware duty platformliften voor commercieel gebruik. Geschikt voor winkels, kantoren en openbare gebouwen.
+              <h3 class="type-title" itemprop="name">Goederen Platformliften</h3>
+              <p class="type-description" itemprop="description">
+                Zware duty platformliften voor commercieel gebruik en goederentransport. Geschikt voor winkels, kantoren en openbare gebouwen.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-advies beschikbaar</strong>
+              </div>
               <ul class="type-features">
                 <li>Hoge belastbaarheid</li>
                 <li>Intensief gebruik mogelijk</li>
                 <li>Voldoet aan commerciële normen</li>
                 <li>Verschillende afwerkingen</li>
-                <li>Optionele toegangscontrole</li>
               </ul>
               <div class="type-specs">
                 <div class="spec-item">
@@ -137,9 +205,51 @@ import Footer from '../../components/Footer.astro';
                   <span class="spec-value">500 kg</span>
                 </div>
               </div>
-              <a href="/offerte" class="btn btn-primary">Offerte Aanvragen</a>
+              <a href="/offerte" class="btn btn-primary" id="cta-platformgoederen-wmo">Offerte Aanvragen</a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subsidieproces Section -->
+    <section class="section subsidie-section" id="subsidie-plateaulift">
+      <div class="container">
+        <h2 class="section-title">Subsidieproces</h2>
+        <div class="subsidie-steps">
+          <div class="subsidie-step">
+            <div class="step-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+              </svg>
+            </div>
+            <h3 class="step-title">1. WMO-indicatie</h3>
+            <p class="step-description">Wij helpen u bij het aanvragen van een WMO-indicatie voor uw platformlift.</p>
+          </div>
+          <div class="subsidie-step">
+            <div class="step-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3 class="step-title">2. Subsidie-aanvraag</h3>
+            <p class="step-description">Samen dienen wij de subsidie-aanvraag in bij uw gemeente.</p>
+          </div>
+          <div class="subsidie-step">
+            <div class="step-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+              </svg>
+            </div>
+            <h3 class="step-title">3. Installatie</h3>
+            <p class="step-description">Bij goedkeuring plannen wij de installatie van uw platformlift.</p>
+          </div>
+        </div>
+        <div class="subsidie-cta">
+          <a href="/offerte" class="btn btn-primary btn-large" id="cta-subsidie-plateaulift">Subsidie Check Plateaulift</a>
         </div>
       </div>
     </section>
@@ -218,7 +328,7 @@ import Footer from '../../components/Footer.astro';
             <div class="timeline-content">
               <h3 class="timeline-title">Locatie Inspectie</h3>
               <p class="timeline-description">
-                Onze specialist komt bij u langs om de locatie te inspecteren en de juiste platformlift te adviseren.
+                Onze specialist komt bij u langs om de locatie te inspecteren en WMO-mogelijkheden te bespreken.
               </p>
               <div class="timeline-duration">Duur: 1 uur</div>
             </div>
@@ -275,14 +385,15 @@ import Footer from '../../components/Footer.astro';
             Vraag een gratis offerte aan en ontdek welke platformlift het beste bij uw situatie past.
           </p>
           <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary btn-large">
+            <a href="tel:020-123-45-67" class="btn btn-primary btn-large" id="cta-phone-platformlift">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Bel 020 123 45 67
             </a>
-            <a href="/offerte" class="btn btn-secondary btn-large">Gratis Offerte</a>
+            <a href="/offerte" class="btn btn-secondary btn-large" id="cta-offerte-platformlift">Gratis Offerte</a>
           </div>
+          <p class="cta-note">Binnen 24 uur reactie</p>
         </div>
       </div>
     </section>
@@ -305,12 +416,13 @@ import Footer from '../../components/Footer.astro';
     margin-bottom: 1rem;
   }
 
-  .hero-description {
-    font-size: 1.25rem;
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
     opacity: 0.9;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto 2rem;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   .hero-features {
@@ -329,7 +441,7 @@ import Footer from '../../components/Footer.astro';
 
   .types-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
   }
 
@@ -382,8 +494,17 @@ import Footer from '../../components/Footer.astro';
 
   .type-description {
     color: var(--text-gray);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.6;
+  }
+
+  .wmo-highlight {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
   }
 
   .type-features {
@@ -434,8 +555,55 @@ import Footer from '../../components/Footer.astro';
     font-weight: 600;
   }
 
-  .benefits-section {
+  .subsidie-section {
     background-color: var(--warm-gray);
+  }
+
+  .subsidie-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .subsidie-step {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .step-icon {
+    background: var(--primary-green);
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .step-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  .subsidie-cta {
+    text-align: center;
+  }
+
+  .benefits-section {
+    background-color: var(--white);
   }
 
   .benefits-grid {
@@ -482,7 +650,7 @@ import Footer from '../../components/Footer.astro';
   }
 
   .process-section {
-    background-color: var(--white);
+    background-color: var(--warm-gray);
   }
 
   .process-timeline {
@@ -574,6 +742,13 @@ import Footer from '../../components/Footer.astro';
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .cta-note {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    font-style: italic;
   }
 
   .btn-large {
@@ -597,6 +772,10 @@ import Footer from '../../components/Footer.astro';
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
     }
 
     .hero-features {

@@ -7,12 +7,47 @@ import ContentSection from '../../components/ContentSection.astro';
 import FeatureBox from '../../components/FeatureBox.astro';
 ---
 
-<Layout title="Verhuur & Lease Opties - LeefZeker" description="Huur of lease een traplift voor tijdelijk gebruik. Flexibele oplossingen vanaf €95 per maand.">
+<Layout 
+  title="Verhuur & Lease Opties - LeefZeker"
+  description="Huur of lease een traplift voor tijdelijk gebruik. Tijdelijke verhuur met WMO PGB-financiering mogelijk. Flexibele oplossingen vanaf €95 per maand."
+>
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Traplift Verhuur",
+    "description": "Tijdelijke verhuur met WMO PGB-financiering mogelijk",
+    "provider": {
+      "@type": "Organization",
+      "name": "LeefZeker"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Rechte trap verhuur",
+        "price": "95",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2024-12-31",
+        "description": "Per maand, minimum 3 maanden"
+      },
+      {
+        "@type": "Offer",
+        "name": "Bochtige trap verhuur",
+        "price": "195",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2024-12-31",
+        "description": "Per maand, minimum 6 maanden"
+      }
+    ]
+  }
+  </script>
   
   <PageHeader 
     title="Verhuur & Lease Opties" 
-    subtitle="Flexibele oplossingen voor tijdelijk gebruik"
+    subtitle="Tijdelijke verhuur met WMO PGB-financiering mogelijk."
     breadcrumbs={[
       { name: 'Producten', href: '/producten' }
     ]}
@@ -122,7 +157,10 @@ import FeatureBox from '../../components/FeatureBox.astro';
     <div class="cta-box">
       <h3>Persoonlijk advies</h3>
       <p>Welke optie past het best bij uw situatie? Laat u vrijblijvend adviseren.</p>
-      <a href="/offerte" class="btn btn-secondary">Gratis advies</a>
+      <div class="cta-actions">
+        <a href="/offerte" class="btn btn-primary" id="cta-huuraanvraag">Huur aanvragen</a>
+        <a href="/contact" class="btn btn-secondary" id="cta-wmo-verhuurcheck">WMO verhuur check</a>
+      </div>
     </div>
   </ContentSection>
 
@@ -279,6 +317,30 @@ import FeatureBox from '../../components/FeatureBox.astro';
     font-weight: 600;
   }
 
+  .cta-box {
+    background: var(--warm-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .cta-box h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .cta-box p {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
   .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -312,6 +374,11 @@ import FeatureBox from '../../components/FeatureBox.astro';
     
     .price-main {
       font-size: 2rem;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style> 

@@ -7,12 +7,40 @@ import ContentSection from '../../components/ContentSection.astro';
 import FeatureBox from '../../components/FeatureBox.astro';
 ---
 
-<Layout title="Tweedehands Trapliften - LeefZeker" description="Kwalitatieve tweedehands trapliften voor een scherpe prijs. Volledig gereviseerd met 2 jaar garantie.">
+<Layout 
+  title="Tweedehands trapliften & mobiliteitshulpmiddelen | LeefZeker"
+  description="Betaalbare tweedehands liften met garantie, WMO-check en servicecontract. Volledig gereviseerd met 2 jaar garantie. Bespaar tot 50%."
+>
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Tweedehands Trapliften",
+    "description": "Tweedehands trapliften en hulpmiddelen met keuring en 2 jaar garantie",
+    "brand": {
+      "@type": "Brand",
+      "name": "LeefZeker"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "1995",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "description": "Volledig gereviseerd met 2 jaar garantie"
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": "P2Y"
+    }
+  }
+  </script>
   
   <PageHeader 
     title="Tweedehands Trapliften" 
-    subtitle="Kwaliteit voor een scherpe prijs"
+    subtitle="Tweedehands trapliften en hulpmiddelen met keuring en 2 jaar garantie."
     breadcrumbs={[
       { name: 'Producten', href: '/producten' }
     ]}
@@ -115,7 +143,10 @@ import FeatureBox from '../../components/FeatureBox.astro';
     <div class="cta-box">
       <h3>Bekijk onze voorraad</h3>
       <p>Bel voor de actuele voorraad tweedehands trapliften en prijzen.</p>
-      <a href="/contact" class="btn btn-secondary">Voorraad bekijken</a>
+      <div class="cta-actions">
+        <a href="/offerte" class="btn btn-primary" id="cta-2ehands-offerte">Offerte aanvragen</a>
+        <a href="/contact" class="btn btn-secondary" id="cta-veiligheidskeuring">Veiligheidskeuring</a>
+      </div>
     </div>
   </ContentSection>
 
@@ -232,6 +263,29 @@ import FeatureBox from '../../components/FeatureBox.astro';
     font-weight: 600;
   }
 
+  .cta-box {
+    background: var(--warm-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .cta-box h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .cta-box p {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
   .price-comparison {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -289,6 +343,11 @@ import FeatureBox from '../../components/FeatureBox.astro';
   @media (max-width: 768px) {
     .benefits-grid {
       grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style> 

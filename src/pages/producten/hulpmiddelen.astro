@@ -5,10 +5,52 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout 
-  title="Mobiliteitshulpmiddelen - Trapleuningen & Hulpmiddelen | LeefZeker"
-  description="Ontdek onze mobiliteitshulpmiddelen zoals trapleuningen, drempelhulpen en opstahulpen. Verhoog uw mobiliteit en zelfstandigheid thuis."
+  title="Mobiliteitshulpmiddelen - WMO Ondersteuning | LeefZeker"
+  description="Mobiliteitshulpmiddelen met WMO-ondersteuning. Trapleuningen, drempelhulpen, opstahulpen en meer. Gratis advies en installatie."
 >
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Mobiliteitshulpmiddelen",
+    "description": "Mobiliteitshulpmiddelen met WMO-ondersteuning",
+    "itemListElement": [
+      {
+        "@type": "Product",
+        "name": "Trapleuningen",
+        "description": "WMO-gepast, veilige en stevige trapleuningen",
+        "offers": {
+          "@type": "Offer",
+          "price": "125",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Drempelhulpen",
+        "description": "WMO-ondersteuning, toegankelijke drempelhulpen",
+        "offers": {
+          "@type": "Offer",
+          "price": "45",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Opstahulpen",
+        "description": "WMO-subsidie mogelijk, hulp bij opstaan",
+        "offers": {
+          "@type": "Offer",
+          "price": "85",
+          "priceCurrency": "EUR"
+        }
+      }
+    ]
+  }
+  </script>
   
   <main>
     <!-- Hero Section -->
@@ -18,12 +60,12 @@ import Footer from '../../components/Footer.astro';
           <h1 class="hero-title">Mobiliteitshulpmiddelen</h1>
           <p class="hero-description">
             Verhoog uw mobiliteit en zelfstandigheid met onze selectie van hoogwaardige hulpmiddelen. 
-            Van trapleuningen tot badkamer aanpassingen - wij hebben de oplossing.
+            Van trapleuningen tot badkamer aanpassingen - wij hebben de oplossing. <strong>Inclusief WMO-ondersteuning.</strong>
           </p>
           <div class="hero-stats">
             <div class="stat-item">
-              <span class="stat-number">100+</span>
-              <span class="stat-label">verschillende producten</span>
+              <span class="stat-number">WMO</span>
+              <span class="stat-label">ondersteuning</span>
             </div>
             <div class="stat-item">
               <span class="stat-number">15+</span>
@@ -41,137 +83,161 @@ import Footer from '../../components/Footer.astro';
     <!-- Categories Section -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Onze Hulpmiddelen</h2>
+        <h2 class="section-title">Productcategorieën</h2>
         <div class="categories-grid">
-          <div class="category-card">
+          <div class="category-card" itemscope itemtype="https://schema.org/Product">
             <div class="category-image">
-              <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Trapleuningen" />
+              <img src="/src/assets/img_site/pexels-pixabay-302083.jpg" alt="trapleuningen WMO-gepast veilig" loading="lazy" />
             </div>
             <div class="category-content">
-              <h3 class="category-title">Trapleuningen</h3>
-              <p class="category-description">
+              <h3 class="category-title" itemprop="name">Trapleuningen</h3>
+              <p class="category-description" itemprop="description">
                 Veilige en stevige trapleuningen voor extra ondersteuning. Op maat gemaakt voor uw trap.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-gepast</strong> - Subsidie mogelijk
+              </div>
               <ul class="category-features">
                 <li>Maatwerk leuningen</li>
                 <li>Verschillende materialen</li>
                 <li>Binnen en buiten gebruik</li>
                 <li>Ergonomische handgrepen</li>
               </ul>
-              <div class="category-price">
+              <div class="category-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€125</span>
+                <span class="price-amount" itemprop="price">€125</span>
+                <meta itemprop="priceCurrency" content="EUR">
               </div>
             </div>
           </div>
 
-          <div class="category-card">
+          <div class="category-card" itemscope itemtype="https://schema.org/Product">
             <div class="category-image">
-              <img src="https://images.pexels.com/photos/6195127/pexels-photo-6195127.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Drempelhulpen" />
+              <img src="/src/assets/img_site/pexels-pixabay-33786.jpg" alt="drempelhulpen WMO-ondersteuning toegankelijk" loading="lazy" />
             </div>
             <div class="category-content">
-              <h3 class="category-title">Drempelhulpen</h3>
-              <p class="category-description">
+              <h3 class="category-title" itemprop="name">Drempelhulpen</h3>
+              <p class="category-description" itemprop="description">
                 Maak drempels toegankelijk met onze drempelhulpen. Perfect voor rolstoelen en rollatoren.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-ondersteuning</strong> - Toegankelijkheid
+              </div>
               <ul class="category-features">
                 <li>Verschillende hoogtes</li>
                 <li>Anti-slip oppervlak</li>
                 <li>Weerbestendig</li>
                 <li>Eenvoudig te installeren</li>
               </ul>
-              <div class="category-price">
+              <div class="category-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€45</span>
+                <span class="price-amount" itemprop="price">€45</span>
+                <meta itemprop="priceCurrency" content="EUR">
               </div>
             </div>
           </div>
 
-          <div class="category-card">
+          <div class="category-card" itemscope itemtype="https://schema.org/Product">
             <div class="category-image">
-              <img src="https://images.pexels.com/photos/6195128/pexels-photo-6195128.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Opstahulpen" />
+              <img src="/src/assets/img_site/pexels-olly-3768131.jpg" alt="opstahulpen WMO-subsidie hulp opstaan" loading="lazy" />
             </div>
             <div class="category-content">
-              <h3 class="category-title">Opstahulpen</h3>
-              <p class="category-description">
+              <h3 class="category-title" itemprop="name">Opstahulpen</h3>
+              <p class="category-description" itemprop="description">
                 Hulp bij het opstaan uit bed of stoel. Geeft extra steun en zekerheid.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-subsidie mogelijk</strong> - Ondersteuning
+              </div>
               <ul class="category-features">
                 <li>Verstelbare hoogte</li>
                 <li>Stevige constructie</li>
                 <li>Verschillende modellen</li>
                 <li>Eenvoudig te gebruiken</li>
               </ul>
-              <div class="category-price">
+              <div class="category-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€85</span>
+                <span class="price-amount" itemprop="price">€85</span>
+                <meta itemprop="priceCurrency" content="EUR">
               </div>
             </div>
           </div>
 
-          <div class="category-card">
+          <div class="category-card" itemscope itemtype="https://schema.org/Product">
             <div class="category-image">
-              <img src="https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Badkamer hulpmiddelen" />
+              <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="badkamer hulpmiddelen WMO-veiligheid" loading="lazy" />
             </div>
             <div class="category-content">
-              <h3 class="category-title">Badkamer Hulpmiddelen</h3>
-              <p class="category-description">
+              <h3 class="category-title" itemprop="name">Badkamer Hulpmiddelen</h3>
+              <p class="category-description" itemprop="description">
                 Maak uw badkamer veiliger met onze badkamer hulpmiddelen. Van douchestoelen tot beugels.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-veiligheid</strong> - Badkamer aanpassingen
+              </div>
               <ul class="category-features">
                 <li>Douchestoelen</li>
                 <li>Badkamer beugels</li>
                 <li>Anti-slip strips</li>
                 <li>Toiletverhogers</li>
               </ul>
-              <div class="category-price">
+              <div class="category-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€35</span>
+                <span class="price-amount" itemprop="price">€35</span>
+                <meta itemprop="priceCurrency" content="EUR">
               </div>
             </div>
           </div>
 
-          <div class="category-card">
+          <div class="category-card" itemscope itemtype="https://schema.org/Product">
             <div class="category-image">
-              <img src="https://images.pexels.com/photos/6195130/pexels-photo-6195130.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Verlichting" />
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="veiligheidsverlichting WMO-preventie" loading="lazy" />
             </div>
             <div class="category-content">
-              <h3 class="category-title">Veiligheidsverlichting</h3>
-              <p class="category-description">
+              <h3 class="category-title" itemprop="name">Veiligheidsverlichting</h3>
+              <p class="category-description" itemprop="description">
                 Automatische verlichting voor trappen en gangen. Verhoogt de veiligheid 's nachts.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-preventie</strong> - Valpreventie
+              </div>
               <ul class="category-features">
                 <li>LED verlichting</li>
                 <li>Bewegingssensoren</li>
                 <li>Dimbaar</li>
                 <li>Energiezuinig</li>
               </ul>
-              <div class="category-price">
+              <div class="category-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€65</span>
+                <span class="price-amount" itemprop="price">€65</span>
+                <meta itemprop="priceCurrency" content="EUR">
               </div>
             </div>
           </div>
 
-          <div class="category-card">
+          <div class="category-card" itemscope itemtype="https://schema.org/Product">
             <div class="category-image">
-              <img src="https://images.pexels.com/photos/6195131/pexels-photo-6195131.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Alertsystemen" />
+              <img src="/src/assets/img_site/ouderenalarm.jpg" alt="alarmsystemen WMO-zorg hulp" loading="lazy" />
             </div>
             <div class="category-content">
-              <h3 class="category-title">Persoonlijke Alarmsystemen</h3>
-              <p class="category-description">
+              <h3 class="category-title" itemprop="name">Persoonlijke Alarmsystemen</h3>
+              <p class="category-description" itemprop="description">
                 Blijf veilig met onze persoonlijke alarmsystemen. Hulp op afstand beschikbaar.
               </p>
+              <div class="wmo-highlight">
+                <strong>WMO-zorg</strong> - 24/7 hulp beschikbaar
+              </div>
               <ul class="category-features">
                 <li>24/7 hulpdienst</li>
                 <li>Waterdicht</li>
                 <li>Lange batterijduur</li>
                 <li>GPS functie</li>
               </ul>
-              <div class="category-price">
+              <div class="category-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <span class="price-from">Vanaf</span>
-                <span class="price-amount">€25</span>
+                <span class="price-amount" itemprop="price">€25</span>
                 <span class="price-per">/maand</span>
+                <meta itemprop="priceCurrency" content="EUR">
               </div>
             </div>
           </div>
@@ -199,14 +265,13 @@ import Footer from '../../components/Footer.astro';
           <div class="benefit-card">
             <div class="benefit-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 17l10 5 10-5"></path>
-                <path d="M2 12l10 5 10-5"></path>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
               </svg>
             </div>
-            <h3 class="benefit-title">Maatwerk Advies</h3>
+            <h3 class="benefit-title">WMO-Advies & Begeleiding</h3>
             <p class="benefit-description">
-              Onze experts adviseren u over de beste hulpmiddelen voor uw specifieke situatie.
+              Onze experts adviseren u over WMO-mogelijkheden en de beste hulpmiddelen voor uw situatie.
             </p>
           </div>
 
@@ -244,9 +309,9 @@ import Footer from '../../components/Footer.astro';
         <h2 class="section-title">Veelgestelde Vragen</h2>
         <div class="faq-grid">
           <div class="faq-item">
-            <h3 class="faq-question">Krijg ik vergoeding van mijn zorgverzekeraar?</h3>
+            <h3 class="faq-question">Krijg ik vergoeding via de WMO?</h3>
             <p class="faq-answer">
-              Veel hulpmiddelen worden (deels) vergoed door zorgverzekeraars. Wij helpen u graag bij het aanvragen van vergoedingen.
+              Via de WMO kunt u subsidie aanvragen voor veel hulpmiddelen. Wij helpen u graag bij het aanvragen van WMO-indicaties en vergoedingen.
             </p>
           </div>
 
@@ -281,17 +346,18 @@ import Footer from '../../components/Footer.astro';
           <h2 class="cta-title">Verhoog uw mobiliteit en zelfstandigheid</h2>
           <p class="cta-description">
             Ontdek welke hulpmiddelen u kunnen helpen om langer zelfstandig te blijven wonen. 
-            Vraag een gratis adviesgesprek aan.
+            Vraag een gratis adviesgesprek aan met WMO-expertise.
           </p>
           <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary btn-large">
+            <a href="tel:020-123-45-67" class="btn btn-primary btn-large" id="cta-phone-hulpmiddelen">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Bel 020 123 45 67
             </a>
-            <a href="/offerte" class="btn btn-secondary btn-large">Gratis Advies</a>
+            <a href="/offerte" class="btn btn-secondary btn-large" id="cta-hulpmiddel-wmo">WMO Hulpmiddel Check</a>
           </div>
+          <p class="cta-note">Binnen 24 uur reactie</p>
         </div>
       </div>
     </section>
@@ -400,9 +466,18 @@ import Footer from '../../components/Footer.astro';
 
   .category-description {
     color: var(--text-gray);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.6;
     flex-grow: 1;
+  }
+
+  .wmo-highlight {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
   }
 
   .category-features {
@@ -550,6 +625,13 @@ import Footer from '../../components/Footer.astro';
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .cta-note {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    font-style: italic;
   }
 
   .btn-large {

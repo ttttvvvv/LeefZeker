@@ -5,10 +5,83 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="Diensten - Installatie, Onderhoud & Service | LeefZeker"
-  description="Ontdek onze diensten: professionele installatie, onderhoud, reparatie en 24/7 service voor trapliften en mobiliteitshulpmiddelen."
+  title="Diensten - Installatie, Onderhoud & WMO-advies | LeefZeker"
+  description="Installatie, onderhoud, subsidieaanvraag en WMO-advies. Professionele dienstverlening voor trapliften en mobiliteitshulpmiddelen."
 >
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Traplift Diensten",
+    "description": "Installatie, onderhoud, subsidieaanvraag en WMO-advies",
+    "provider": {
+      "@type": "Organization",
+      "name": "LeefZeker"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Diensten",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Gratis Thuisadvies",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Professionele trapinspectie en persoonlijk advies op maat"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professionele Installatie",
+          "description": "Installatie door ervaren monteurs, meestal binnen 1 dag klaar"
+        },
+        {
+          "@type": "Offer",
+          "name": "Onderhoud & Service",
+          "price": "95",
+          "priceCurrency": "EUR",
+          "description": "Jaarlijks onderhoudsbeurt met preventieve controles"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hoe snel kan een traplift geïnstalleerd worden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rechte trapliften kunnen meestal binnen 1-2 weken geleverd en geïnstalleerd worden. Voor gebogen trapliften is dit 2-4 weken vanwege het maatwerk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Helpen jullie bij subsidieaanvragen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absoluut! Wij hebben ervaring met alle subsidie- en vergoedingsmogelijkheden en helpen u graag bij het aanvragen ervan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat is inbegrepen in de 5 jaar garantie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Onze garantie dekt alle onderdelen, reparaties en service. Alleen slijtage door intensief gebruik valt niet onder de garantie."
+        }
+      }
+    ]
+  }
+  </script>
   
   <main>
     <!-- Hero Section -->
@@ -17,7 +90,7 @@ import Footer from '../components/Footer.astro';
         <div class="hero-content">
           <h1 class="hero-title">Onze Diensten</h1>
           <p class="hero-description">
-            Van gratis thuisadvies tot professionele installatie en 24/7 service - 
+            Installatie, onderhoud, subsidieaanvraag en WMO-advies - 
             wij bieden u een complete service rondom uw mobiliteit.
           </p>
           <div class="hero-features">
@@ -30,9 +103,10 @@ import Footer from '../components/Footer.astro';
             </div>
             <div class="hero-feature">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
               </svg>
-              <span>5 jaar garantie</span>
+              <span>WMO-ondersteuning</span>
             </div>
             <div class="hero-feature">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -72,7 +146,7 @@ import Footer from '../components/Footer.astro';
               <div class="service-price">
                 <span class="price-amount">Gratis</span>
               </div>
-              <a href="/contact" class="btn btn-primary">Afspraak Maken</a>
+              <a href="/contact" class="btn btn-primary" id="cta-plan-installatie">Afspraak Maken</a>
             </div>
           </div>
 
@@ -98,7 +172,7 @@ import Footer from '../components/Footer.astro';
               <div class="service-price">
                 <span class="price-amount">Inbegrepen</span>
               </div>
-              <a href="/offerte" class="btn btn-primary">Offerte Aanvragen</a>
+              <a href="/offerte" class="btn btn-primary" id="cta-plan-installatie">Offerte Aanvragen</a>
             </div>
           </div>
 
@@ -124,7 +198,7 @@ import Footer from '../components/Footer.astro';
                 <span class="price-amount">€95</span>
                 <span class="price-per">/jaar</span>
               </div>
-              <a href="/contact" class="btn btn-primary">Meer Info</a>
+              <a href="/contact" class="btn btn-primary" id="cta-onderhoud-overeenkomst">Meer Info</a>
             </div>
           </div>
 
@@ -148,7 +222,7 @@ import Footer from '../components/Footer.astro';
               <div class="service-price">
                 <span class="price-amount">020 123 45 67</span>
               </div>
-              <a href="tel:020-123-45-67" class="btn btn-primary">Direct Bellen</a>
+              <a href="tel:020-123-45-67" class="btn btn-primary" id="cta-phone-diensten">Direct Bellen</a>
             </div>
           </div>
 
@@ -172,34 +246,32 @@ import Footer from '../components/Footer.astro';
               <div class="service-price">
                 <span class="price-amount">Inbegrepen</span>
               </div>
-              <a href="/contact" class="btn btn-primary">Meer Info</a>
+              <a href="/contact" class="btn btn-primary" id="cta-garantie-info">Meer Info</a>
             </div>
           </div>
 
           <div class="service-card">
             <div class="service-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="8.5" cy="7" r="4"></circle>
-                <path d="M20 8v6"></path>
-                <path d="M23 11h-6"></path>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
               </svg>
             </div>
             <div class="service-content">
-              <h3 class="service-title">Financiering & Subsidies</h3>
+              <h3 class="service-title">WMO-advies & Subsidies</h3>
               <p class="service-description">
-                Wij helpen u bij het aanvragen van subsidies en bieden flexibele financieringsmogelijkheden.
+                Wij helpen u bij het aanvragen van WMO-indicaties en subsidies, en bieden flexibele financieringsmogelijkheden.
               </p>
               <ul class="service-features">
-                <li>Hulp bij subsidieaanvragen</li>
-                <li>Flexibele betaalmogelijkheden</li>
+                <li>Hulp bij WMO-indicatie aanvragen</li>
+                <li>Subsidie-aanvraag begeleiding</li>
                 <li>Huur- en leaseconstructies</li>
                 <li>Zorgverzekering informatie</li>
               </ul>
               <div class="service-price">
                 <span class="price-amount">Gratis advies</span>
               </div>
-              <a href="/contact" class="btn btn-primary">Advies Aanvragen</a>
+              <a href="/contact" class="btn btn-primary" id="cta-subsidieadvies">Subsidie Advies</a>
             </div>
           </div>
         </div>
@@ -226,7 +298,7 @@ import Footer from '../components/Footer.astro';
             <div class="step-content">
               <h3 class="step-title">Gratis Thuisadvies</h3>
               <p class="step-description">
-                Onze adviseur komt bij u langs en bekijkt uw situatie. Samen bespreken we de mogelijkheden.
+                Onze adviseur komt bij u langs en bekijkt uw situatie. Samen bespreken we de mogelijkheden en WMO-opties.
               </p>
             </div>
           </div>
@@ -310,9 +382,9 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <div class="faq-item">
-            <h3 class="faq-question">Helpen jullie bij subsidieaanvragen?</h3>
+            <h3 class="faq-question">Helpen jullie bij WMO-subsidieaanvragen?</h3>
             <p class="faq-answer">
-              Absoluut! Wij hebben ervaring met alle subsidie- en vergoedingsmogelijkheden 
+              Absoluut! Wij hebben ervaring met alle WMO-indicaties en subsidie-mogelijkheden 
               en helpen u graag bij het aanvragen ervan.
             </p>
           </div>
@@ -330,14 +402,15 @@ import Footer from '../components/Footer.astro';
             of neem contact op voor meer informatie.
           </p>
           <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary btn-large">
+            <a href="tel:020-123-45-67" class="btn btn-primary btn-large" id="cta-phone-diensten-footer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               Bel 020 123 45 67
             </a>
-            <a href="/contact" class="btn btn-secondary btn-large">Gratis Thuisadvies</a>
+            <a href="/contact" class="btn btn-secondary btn-large" id="cta-thuisadvies-footer">Gratis Thuisadvies</a>
           </div>
+          <p class="cta-note">Binnen 24 uur reactie</p>
         </div>
       </div>
     </section>
@@ -597,6 +670,13 @@ import Footer from '../components/Footer.astro';
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .cta-note {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    font-style: italic;
   }
 
   .btn-large {
