@@ -1,0 +1,874 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Gratis Offerte - LeefZeker Trapliften & Mobiliteitshulpmiddelen">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Gratis Offerte Aanvragen</h1>
+          <p class="hero-description">
+            Vraag vandaag nog een vrijblijvende offerte aan. 
+            Wij berekenen de beste prijs voor uw specifieke situatie.
+          </p>
+          <div class="hero-features">
+            <div class="feature-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span>Geheel vrijblijvend</span>
+            </div>
+            <div class="feature-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span>Gratis thuisadvies</span>
+            </div>
+            <div class="feature-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              <span>Binnen 24 uur reactie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="section">
+      <div class="container">
+        <div class="quote-content">
+          <!-- Quote Form -->
+          <div class="quote-form-section">
+            <form class="quote-form" id="quote-form">
+              <div class="form-step active" data-step="1">
+                <h2 class="step-title">Stap 1: Uw Situatie</h2>
+                <p class="step-description">Vertel ons over uw trap en wensen</p>
+
+                <div class="form-group">
+                  <label class="form-label">Wat voor type trap heeft u? *</label>
+                  <div class="radio-group">
+                    <label class="radio-label">
+                      <input type="radio" name="trapType" value="recht" required />
+                      <span class="radio-custom"></span>
+                      <div class="radio-content">
+                        <strong>Rechte trap</strong>
+                        <span>Trap zonder bochten of wendingen</span>
+                      </div>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="trapType" value="gebogen" required />
+                      <span class="radio-custom"></span>
+                      <div class="radio-content">
+                        <strong>Gebogen trap</strong>
+                        <span>Trap met bochten, wendingen of tussenbordes</span>
+                      </div>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="trapType" value="buiten" required />
+                      <span class="radio-custom"></span>
+                      <div class="radio-content">
+                        <strong>Buitentrap</strong>
+                        <span>Trap aan de buitenkant van het huis</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Hoeveel treden heeft uw trap ongeveer? *</label>
+                  <select name="treden" class="form-select" required>
+                    <option value="">Kies aantal treden</option>
+                    <option value="1-10">1-10 treden</option>
+                    <option value="11-15">11-15 treden</option>
+                    <option value="16-20">16-20 treden</option>
+                    <option value="21+">Meer dan 20 treden</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Waar bevindt zich de trap? *</label>
+                  <select name="locatie" class="form-select" required>
+                    <option value="">Kies locatie</option>
+                    <option value="binnen-hoofdtrap">Binnen - hoofdtrap</option>
+                    <option value="binnen-zoldertrap">Binnen - zoldertrap</option>
+                    <option value="binnen-keldertrap">Binnen - keldertrap</option>
+                    <option value="buiten-voordeur">Buiten - bij voordeur</option>
+                    <option value="buiten-achterdeur">Buiten - bij achterdeur</option>
+                    <option value="anders">Anders</option>
+                  </select>
+                </div>
+
+                <button type="button" class="btn btn-primary next-step">Volgende Stap</button>
+              </div>
+
+              <div class="form-step" data-step="2">
+                <h2 class="step-title">Stap 2: Uw Voorkeuren</h2>
+                <p class="step-description">Wat zijn uw wensen en eisen?</p>
+
+                <div class="form-group">
+                  <label class="form-label">Wanneer wilt u de traplift laten installeren? *</label>
+                  <select name="timing" class="form-select" required>
+                    <option value="">Kies timing</option>
+                    <option value="zo-snel-mogelijk">Zo snel mogelijk</option>
+                    <option value="binnen-maand">Binnen een maand</option>
+                    <option value="binnen-3-maanden">Binnen 3 maanden</option>
+                    <option value="nog-orienterend">Nog oriënterend</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Heeft u specifieke wensen? (meerdere antwoorden mogelijk)</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="wensen[]" value="opklapbare-zitting" />
+                      <span class="checkmark"></span>
+                      Opklapbare zitting
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="wensen[]" value="afstandsbediening" />
+                      <span class="checkmark"></span>
+                      Afstandsbediening
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="wensen[]" value="kleur-keuze" />
+                      <span class="checkmark"></span>
+                      Specifieke kleur
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="wensen[]" value="extra-veiligheid" />
+                      <span class="checkmark"></span>
+                      Extra veiligheidsvoorzieningen
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="budget" class="form-label">Wat is uw indicatieve budget?</label>
+                  <select id="budget" name="budget" class="form-select">
+                    <option value="">Geen voorkeur</option>
+                    <option value="tot-5000">Tot €5.000</option>
+                    <option value="5000-10000">€5.000 - €10.000</option>
+                    <option value="10000-15000">€10.000 - €15.000</option>
+                    <option value="meer-dan-15000">Meer dan €15.000</option>
+                  </select>
+                </div>
+
+                <div class="form-actions">
+                  <button type="button" class="btn btn-secondary prev-step">Vorige Stap</button>
+                  <button type="button" class="btn btn-primary next-step">Volgende Stap</button>
+                </div>
+              </div>
+
+              <div class="form-step" data-step="3">
+                <h2 class="step-title">Stap 3: Uw Gegevens</h2>
+                <p class="step-description">Zodat wij contact met u kunnen opnemen</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName" class="form-label">Voornaam *</label>
+                    <input type="text" id="firstName" name="firstName" class="form-input" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Achternaam *</label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" required />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email" class="form-label">E-mailadres *</label>
+                    <input type="email" id="email" name="email" class="form-input" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Telefoonnummer *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="address" class="form-label">Adres (voor thuisadvies) *</label>
+                  <input type="text" id="address" name="address" class="form-input" placeholder="Straat en huisnummer" required />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="zipcode" class="form-label">Postcode *</label>
+                    <input type="text" id="zipcode" name="zipcode" class="form-input" placeholder="1234 AB" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="city" class="form-label">Plaats *</label>
+                    <input type="text" id="city" name="city" class="form-input" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Aanvullende opmerkingen</label>
+                  <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Vertel ons meer over uw situatie of specifieke wensen..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="privacy" required />
+                    <span class="checkmark"></span>
+                    Ik ga akkoord met de <a href="/privacy" class="privacy-link">privacyverklaring</a> *
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="newsletter" />
+                    <span class="checkmark"></span>
+                    Ja, ik wil graag tips en aanbiedingen ontvangen van LeefZeker
+                  </label>
+                </div>
+
+                <div class="form-actions">
+                  <button type="button" class="btn btn-secondary prev-step">Vorige Stap</button>
+                  <button type="submit" class="btn btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Offerte Aanvragen
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Info Sidebar -->
+          <div class="info-sidebar">
+            <div class="info-card">
+              <h3 class="info-title">Wat kunt u verwachten?</h3>
+              <div class="info-steps">
+                <div class="info-step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>Offerte binnen 24 uur</h4>
+                    <p>U ontvangt een gedetailleerde offerte op maat</p>
+                  </div>
+                </div>
+                <div class="info-step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>Gratis thuisadvies</h4>
+                    <p>Onze specialist komt langs voor persoonlijk advies</p>
+                  </div>
+                </div>
+                <div class="info-step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>Professionele installatie</h4>
+                    <p>Vakkundige installatie binnen 1-2 werkdagen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h3 class="info-title">Waarom LeefZeker?</h3>
+              <ul class="info-benefits">
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  15+ jaar ervaring
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  5 jaar volledige garantie
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  CE gecertificeerde producten
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  24/7 service en onderhoud
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  Gratis thuisadvies
+                </li>
+              </ul>
+            </div>
+
+            <div class="info-card contact-card">
+              <h3 class="info-title">Direct contact?</h3>
+              <p class="contact-text">
+                Liever direct contact? Bel ons voor een persoonlijk gesprek.
+              </p>
+              <a href="tel:+31201234567" class="contact-phone">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                020 123 45 67
+              </a>
+              <p class="contact-hours">Ma-Vr: 8:00-18:00 | Za: 9:00-16:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+          <div class="progress-step active" data-step="1">
+            <div class="progress-circle">1</div>
+            <span class="progress-label">Situatie</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="2">
+            <div class="progress-circle">2</div>
+            <span class="progress-label">Voorkeuren</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="3">
+            <div class="progress-circle">3</div>
+            <span class="progress-label">Gegevens</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .hero-features {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .feature-item svg {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .quote-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    position: relative;
+  }
+
+  .quote-form-section {
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  .form-step {
+    padding: 2rem;
+    display: none;
+  }
+
+  .form-step.active {
+    display: block;
+  }
+
+  .step-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-description {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 2rem;
+  }
+
+  .form-label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--border-light);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+  }
+
+  .radio-group,
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .radio-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--border-light);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .radio-label:hover {
+    border-color: var(--primary-red);
+    background-color: rgba(215, 53, 39, 0.05);
+  }
+
+  .radio-label input[type="radio"] {
+    display: none;
+  }
+
+  .radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+
+  .radio-label input[type="radio"]:checked + .radio-custom {
+    border-color: var(--primary-red);
+    background-color: var(--primary-red);
+  }
+
+  .radio-label input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+
+  .radio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .radio-content strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .radio-content span {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .privacy-link {
+    color: var(--primary-red);
+    text-decoration: none;
+  }
+
+  .privacy-link:hover {
+    text-decoration: underline;
+  }
+
+  .info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .info-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .info-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-red);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .step-content h4 {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+  }
+
+  .step-content p {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .info-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .info-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-gray);
+  }
+
+  .info-benefits svg {
+    color: var(--success-green);
+    flex-shrink: 0;
+  }
+
+  .contact-card {
+    background: var(--warm-gray);
+  }
+
+  .contact-text {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .contact-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-phone:hover {
+    text-decoration: underline;
+  }
+
+  .contact-hours {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .progress-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--border-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--text-gray);
+    transition: all 0.2s ease;
+  }
+
+  .progress-step.active .progress-circle {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    color: var(--white);
+  }
+
+  .progress-label {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    font-weight: 500;
+  }
+
+  .progress-step.active .progress-label {
+    color: var(--primary-red);
+  }
+
+  .progress-line {
+    width: 100px;
+    height: 2px;
+    background: var(--border-light);
+    margin: 0 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .quote-content {
+      grid-template-columns: 1fr;
+    }
+
+    .info-sidebar {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-features {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+      flex-direction: column;
+    }
+
+    .progress-bar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .progress-line {
+      width: 2px;
+      height: 50px;
+      margin: 0;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('quote-form');
+    const steps = document.querySelectorAll('.form-step');
+    const progressSteps = document.querySelectorAll('.progress-step');
+    const nextButtons = document.querySelectorAll('.next-step');
+    const prevButtons = document.querySelectorAll('.prev-step');
+    
+    let currentStep = 1;
+
+    function showStep(stepNumber) {
+      // Hide all steps
+      steps.forEach(step => step.classList.remove('active'));
+      progressSteps.forEach(step => step.classList.remove('active'));
+      
+      // Show current step
+      document.querySelector(`[data-step="${stepNumber}"]`).classList.add('active');
+      document.querySelector(`.progress-step[data-step="${stepNumber}"]`).classList.add('active');
+      
+      currentStep = stepNumber;
+    }
+
+    function validateStep(stepNumber) {
+      const currentStepElement = document.querySelector(`[data-step="${stepNumber}"]`);
+      const requiredFields = currentStepElement.querySelectorAll('[required]');
+      
+      for (let field of requiredFields) {
+        if (!field.value.trim() && field.type !== 'radio' && field.type !== 'checkbox') {
+          field.focus();
+          return false;
+        }
+        
+        if (field.type === 'radio') {
+          const radioGroup = currentStepElement.querySelectorAll(`[name="${field.name}"]`);
+          const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+          if (!isChecked) {
+            return false;
+          }
+        }
+        
+        if (field.type === 'checkbox' && field.name === 'privacy') {
+          if (!field.checked) {
+            return false;
+          }
+        }
+      }
+      
+      return true;
+    }
+
+    nextButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        if (validateStep(currentStep)) {
+          if (currentStep < 3) {
+            showStep(currentStep + 1);
+          }
+        } else {
+          alert('Vul alle verplichte velden in voordat u verder gaat.');
+        }
+      });
+    });
+
+    prevButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        if (currentStep > 1) {
+          showStep(currentStep - 1);
+        }
+      });
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      if (validateStep(3)) {
+        // Here you would normally send the form data to your server
+        alert('Bedankt voor uw aanvraag! Wij nemen binnen 24 uur contact met u op voor een gratis thuisadvies.');
+        
+        // Reset form
+        form.reset();
+        showStep(1);
+      } else {
+        alert('Vul alle verplichte velden in voordat u de offerte verstuurt.');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,181 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Veilig wonen: Hoe u uw huis seniorvriendelijk maakt | LeefZeker Blog"
+  description="Praktische aanpassingen om uw huis veiliger en toegankelijker te maken voor senioren. Tips voor badkamer, keuken en algemene veiligheid."
+>
+  <Header />
+  
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="blog-meta">
+            <span class="blog-category">Veiligheid</span>
+            <span class="blog-date">10 maart 2024</span>
+            <span class="blog-read-time">7 min lezen</span>
+          </div>
+          <h1 class="blog-title">Veilig wonen: Hoe u uw huis seniorvriendelijk maakt</h1>
+          <p class="blog-excerpt">
+            Ontdek praktische aanpassingen die u kunt maken om uw huis veiliger en toegankelijker te maken voor senioren. Van badkamer tot keuken - kleine aanpassingen, grote impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="simple-article">
+          <h2>Badkamer veiligheid</h2>
+          <p>De badkamer is een van de meest risicovolle ruimtes in huis. Belangrijke aanpassingen:</p>
+          <ul>
+            <li>Anti-slip strips in bad en douche</li>
+            <li>Steunbeugels bij toilet en douche</li>
+            <li>Douchestoel of -kruk</li>
+            <li>Verhoogde toiletbril</li>
+            <li>Goede verlichting</li>
+          </ul>
+
+          <h2>Keuken aanpassingen</h2>
+          <p>Maak de keuken toegankelijker:</p>
+          <ul>
+            <li>Keukenkastjes op handige hoogte</li>
+            <li>Goede werkblad verlichting</li>
+            <li>Anti-slip matten</li>
+            <li>Ergonomische grepen</li>
+          </ul>
+
+          <h2>Algemene veiligheid</h2>
+          <p>Door het hele huis:</p>
+          <ul>
+            <li>Goede verlichting, vooral bij trappen</li>
+            <li>Geen losse vloerkleden</li>
+            <li>Drempels wegwerken</li>
+            <li>Leuningen bij trappen</li>
+            <li>Noodknop systeem</li>
+          </ul>
+
+          <div class="cta-box">
+            <h3>Hulp nodig?</h3>
+            <p>Wij helpen u graag bij het seniorvriendelijk maken van uw huis.</p>
+            <a href="/contact" class="btn btn-primary">Contact opnemen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .blog-hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .blog-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .blog-category {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .blog-date,
+  .blog-read-time {
+    opacity: 0.8;
+    font-size: 0.875rem;
+  }
+
+  .blog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .blog-excerpt {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .simple-article {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .simple-article h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin: 2rem 0 1rem 0;
+    font-weight: 700;
+  }
+
+  .simple-article p {
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .simple-article ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+
+  .simple-article li {
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .cta-box {
+    background: var(--warm-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-box h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .blog-title {
+      font-size: 2rem;
+    }
+    
+    .simple-article {
+      padding: 2rem;
+    }
+  }
+</style> 

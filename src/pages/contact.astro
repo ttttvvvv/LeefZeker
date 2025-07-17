@@ -1,0 +1,672 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact - LeefZeker Trapliften & Mobiliteitshulpmiddelen">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Contact</h1>
+          <p class="hero-description">
+            Heeft u vragen of wilt u een gratis thuisadvies? 
+            Neem contact met ons op, wij helpen u graag verder.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-content">
+          <!-- Contact Form -->
+          <div class="contact-form-section">
+            <h2 class="form-title">Stuur ons een bericht</h2>
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">Voornaam *</label>
+                  <input type="text" id="firstName" name="firstName" class="form-input" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Achternaam *</label>
+                  <input type="text" id="lastName" name="lastName" class="form-input" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" class="form-label">E-mailadres *</label>
+                  <input type="email" id="email" name="email" class="form-input" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Telefoonnummer</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Onderwerp *</label>
+                <select id="subject" name="subject" class="form-select" required>
+                  <option value="">Kies een onderwerp</option>
+                  <option value="offerte">Gratis offerte aanvragen</option>
+                  <option value="thuisadvies">Gratis thuisadvies</option>
+                  <option value="onderhoud">Onderhoud & service</option>
+                  <option value="reparatie">Reparatie</option>
+                  <option value="algemeen">Algemene vraag</option>
+                  <option value="klacht">Klacht</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Bericht *</label>
+                <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Vertel ons over uw situatie, wensen of vragen..." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="privacy" required />
+                  <span class="checkmark"></span>
+                  Ik ga akkoord met de <a href="/privacy" class="privacy-link">privacyverklaring</a> *
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" />
+                  <span class="checkmark"></span>
+                  Ja, ik wil graag tips en nieuws ontvangen van LeefZeker
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Verstuur Bericht
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info-section">
+            <h2 class="info-title">Contactgegevens</h2>
+            
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="method-content">
+                  <h3 class="method-title">Telefoon</h3>
+                  <p class="method-text">Bel ons voor direct contact</p>
+                  <a href="tel:+31201234567" class="method-link">020 123 45 67</a>
+                  <p class="method-hours">Ma-Vr: 8:00-18:00 | Za: 9:00-16:00</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="method-content">
+                  <h3 class="method-title">E-mail</h3>
+                  <p class="method-text">Stuur ons een e-mail</p>
+                  <a href="mailto:info@leefzeker.nl" class="method-link">info@leefzeker.nl</a>
+                  <p class="method-hours">Reactie binnen 24 uur</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="method-content">
+                  <h3 class="method-title">Adres</h3>
+                  <p class="method-text">Bezoek onze showroom</p>
+                  <address class="method-address">
+                    Hoofdstraat 123<br>
+                    1234 AB Amsterdam
+                  </address>
+                  <p class="method-hours">Op afspraak</p>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12,6 12,12 16,14"></polyline>
+                  </svg>
+                </div>
+                <div class="method-content">
+                  <h3 class="method-title">24/7 Service</h3>
+                  <p class="method-text">Voor spoedgevallen</p>
+                  <a href="tel:+31612345678" class="method-link">06 123 456 78</a>
+                  <p class="method-hours">Altijd bereikbaar</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Areas -->
+            <div class="service-areas">
+              <h3 class="areas-title">Werkgebied</h3>
+              <p class="areas-description">
+                Wij leveren en installeren in heel Nederland. 
+                Gratis thuisadvies in de volgende regio's:
+              </p>
+              <div class="areas-grid">
+                <div class="area-item">Amsterdam & omgeving</div>
+                <div class="area-item">Utrecht & omgeving</div>
+                <div class="area-item">Den Haag & omgeving</div>
+                <div class="area-item">Rotterdam & omgeving</div>
+                <div class="area-item">Haarlem & omgeving</div>
+                <div class="area-item">Almere & omgeving</div>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications">
+              <h3 class="cert-title">Kwaliteit & Garantie</h3>
+              <div class="cert-items">
+                <div class="cert-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <span>CE gecertificeerd</span>
+                </div>
+                <div class="cert-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <span>5 jaar garantie</span>
+                </div>
+                <div class="cert-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <span>Erkend installateur</span>
+                </div>
+                <div class="cert-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <span>15+ jaar ervaring</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+      <div class="container">
+        <h2 class="section-title">Veelgestelde Vragen</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question" data-faq="1">
+              <span>Hoe snel kan een traplift geïnstalleerd worden?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer" data-answer="1">
+              <p>Een rechte traplift kan meestal binnen 1-2 werkdagen geïnstalleerd worden. Voor gebogen trapliften duurt dit 2-4 weken vanwege het maatwerk.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="2">
+              <span>Wat kost een traplift?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer" data-answer="2">
+              <p>Rechte trapliften starten vanaf €3.500. Gebogen trapliften zijn maatwerk en starten vanaf €8.500. De exacte prijs hangt af van uw specifieke situatie.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="3">
+              <span>Is er garantie op de traplift?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer" data-answer="3">
+              <p>Ja, wij geven 5 jaar volledige garantie op alle onze trapliften en installaties. Ook bieden wij 24/7 service voor onderhoud en reparaties.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="4">
+              <span>Kan ik subsidie krijgen voor een traplift?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer" data-answer="4">
+              <p>Mogelijk kunt u een vergoeding krijgen van uw zorgverzekeraar of gemeente. Wij helpen u graag bij het aanvragen van subsidies en vergoedingen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .form-title,
+  .info-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--border-light);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+
+  .privacy-link {
+    color: var(--primary-red);
+    text-decoration: none;
+  }
+
+  .privacy-link:hover {
+    text-decoration: underline;
+  }
+
+  .contact-info-section {
+    background: var(--warm-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .contact-methods {
+    margin-bottom: 3rem;
+  }
+
+  .contact-method {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .contact-method:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .method-icon {
+    background: var(--primary-red);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .method-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .method-text {
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .method-link {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .method-link:hover {
+    text-decoration: underline;
+  }
+
+  .method-hours {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .method-address {
+    color: var(--primary-red);
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+
+  .service-areas {
+    margin-bottom: 3rem;
+  }
+
+  .areas-title,
+  .cert-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .areas-description {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .area-item {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    padding: 0.25rem 0;
+  }
+
+  .cert-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .cert-item svg {
+    color: var(--success-green);
+    flex-shrink: 0;
+  }
+
+  .faq-section {
+    background-color: var(--warm-gray);
+  }
+
+  .faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: background-color 0.2s ease;
+  }
+
+  .faq-question:hover {
+    background-color: var(--warm-gray);
+  }
+
+  .faq-icon {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .faq-question.active .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-answer.active {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 200px;
+  }
+
+  .faq-answer p {
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form,
+    .contact-info-section {
+      padding: 1.5rem;
+    }
+
+    .areas-grid,
+    .cert-items {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-question {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .faq-answer.active {
+      padding: 0 1rem 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // FAQ functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', function() {
+        const faqId = this.getAttribute('data-faq');
+        const answer = document.querySelector(`[data-answer="${faqId}"]`);
+        
+        // Close all other FAQs
+        faqQuestions.forEach(q => {
+          if (q !== this) {
+            q.classList.remove('active');
+            const otherId = q.getAttribute('data-faq');
+            const otherAnswer = document.querySelector(`[data-answer="${otherId}"]`);
+            otherAnswer.classList.remove('active');
+          }
+        });
+        
+        // Toggle current FAQ
+        this.classList.toggle('active');
+        answer.classList.toggle('active');
+      });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Here you would normally send the form data to your server
+        alert('Bedankt voor uw bericht! Wij nemen zo spoedig mogelijk contact met u op.');
+        
+        // Reset form
+        this.reset();
+      });
+    }
+  });
+</script>

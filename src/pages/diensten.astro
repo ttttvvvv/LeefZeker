@@ -1,0 +1,674 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Diensten - Installatie, Onderhoud & Service | LeefZeker"
+  description="Ontdek onze diensten: professionele installatie, onderhoud, reparatie en 24/7 service voor trapliften en mobiliteitshulpmiddelen."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Onze Diensten</h1>
+          <p class="hero-description">
+            Van gratis thuisadvies tot professionele installatie en 24/7 service - 
+            wij bieden u een complete service rondom uw mobiliteit.
+          </p>
+          <div class="hero-features">
+            <div class="hero-feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+              </svg>
+              <span>Gratis thuisadvies</span>
+            </div>
+            <div class="hero-feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <span>5 jaar garantie</span>
+            </div>
+            <div class="hero-feature">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+              <span>24/7 service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Onze Diensten</h2>
+        <div class="services-grid">
+          <div class="service-card featured">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+              </svg>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gratis Thuisadvies</h3>
+              <p class="service-description">
+                Onze experts komen vrijblijvend bij u langs om uw trap te bekijken en de beste oplossing te adviseren.
+              </p>
+              <ul class="service-features">
+                <li>Professionele trapinspectie</li>
+                <li>Persoonlijk advies op maat</li>
+                <li>Gratis en vrijblijvend</li>
+                <li>Binnen 48 uur een afspraak</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount">Gratis</span>
+              </div>
+              <a href="/contact" class="btn btn-primary">Afspraak Maken</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Professionele Installatie</h3>
+              <p class="service-description">
+                Onze ervaren monteurs zorgen voor een perfecte installatie van uw traplift of hulpmiddel.
+              </p>
+              <ul class="service-features">
+                <li>Installatie door ervaren monteurs</li>
+                <li>Meestal binnen 1 dag klaar</li>
+                <li>Uitgebreide uitleg na installatie</li>
+                <li>Opruiming en schoonmaak</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount">Inbegrepen</span>
+              </div>
+              <a href="/offerte" class="btn btn-primary">Offerte Aanvragen</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Onderhoud & Service</h3>
+              <p class="service-description">
+                Regelmatig onderhoud houdt uw traplift in topconditie. Wij zorgen ervoor dat alles perfect blijft werken.
+              </p>
+              <ul class="service-features">
+                <li>Jaarlijks onderhoudsbeurt</li>
+                <li>Preventieve controles</li>
+                <li>Vervanging van slijtonderdelen</li>
+                <li>Onderhoudscontract mogelijk</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-from">Vanaf</span>
+                <span class="price-amount">€95</span>
+                <span class="price-per">/jaar</span>
+              </div>
+              <a href="/contact" class="btn btn-primary">Meer Info</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">24/7 Storingsdienst</h3>
+              <p class="service-description">
+                Altijd bereikbaar voor noodreparaties en spoedgevallen. Uw veiligheid staat voorop.
+              </p>
+              <ul class="service-features">
+                <li>24 uur per dag bereikbaar</li>
+                <li>Snelle responstijd</li>
+                <li>Ervaren technici</li>
+                <li>Noodreparaties mogelijk</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount">020 123 45 67</span>
+              </div>
+              <a href="tel:020-123-45-67" class="btn btn-primary">Direct Bellen</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Garantie & Verzekering</h3>
+              <p class="service-description">
+                Uitgebreide garantie en verzekering voor uw gemoedsrust. Wij staan achter onze producten.
+              </p>
+              <ul class="service-features">
+                <li>5 jaar volledige garantie</li>
+                <li>Verzekering tegen schade</li>
+                <li>Gratis reparaties</li>
+                <li>Vervanging bij defect</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount">Inbegrepen</span>
+              </div>
+              <a href="/contact" class="btn btn-primary">Meer Info</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <path d="M20 8v6"></path>
+                <path d="M23 11h-6"></path>
+              </svg>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Financiering & Subsidies</h3>
+              <p class="service-description">
+                Wij helpen u bij het aanvragen van subsidies en bieden flexibele financieringsmogelijkheden.
+              </p>
+              <ul class="service-features">
+                <li>Hulp bij subsidieaanvragen</li>
+                <li>Flexibele betaalmogelijkheden</li>
+                <li>Huur- en leaseconstructies</li>
+                <li>Zorgverzekering informatie</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount">Gratis advies</span>
+              </div>
+              <a href="/contact" class="btn btn-primary">Advies Aanvragen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section">
+      <div class="container">
+        <h2 class="section-title">Hoe werkt het?</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Contact Opnemen</h3>
+              <p class="step-description">
+                Bel ons of vul het contactformulier in. Wij plannen een afspraak die u uitkomt.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Gratis Thuisadvies</h3>
+              <p class="step-description">
+                Onze adviseur komt bij u langs en bekijkt uw situatie. Samen bespreken we de mogelijkheden.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Offerte & Bestelling</h3>
+              <p class="step-description">
+                U ontvangt een duidelijke offerte. Bij akkoord plannen wij de installatie.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-title">Installatie & Uitleg</h3>
+              <p class="step-description">
+                Professionele installatie en uitgebreide uitleg. Daarna kunt u direct gebruik maken van uw traplift.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3 class="step-title">Service & Onderhoud</h3>
+              <p class="step-description">
+                Wij zorgen voor regelmatig onderhoud en zijn altijd bereikbaar voor service.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+      <div class="container">
+        <h2 class="section-title">Veelgestelde Vragen</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3 class="faq-question">Hoe snel kan een traplift geïnstalleerd worden?</h3>
+            <p class="faq-answer">
+              Rechte trapliften kunnen meestal binnen 1-2 weken geleverd en geïnstalleerd worden. 
+              Voor gebogen trapliften is dit 2-4 weken vanwege het maatwerk.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Wat is inbegrepen in de 5 jaar garantie?</h3>
+            <p class="faq-answer">
+              Onze garantie dekt alle onderdelen, reparaties en service. Alleen slijtage door 
+              intensief gebruik valt niet onder de garantie.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Zijn er onderhoudscontracten beschikbaar?</h3>
+            <p class="faq-answer">
+              Ja, wij bieden verschillende onderhoudscontracten aan. Deze zorgen voor regelmatige 
+              controles en preventief onderhoud.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Wat gebeurt er bij een storing?</h3>
+            <p class="faq-answer">
+              Onze 24/7 storingsdienst is altijd bereikbaar. In de meeste gevallen kunnen 
+              we problemen snel telefonisch oplossen of binnen 24 uur ter plaatse zijn.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Kunnen trapliften gehuurd worden?</h3>
+            <p class="faq-answer">
+              Ja, wij bieden ook huur- en leaseconstructies aan. Dit is vaak interessant 
+              voor tijdelijke situaties of bij financiële overwegingen.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Helpen jullie bij subsidieaanvragen?</h3>
+            <p class="faq-answer">
+              Absoluut! Wij hebben ervaring met alle subsidie- en vergoedingsmogelijkheden 
+              en helpen u graag bij het aanvragen ervan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Ontdek onze service</h2>
+          <p class="cta-description">
+            Ervaar zelf de LeefZeker service. Maak een afspraak voor een gratis thuisadvies 
+            of neem contact op voor meer informatie.
+          </p>
+          <div class="cta-actions">
+            <a href="/contact" class="btn btn-primary btn-large">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Bel 020 123 45 67
+            </a>
+            <a href="/contact" class="btn btn-secondary btn-large">Gratis Thuisadvies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.9;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .featured {
+    border: 2px solid var(--primary-green);
+    position: relative;
+  }
+
+  .featured::before {
+    content: 'Meest Populair';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .service-icon {
+    background: var(--primary-green);
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .service-description {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .service-features {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .service-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-gray);
+  }
+
+  .service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: bold;
+  }
+
+  .service-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .price-from {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .price-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+  }
+
+  .price-per {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .process-section {
+    background-color: var(--warm-gray);
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .step-number {
+    background: var(--primary-green);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-description {
+    color: var(--text-gray);
+    line-height: 1.5;
+  }
+
+  .faq-section {
+    background-color: var(--white);
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+
+  .faq-item {
+    background: var(--warm-gray);
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .faq-answer {
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+
+  .cta-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .cta-section .btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border-color: var(--white);
+  }
+
+  .cta-section .btn-secondary:hover {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-features {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+      grid-template-columns: 1fr;
+    }
+
+    .step {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+    }
+
+    .step-title {
+      font-size: 1.125rem;
+    }
+
+    .cta-title {
+      font-size: 1.75rem;
+    }
+  }
+</style> 

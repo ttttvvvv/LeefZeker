@@ -1,0 +1,473 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Producten - LeefZeker Trapliften & Mobiliteitshulpmiddelen">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Onze Producten</h1>
+          <p class="hero-description">
+            Ontdek ons complete assortiment trapliften en mobiliteitshulpmiddelen. 
+            Alle producten zijn speciaal geselecteerd voor optimale veiligheid en comfort.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="categories-grid">
+          <div class="category-card featured">
+            <div class="category-image">
+              <img src="https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Trapliften" />
+              <div class="category-badge">Meest Populair</div>
+            </div>
+            <div class="category-content">
+              <h2 class="category-title">Trapliften</h2>
+              <p class="category-description">
+                Onze trapliften zijn geschikt voor alle soorten trappen. Van rechte tot gebogen trappen, 
+                wij hebben de perfecte oplossing voor uw situatie.
+              </p>
+              <ul class="category-features">
+                <li>Rechte trapliften vanaf €3.500</li>
+                <li>Gebogen trapliften op maat</li>
+                <li>Binnen- en buitentrapliften</li>
+                <li>5 jaar volledige garantie</li>
+              </ul>
+              <div class="category-actions">
+                <a href="/producten/trapliften" class="btn btn-primary">Bekijk Trapliften</a>
+                <a href="/offerte" class="btn btn-secondary">Gratis Offerte</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img src="https://images.pexels.com/photos/6195124/pexels-photo-6195124.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Platformliften" />
+            </div>
+            <div class="category-content">
+              <h2 class="category-title">Platformliften</h2>
+              <p class="category-description">
+                Ideaal voor rolstoelgebruikers en mensen met een rollator. 
+                Veilig en betrouwbaar transport tussen verdiepingen.
+              </p>
+              <ul class="category-features">
+                <li>Geschikt voor rolstoelen</li>
+                <li>Binnen en buiten plaatsing</li>
+                <li>Verschillende hoogtes mogelijk</li>
+                <li>CE gecertificeerd</li>
+              </ul>
+              <div class="category-actions">
+                <a href="/producten/platformliften" class="btn btn-primary">Bekijk Platformliften</a>
+                <a href="/offerte" class="btn btn-secondary">Gratis Offerte</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mobiliteitshulpmiddelen" />
+            </div>
+            <div class="category-content">
+              <h2 class="category-title">Mobiliteitshulpmiddelen</h2>
+              <p class="category-description">
+                Aanvullende hulpmiddelen om uw mobiliteit en zelfstandigheid te vergroten. 
+                Van leuningen tot drempelhulpen.
+              </p>
+              <ul class="category-features">
+                <li>Trapleuningen op maat</li>
+                <li>Drempelhulpen</li>
+                <li>Opstahulpen</li>
+                <li>Badkamer aanpassingen</li>
+              </ul>
+              <div class="category-actions">
+                <a href="/producten/hulpmiddelen" class="btn btn-primary">Bekijk Hulpmiddelen</a>
+                <a href="/offerte" class="btn btn-secondary">Gratis Offerte</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section">
+      <div class="container">
+        <h2 class="section-title">Waarom kiezen voor onze producten?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3 class="feature-title">Hoogste Kwaliteit</h3>
+            <p class="feature-description">
+              Alle producten voldoen aan de hoogste Europese veiligheidsnormen en zijn CE gecertificeerd.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">5 Jaar Garantie</h3>
+            <p class="feature-description">
+              Uitgebreide garantie op alle producten en installaties voor uw gemoedsrust.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Persoonlijk Advies</h3>
+            <p class="feature-description">
+              Gratis thuisadvies om de perfecte oplossing voor uw specifieke situatie te vinden.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12,6 12,12 16,14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Snelle Installatie</h3>
+            <p class="feature-description">
+              Professionele installatie binnen 1-2 werkdagen, met minimale overlast.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">24/7 Service</h3>
+            <p class="feature-description">
+              Altijd bereikbaar voor onderhoud, reparaties en spoedgevallen.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Maatwerk Mogelijk</h3>
+            <p class="feature-description">
+              Elke installatie wordt aangepast aan uw specifieke wensen en trapsituatie.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Wilt u meer weten over onze producten?</h2>
+          <p class="cta-description">
+            Neem contact met ons op voor een gratis thuisadvies of vraag direct een offerte aan.
+          </p>
+          <div class="cta-actions">
+            <a href="/contact" class="btn btn-primary btn-large">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Bel 020 123 45 67
+            </a>
+            <a href="/offerte" class="btn btn-secondary btn-large">Gratis Offerte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .category-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .category-card:nth-child(even) {
+    direction: rtl;
+  }
+
+  .category-card:nth-child(even) .category-content {
+    direction: ltr;
+  }
+
+  .featured {
+    border: 2px solid var(--primary-red);
+  }
+
+  .category-image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .category-card:hover .category-image img {
+    transform: scale(1.05);
+  }
+
+  .category-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .category-content {
+    padding: 2rem;
+  }
+
+  .category-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .category-description {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.125rem;
+  }
+
+  .category-features {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .category-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-gray);
+  }
+
+  .category-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-green);
+    font-weight: bold;
+  }
+
+  .category-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .features-section {
+    background-color: var(--warm-gray);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-icon {
+    background: var(--primary-red);
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .feature-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+
+  .cta-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .cta-section .btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-red);
+    border-color: var(--white);
+  }
+
+  .cta-section .btn-secondary:hover {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  @media (max-width: 1024px) {
+    .category-card {
+      grid-template-columns: 1fr;
+    }
+
+    .category-card:nth-child(even) {
+      direction: ltr;
+    }
+
+    .category-image {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .category-title {
+      font-size: 1.5rem;
+    }
+
+    .category-actions {
+      flex-direction: column;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

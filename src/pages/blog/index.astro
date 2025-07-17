@@ -1,0 +1,473 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const blogPosts = [
+  {
+    id: 1,
+    title: "5 Tips voor het kiezen van de juiste traplift",
+    excerpt: "Het kiezen van een traplift is een belangrijke beslissing. Lees onze praktische tips om de beste keuze te maken voor uw situatie.",
+    image: "https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=600",
+    date: "15 maart 2024",
+    category: "Tips & Advies",
+    readTime: "5 min"
+  },
+  {
+    id: 2,
+    title: "Veilig wonen: Hoe u uw huis seniorvriendelijk maakt",
+    excerpt: "Ontdek praktische aanpassingen die u kunt maken om uw huis veiliger en toegankelijker te maken voor senioren.",
+    image: "https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=600",
+    date: "10 maart 2024",
+    category: "Veiligheid",
+    readTime: "7 min"
+  },
+  {
+    id: 3,
+    title: "Onderhoud van uw traplift: Wat u moet weten",
+    excerpt: "Regelmatig onderhoud zorgt ervoor dat uw traplift optimaal blijft functioneren. Lees hier alles over onderhoud en service.",
+    image: "https://images.pexels.com/photos/6195124/pexels-photo-6195124.jpeg?auto=compress&cs=tinysrgb&w=600",
+    date: "5 maart 2024",
+    category: "Onderhoud",
+    readTime: "4 min"
+  },
+  {
+    id: 4,
+    title: "Subsidies en vergoedingen voor trapliften",
+    excerpt: "Informatie over mogelijke subsidies en vergoedingen van zorgverzekeraars voor de aanschaf van een traplift.",
+    image: "https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600",
+    date: "28 februari 2024",
+    category: "Financiering",
+    readTime: "6 min"
+  },
+  {
+    id: 5,
+    title: "Platformliften vs Trapliften: Wat is het verschil?",
+    excerpt: "Leer het verschil tussen platformliften en trapliften en ontdek welke oplossing het beste bij uw situatie past.",
+    image: "https://images.pexels.com/photos/7551660/pexels-photo-7551660.jpeg?auto=compress&cs=tinysrgb&w=600",
+    date: "20 februari 2024",
+    category: "Producten",
+    readTime: "5 min"
+  },
+  {
+    id: 6,
+    title: "Installatie van een traplift: Wat kunt u verwachten?",
+    excerpt: "Een stap-voor-stap overzicht van het installatieproces van een traplift, van eerste bezoek tot eindcontrole.",
+    image: "https://images.pexels.com/photos/6195123/pexels-photo-6195123.jpeg?auto=compress&cs=tinysrgb&w=600",
+    date: "15 februari 2024",
+    category: "Installatie",
+    readTime: "8 min"
+  }
+];
+
+const categories = ["Alle", "Tips & Advies", "Veiligheid", "Onderhoud", "Financiering", "Producten", "Installatie"];
+---
+
+<Layout title="Blog - LeefZeker Tips & Advies voor Senioren">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Blog & Tips</h1>
+          <p class="hero-description">
+            Ontdek nuttige tips, advies en informatie over trapliften, veilig wonen en mobiliteit voor senioren.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="section">
+      <div class="container">
+        <div class="featured-post">
+          <div class="featured-image">
+            <img src={blogPosts[0].image} alt={blogPosts[0].title} />
+            <div class="featured-badge">Uitgelicht</div>
+          </div>
+          <div class="featured-content">
+            <div class="post-meta">
+              <span class="post-category">{blogPosts[0].category}</span>
+              <span class="post-date">{blogPosts[0].date}</span>
+              <span class="post-read-time">{blogPosts[0].readTime} lezen</span>
+            </div>
+            <h2 class="featured-title">{blogPosts[0].title}</h2>
+            <p class="featured-excerpt">{blogPosts[0].excerpt}</p>
+            <a href={`/blog/${blogPosts[0].id}`} class="btn btn-primary">Lees Meer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="section blog-section">
+      <div class="container">
+        <!-- Category Filter -->
+        <div class="category-filter">
+          {categories.map(category => (
+            <button class={`filter-btn ${category === 'Alle' ? 'active' : ''}`} data-category={category}>
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <!-- Posts Grid -->
+        <div class="posts-grid">
+          {blogPosts.slice(1).map(post => (
+            <article class="post-card" data-category={post.category}>
+              <div class="post-image">
+                <img src={post.image} alt={post.title} />
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span class="post-category">{post.category}</span>
+                  <span class="post-date">{post.date}</span>
+                  <span class="post-read-time">{post.readTime} lezen</span>
+                </div>
+                <h3 class="post-title">{post.title}</h3>
+                <p class="post-excerpt">{post.excerpt}</p>
+                <a href={`/blog/${post.id}`} class="read-more">Lees meer →</a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-section">
+          <button class="btn btn-secondary">Meer Artikelen Laden</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h2 class="newsletter-title">Blijf op de hoogte</h2>
+            <p class="newsletter-description">
+              Ontvang onze nieuwsbrief met de laatste tips, nieuws en aanbiedingen voor senioren.
+            </p>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Uw e-mailadres" class="newsletter-input" required />
+            <button type="submit" class="btn btn-primary">Aanmelden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .featured-post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .featured-image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .featured-content {
+    padding: 2rem;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .post-category {
+    background: var(--primary-red);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: 500;
+  }
+
+  .post-date,
+  .post-read-time {
+    color: var(--text-gray);
+  }
+
+  .featured-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .featured-excerpt {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.125rem;
+  }
+
+  .blog-section {
+    background-color: var(--warm-gray);
+  }
+
+  .category-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--border-light);
+    background: var(--white);
+    color: var(--text-gray);
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--primary-red);
+    color: var(--white);
+    border-color: var(--primary-red);
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .post-card {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .post-image {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .post-card:hover .post-image img {
+    transform: scale(1.05);
+  }
+
+  .post-content {
+    padding: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .post-excerpt {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .read-more {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .read-more:hover {
+    color: var(--primary-red-dark);
+  }
+
+  .load-more-section {
+    text-align: center;
+  }
+
+  .newsletter-section {
+    background: linear-gradient(135deg, var(--text-dark) 0%, #374151 100%);
+    color: var(--white);
+  }
+
+  .newsletter-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .newsletter-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-description {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  .newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .newsletter-input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+  }
+
+  @media (max-width: 1024px) {
+    .featured-post,
+    .newsletter-content {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .featured-title {
+      font-size: 1.5rem;
+    }
+
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .category-filter {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+
+    .filter-btn {
+      white-space: nowrap;
+    }
+
+    .newsletter-form {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const postCards = document.querySelectorAll('.post-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter posts
+        postCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (category === 'Alle' || cardCategory === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
