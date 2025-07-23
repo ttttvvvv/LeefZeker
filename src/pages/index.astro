@@ -5,8 +5,8 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="Trapliften & Mobiliteitshulpmiddelen – LeefZeker"
-  description="LeefZeker levert trapliften, platformliften en mobiliteitshulpmiddelen met WMO-advies. Gratis thuisadvies, 5 jaar garantie."
+  title="LeefZeker – Veilig wonen voor ouderen met persoonlijk advies & WMO-hulp"
+  description="Persoonlijk advies aan huis voor veilig wonen op leeftijd – van valpreventie tot traplift, airco, alarmering of WMO-aanvraag. Eén aanspreekpunt, alles geregeld."
 >
   <Header />
   
@@ -63,6 +63,48 @@ import Footer from '../components/Footer.astro';
     }
   }
   </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wat is WMO en hoe werkt het?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De Wet Maatschappelijke Ondersteuning (WMO) helpt inwoners om zo lang mogelijk zelfstandig thuis te wonen. Via de WMO kunt u hulp krijgen bij woningaanpassingen zoals trapliften, drempelhulpen, of badkameraanpassingen. De aanvraag loopt via uw gemeente, eigen bijdrage is vaak laag (€19-€150 per maand), en wij begeleiden u door het hele proces."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "Hoe regel ik subsidie voor woningaanpassingen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Er zijn verschillende mogelijkheden: WMO via gemeente, Blijverslening via bank, of eigen financiering. Wij zorgen dat u niets over het hoofd ziet. We bieden gratis subsidiecheck bij thuisbezoek, vullen formulieren voor u in, hebben contact met gemeente namens u, en bespreken alternatieve financieringsmogelijkheden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welke woningaanpassingen zijn er allemaal?", 
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Van kleine aanpassingen tot grote verbouwingen — wij kijken wat écht nodig is voor uw veiligheid en comfort. Denk aan leuningen, drempelhulpen, douche-instap, trapliften, platformliften, alarmering, betere verlichting, slimme sensoren, airconditioning en automatische gordijnen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat kosten woningaanpassingen gemiddeld?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Kosten variëren sterk, maar veel aanpassingen worden (gedeeltelijk) vergoed via WMO of Blijverslening. Kleine aanpassingen kosten €100-500 (vaak volledig vergoed), een rechte traplift €3.500-5.000, een gebogen traplift €8.500-12.000, en badkameraanpassingen €2.000-8.000."
+        }
+      }
+    ]
+  }
+  </script>
   
   <main>
     <!-- Hero Section -->
@@ -71,21 +113,23 @@ import Footer from '../components/Footer.astro';
         <div class="hero-content">
           <div class="hero-text">
             <h1 class="hero-title">
-              Trapliften, Advies & Mobiliteitshulpmiddelen – <span class="highlight">Veilig, Zelfstandig, Thuis</span>
+              Veilig wonen begint met persoonlijk advies
             </h1>
             <h2 class="hero-subtitle">
-              Trapliften op maat, platform en mobiliteitshulpmiddelen voor senioren – inclusief WMO-advies & subsidiebegeleiding.
+              Wij komen aan huis om te bekijken wat écht nodig is — van valpreventie tot airco bij hitte, van trapliften tot slimme alarmering. Met één vast aanspreekpunt regelen wij ook de WMO-aanvraag, installatie én onderhoud.
             </h2>
+            <blockquote class="hero-quote">
+              Voor ouderen die zelfstandig willen blijven wonen — zonder zorgen.
+            </blockquote>
             <div class="hero-actions">
-              <a href="/offerte" class="btn btn-primary" id="cta-hero-offerte">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"></path>
-                  <polyline points="9,11 12,14 15,11"></polyline>
-                  <line x1="12" y1="2" x2="12" y2="14"></line>
+              <a href="/contact" class="btn btn-primary" id="cta-hero-advies" aria-label="Plan een gratis thuisadvies voor veilige woningaanpassingen">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9,22 9,12 15,12 15,22"></polyline>
                 </svg>
-                Offerte traplift aanvragen
+                Plan gratis thuisadvies
               </a>
-              <a href="/producten" class="btn btn-secondary" id="cta-hero-producten">Bekijk Producten</a>
+              <a href="/diensten" class="btn btn-secondary" id="cta-hero-diensten" aria-label="Ontdek onze diensten voor veilig wonen op oudere leeftijd">Wat kunnen we voor u doen?</a>
             </div>
             <div class="hero-features">
               <div class="feature-item">
@@ -112,7 +156,7 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
           <div class="hero-image">
-            <img src="/src/assets/img_site/stairlift.jpg" alt="traplift veilige woning WMO" class="hero-img" loading="lazy" />
+            <img src="/src/assets/img_site/pexels-olly-3768131.jpg" alt="Senior thuis met adviesgever die veiligheidsopties bespreekt voor veilig wonen op oudere leeftijd" class="hero-img" loading="lazy" />
             <div class="hero-badge">
               <div class="badge-content">
                 <span class="badge-title">Gratis thuisadvies</span>
@@ -125,165 +169,562 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="section products-section">
+    <!-- Intro Section -->
+    <section class="section intro-section">
       <div class="container">
-        <h2 class="section-title">Onze Producten</h2>
+        <div class="intro-content">
+          <p class="intro-text">
+            Bij LeefZeker helpen we ouderen en mantelzorgers met álles wat nodig is om een woning veilig en comfortabel te maken.
+            Denk aan: valpreventie, slimme sensoren, airco tegen hittegolven, een betrouwbare traplift of veilige toegang voor zorgverleners.
+            Wij komen bij u thuis, bekijken de situatie en regelen het van A tot Z — inclusief subsidieaanvraag, installatie en onderhoud.
+          </p>
+          <blockquote class="intro-quote">
+            "We willen gewoon zeker weten dat mijn moeder veilig woont."
+            <cite>— Dochter van klant</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section solutions-section">
+      <div class="container">
+        <h2 class="section-title">Onze Oplossingen voor Veilig Thuis Wonen</h2>
         <p class="section-subtitle">
-          Ontdek ons uitgebreide assortiment trapliften en mobiliteitshulpmiddelen, 
-          speciaal ontworpen voor uw comfort en veiligheid.
+          Persoonlijk advies en professionele uitvoering voor elke situatie — 
+          van kleine aanpassingen tot grote verbouwingen.
         </p>
         
-        <div class="products-grid">
-          <div class="product-card" itemscope itemtype="https://schema.org/Product">
-            <div class="product-image">
-              <img src="/src/assets/img_site/stairlift.jpg" alt="Rechte traplift WMO-subsidie" loading="lazy" />
-              <div class="product-badge">Populair</div>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="solution-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                <path d="M7 16h.01M17 16h.01"></path>
+              </svg>
             </div>
-            <div class="product-content">
-              <h3 class="product-title" itemprop="name">Rechte Trapliften</h3>
-              <p class="product-description" itemprop="description">
-                Perfect voor rechte trappen. Eenvoudig te installeren en gebruiken, 
-                met alle veiligheidsvoorzieningen die u nodig heeft.
+            <div class="solution-content">
+              <h3 class="solution-title">Valpreventie &<br>woningveiligheid</h3>
+              <p class="solution-description">
+                Extra zekerheid in huis met slimme aanpassingen zoals leuningen, 
+                drempelhulpen en antislip.
               </p>
-              <ul class="product-features">
-                <li><strong>WMO-gepast</strong> - Geschikt voor alle rechte trappen</li>
-                <li><strong>Subsidie mogelijk</strong> - Veilige en comfortabele zitting</li>
-                <li>Eenvoudige bediening</li>
-              </ul>
-              <div class="product-actions">
-                <a href="/producten/trapliften" class="btn btn-primary" id="cta-rechtetrap-wmo">Meer Info</a>
-                <span class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                  Vanaf €3.500
-                </span>
-              </div>
+                              <div class="solution-actions">
+                  <a href="/oplossingen/valpreventie" class="solution-cta">Meer info →</a>
+                  <a href="/contact" class="btn btn-small btn-primary">Plan afspraak</a>
+                </div>
             </div>
           </div>
 
-          <div class="product-card" itemscope itemtype="https://schema.org/Product">
-            <div class="product-image">
-              <img src="/src/assets/img_site/stairlift installation.jpg" alt="Gebogen traplift WMO-pakket" loading="lazy" />
+          <div class="solution-card">
+            <div class="solution-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
             </div>
-            <div class="product-content">
-              <h3 class="product-title" itemprop="name">Gebogen Trapliften</h3>
-              <p class="product-description" itemprop="description">
-                Op maat gemaakt voor trappen met bochten. Elke traplift wordt 
-                speciaal aangepast aan uw unieke trapsituatie.
+            <div class="solution-content">
+              <h3 class="solution-title">Slimme alarmering &<br>sensoren</h3>
+              <p class="solution-description">
+                Personenalarmering, rookmelders, valdetectie met meldkamer 
+                of familie-koppeling voor extra zekerheid.
               </p>
-              <ul class="product-features">
-                <li><strong>WMO-pakket standaard inbegrepen</strong></li>
-                <li>Maatwerk voor elke trap</li>
-                <li>Soepele bochten en wendingen</li>
-              </ul>
-              <div class="product-actions">
-                <a href="/producten/trapliften" class="btn btn-primary" id="cta-gebogentrap-wmo">Meer Info</a>
-                <span class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                  Vanaf €8.500
-                </span>
-              </div>
+                              <div class="solution-actions">
+                  <a href="/oplossingen/alarmering" class="solution-cta">Meer info →</a>
+                  <a href="/contact" class="btn btn-small btn-primary">Plan afspraak</a>
+                </div>
             </div>
           </div>
 
-          <div class="product-card" itemscope itemtype="https://schema.org/Product">
-            <div class="product-image">
-              <img src="/src/assets/img_site/Wheelchair-Lift-Installation-Process-DME-Elevators-Lifts-scaled-1.jpg" alt="Platformlift subsidie-controle WMO" loading="lazy" />
+          <div class="solution-card">
+            <div class="solution-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                <path d="M8 16v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2"></path>
+              </svg>
             </div>
-            <div class="product-content">
-              <h3 class="product-title" itemprop="name">Platformliften</h3>
-              <p class="product-description" itemprop="description">
-                Ideaal voor rolstoelgebruikers. Veilig en betrouwbaar transport 
-                tussen verschillende verdiepingen.
+            <div class="solution-content">
+              <h3 class="solution-title">Klimaat &<br>comfort</h3>
+              <p class="solution-description">
+                Comfort het hele jaar door — speciaal voor ouderen die 
+                last hebben van hitte of kou.
               </p>
-              <ul class="product-features">
-                <li><strong>Subsidie-controle via WMO-loket</strong></li>
-                <li>Geschikt voor rolstoelen</li>
-                <li>Binnen en buiten plaatsing</li>
-              </ul>
-              <div class="product-actions">
-                <a href="/producten/platformliften" class="btn btn-primary" id="cta-platformlift-wmo">Meer Info</a>
-                <span class="product-price">Op aanvraag</span>
-              </div>
+                              <div class="solution-actions">
+                  <a href="/oplossingen/klimaat" class="solution-cta">Meer info →</a>
+                  <a href="/contact" class="btn btn-small btn-primary">Plan afspraak</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <circle cx="12" cy="16" r="1"></circle>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">Toegangscontrole &<br>digitale veiligheid</h3>
+              <p class="solution-description">
+                Veilige deuropeners, slimme sloten, hulpverlenertoegang 
+                en digitale beveiliging tegen oplichting.
+              </p>
+                              <div class="solution-actions">
+                  <a href="/oplossingen/toegang-veiligheid" class="solution-cta">Meer info →</a>
+                  <a href="/contact" class="btn btn-small btn-primary">Plan afspraak</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                <path d="M8 12h8"></path>
+              </svg>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">Mobiliteit &<br>trapondersteuning</h3>
+              <p class="solution-description">
+                Van trapliften tot rollators of wandbeugels — wij helpen u veilig en zelfstandig te bewegen in én om het huis.
+              </p>
+                              <div class="solution-actions">
+                  <a href="/oplossingen/mobiliteit" class="solution-cta">Meer info →</a>
+                  <a href="/contact" class="btn btn-small btn-primary">Plan afspraak</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                <circle cx="20" cy="12" r="2"/>
+                <path d="M22 12h-4"/>
+              </svg>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">Mantelzorg &<br>coördinatie</h3>
+              <p class="solution-description">
+                Persoonlijk advies en praktische hulp voor kinderen, buren of 
+                mantelzorgers die zorgen voor een ouder familielid.
+              </p>
+                              <div class="solution-actions">
+                  <a href="/oplossingen/mantelzorg" class="solution-cta">Meer info →</a>
+                  <a href="/contact" class="btn btn-small btn-primary">Plan afspraak</a>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="section why-choose-section">
+    <!-- Enhanced Situation Quiz Section -->
+    <section class="section quiz-section">
       <div class="container">
-        <div class="why-choose-content">
-          <div class="why-choose-text">
-            <h2 class="section-title text-left">Waarom kiezen voor LeefZeker?</h2>
-            <p class="section-subtitle text-left">
-              Met meer dan 15 jaar ervaring zijn wij dé specialist in trapliften en mobiliteitshulpmiddelen. 
-              Wij staan voor kwaliteit, betrouwbaarheid en persoonlijke service.
-            </p>
-            
-            <div class="benefits-grid">
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
+        <div class="quiz-content">
+          <div class="quiz-container">
+            <div class="quiz-header">
+              <h2 class="quiz-title">Wat past bij uw situatie?</h2>
+              <p class="quiz-subtitle">
+                Weet u niet waar te beginnen? Beantwoord een paar korte vragen 
+                en ontdek welke oplossingen het beste bij u passen.
+              </p>
+              <div class="quiz-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" id="quiz-progress-fill"></div>
                 </div>
-                <div class="benefit-content">
-                  <h3 class="benefit-title">WMO-indicatie & subsidieproces</h3>
-                  <p class="benefit-description">Volledige ondersteuning bij WMO-aanvragen en subsidiebegeleiding</p>
+                <span class="progress-text" id="quiz-progress-text">Vraag 1 van 5</span>
+              </div>
+            </div>
+
+            <div class="quiz-steps" id="quiz-steps">
+              
+              <!-- Question 1 -->
+              <div class="quiz-step active" data-step="1">
+                <div class="question-icon">🏠</div>
+                <h3 class="question-title">Hoe gaat het traplopen tegenwoordig?</h3>
+                <div class="question-options">
+                  <button class="option-button" data-theme="mobiliteit" data-answer="difficult">
+                    <span class="option-icon">😟</span>
+                    <span class="option-text">Wordt steeds lastiger</span>
+                  </button>
+                  <button class="option-button" data-theme="valpreventie" data-answer="uncertain">
+                    <span class="option-icon">😐</span>
+                    <span class="option-text">Gaat wel, maar soms onzeker</span>
+                  </button>
+                  <button class="option-button" data-answer="fine">
+                    <span class="option-icon">😊</span>
+                    <span class="option-text">Gaat nog prima</span>
+                  </button>
                 </div>
               </div>
 
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 12l2 2 4-4"></path>
-                    <circle cx="12" cy="12" r="10"></circle>
-                  </svg>
-                </div>
-                <div class="benefit-content">
-                  <h3 class="benefit-title">5 jaar garantie, onderhoudscontract</h3>
-                  <p class="benefit-description">Uitgebreide garantie en fix-on-demand service</p>
-                </div>
-              </div>
-
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12,6 12,12 16,14"></polyline>
-                  </svg>
-                </div>
-                <div class="benefit-content">
-                  <h3 class="benefit-title">Digitale offerte, planning en onderhoud</h3>
-                  <p class="benefit-description">Moderne digitale aanpak voor snelle service</p>
+              <!-- Question 2 -->
+              <div class="quiz-step" data-step="2">
+                <div class="question-icon">⚠️</div>
+                <h3 class="question-title">Is er weleens iets gebeurd waardoor u zich minder zeker voelt?</h3>
+                <div class="question-options">
+                  <button class="option-button" data-theme="valpreventie" data-answer="fell-home">
+                    <span class="option-icon">🏠</span>
+                    <span class="option-text">Ja, ik ben weleens gevallen thuis</span>
+                  </button>
+                  <button class="option-button" data-theme="alarmering" data-answer="fell-alone">
+                    <span class="option-icon">📞</span>
+                    <span class="option-text">Ja, en ik was toen alleen</span>
+                  </button>
+                  <button class="option-button" data-answer="no-falls">
+                    <span class="option-icon">✅</span>
+                    <span class="option-text">Nee, dat is gelukkig niet gebeurd</span>
+                  </button>
                 </div>
               </div>
 
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
-                  </svg>
+              <!-- Question 3 -->
+              <div class="quiz-step" data-step="3">
+                <div class="question-icon">🌡️</div>
+                <h3 class="question-title">Heeft u last van hitte in de zomer of kou in de winter?</h3>
+                <div class="question-options">
+                  <button class="option-button" data-theme="klimaat" data-answer="hot-summer">
+                    <span class="option-icon">☀️</span>
+                    <span class="option-text">Ja, vooral van de hitte</span>
+                  </button>
+                  <button class="option-button" data-theme="klimaat" data-answer="cold-winter">
+                    <span class="option-icon">❄️</span>
+                    <span class="option-text">Ja, vooral van de kou</span>
+                  </button>
+                  <button class="option-button" data-answer="comfortable">
+                    <span class="option-icon">😊</span>
+                    <span class="option-text">Nee, dat valt wel mee</span>
+                  </button>
                 </div>
-                <div class="benefit-content">
-                  <h3 class="benefit-title">Gratis thuisadvies</h3>
-                  <p class="benefit-description">Persoonlijk advies bij u thuis, geheel vrijblijvend</p>
+              </div>
+
+              <!-- Question 4 -->
+              <div class="quiz-step" data-step="4">
+                <div class="question-icon">🔒</div>
+                <h3 class="question-title">Voelt u zich altijd veilig als het om digitale dingen gaat?</h3>
+                <div class="question-options">
+                  <button class="option-button" data-theme="toegang" data-answer="often-unsure">
+                    <span class="option-icon">😟</span>
+                    <span class="option-text">Nee, vaak onzekerheid</span>
+                  </button>
+                  <button class="option-button" data-theme="toegang" data-answer="sometimes-unsure">
+                    <span class="option-icon">🤔</span>
+                    <span class="option-text">Soms wel, soms niet</span>
+                  </button>
+                  <button class="option-button" data-answer="confident">
+                    <span class="option-icon">😊</span>
+                    <span class="option-text">Ja, ik ben voorzichtig genoeg</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Question 5 -->
+              <div class="quiz-step" data-step="5">
+                <div class="question-icon">📋</div>
+                <h3 class="question-title">Vindt u het prettig als iemand u helpt met WMO of vergoeding?</h3>
+                <div class="question-options">
+                  <button class="option-button" data-theme="subsidie" data-answer="yes-help">
+                    <span class="option-icon">🤝</span>
+                    <span class="option-text">Ja, dat zou fijn zijn</span>
+                  </button>
+                  <button class="option-button" data-theme="subsidie" data-answer="unclear">
+                    <span class="option-icon">🤷</span>
+                    <span class="option-text">Het is allemaal onduidelijk</span>
+                  </button>
+                  <button class="option-button" data-answer="self-managed">
+                    <span class="option-icon">💪</span>
+                    <span class="option-text">Nee, dat regel ik liever zelf</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Results Screen -->
+              <div class="quiz-step quiz-results-step" data-step="6">
+                <div class="results-icon">✨</div>
+                <h3 class="results-title">Op basis van uw antwoorden</h3>
+                <div class="results-summary" id="quiz-results-summary"></div>
+                <div class="results-themes" id="quiz-results-themes"></div>
+                <div class="results-actions">
+                  <a href="/contact" class="btn btn-primary btn-large" id="quiz-primary-cta">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                    </svg>
+                    Plan gratis thuisadvies
+                  </a>
+                  <a href="/diensten" class="btn btn-secondary" id="quiz-secondary-cta">Bekijk eerst onze oplossingen</a>
+                </div>
+                <div class="results-note">
+                  💬 Wij komen vrijblijvend bij u langs voor persoonlijk advies op maat
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="quiz-visual">
+            <div class="visual-container" id="quiz-visual">
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Senior in overleg met adviesgever over woningaanpassingen en veiligheidsmaatregelen thuis" loading="lazy" class="quiz-visual-image" />
+              <div class="visual-overlay">
+                <div class="visual-content" id="visual-content">
+                  <div class="visual-icon" id="visual-icon">🏠</div>
+                  <div class="visual-text" id="visual-text">Uw woonsituatie</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="why-choose-image">
-            <img src="/src/assets/img_site/pexels-olly-3768131.jpg" alt="Tevreden klant met traplift" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Funding Info Section -->
+    <section class="section funding-section">
+      <div class="container">
+        <h2 class="section-title">Hoe zit het met vergoeding?</h2>
+        <p class="section-subtitle">
+          WMO-aanvragen en subsidies kunnen verwarrend zijn. 
+          Wij leggen het in begrijpelijke taal uit.
+        </p>
+        
+        <div class="funding-accordion">
+          <div class="funding-item">
+            <button class="funding-header" onclick="toggleFunding('wmo')">
+              <span>✅ Wat is WMO en wat krijg ik vergoed?</span>
+              <span class="funding-icon">+</span>
+            </button>
+            <div class="funding-content" id="wmo-content">
+              <p>
+                De Wet Maatschappelijke Ondersteuning (WMO) helpt u met voorzieningen om zelfstandig thuis te kunnen wonen. 
+                Denk aan trapliften, woningaanpassingen en hulpmiddelen. Elke gemeente heeft eigen regels, maar wij kennen ze allemaal.
+              </p>
+              <ul>
+                <li>Eigen bijdrage vaak laag of nihil</li>
+                <li>Aanvraag verloopt via gemeente</li>
+                <li>Wij helpen met het hele proces</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="funding-item">
+            <button class="funding-header" onclick="toggleFunding('blijvers')">
+              <span>🏡 Wat is een Blijverslening en kan ik die aanvragen?</span>
+              <span class="funding-icon">+</span>
+            </button>
+            <div class="funding-content" id="blijvers-content">
+              <p>
+                Een Blijverslening is een voordelige lening voor woningaanpassingen voor 55-plussers. 
+                Het geld hoeft pas terugbetaald wanneer u verhuist of overlijdt — er zijn geen maandlasten.
+              </p>
+              <ul>
+                <li>Lage rente (vaak onder 2%)</li>
+                <li>Geen maandelijkse aflossing</li>
+                <li>Voor aanpassingen vanaf €5.000</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="funding-item">
+            <button class="funding-header" onclick="toggleFunding('zelfbetalen')">
+              <span>💡 Wat als ik niets vergoed krijg?</span>
+              <span class="funding-icon">+</span>
+            </button>
+            <div class="funding-content" id="zelfbetalen-content">
+              <p>
+                Ook zonder subsidie zijn er mogelijkheden. Wij bieden eerlijke prijzen, 
+                betaalregelingen en vaak kunnen we goedkopere alternatieven voorstellen die net zo veilig zijn.
+              </p>
+              <ul>
+                <li>Transparante prijsopgave vooraf</li>
+                <li>Betaling in termijnen mogelijk</li>
+                <li>Ook budget-vriendelijke alternatieven</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="funding-cta-highlight">
+          <div class="highlight-content">
+            <div class="highlight-icon">💰</div>
+            <div class="highlight-text">
+              <h3>Gratis subsidie-check</h3>
+              <p>Ontdek binnen 5 minuten of u in aanmerking komt voor WMO-vergoeding</p>
+            </div>
+            <a href="/financiering" class="btn btn-primary btn-large">Start nu</a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works-section">
+      <div class="container">
+        <h2 class="section-title">Zo werkt het — in 4 stappen</h2>
+        <p class="section-subtitle">
+          Van eerste kennismaking tot nazorg: wij nemen u bij de hand door het hele proces.
+        </p>
+        
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Wij komen gratis aan huis</h3>
+              <p class="step-description">
+                Een afspraak op een moment dat u uitkomt. We kijken samen 
+                naar uw woonsituatie en bespreken uw wensen en zorgen.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">We kijken samen wat nodig is</h3>
+              <p class="step-description">
+                Geen verkoop, maar écht advies. We maken een plan op maat 
+                en laten zien welke subsidies mogelijk zijn.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Wij regelen alles: offerte, subsidie, plaatsing</h3>
+              <p class="step-description">
+                Van papierwerk tot installatie — u hoeft zich nergens zorgen 
+                over te maken. Wij houden u op de hoogte.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-title">U woont veilig en zelfstandig, wij blijven bereikbaar</h3>
+              <p class="step-description">
+                Na installatie krijgt u instructie en blijven we beschikbaar 
+                voor onderhoud, vragen of nieuwe wensen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+      <div class="container">
+        <h2 class="section-title">Veelgestelde vragen</h2>
+        <p class="section-subtitle">
+          De belangrijkste vragen over veilig wonen, WMO en subsidies beantwoord.
+        </p>
+        
+        <div class="faq-grid">
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <button class="faq-question" onclick="toggleFAQ('wmo-wat')" itemprop="name">
+              <span>Wat is WMO en hoe werkt het?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="wmo-wat-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>De Wet Maatschappelijke Ondersteuning (WMO) helpt inwoners om zo lang mogelijk zelfstandig thuis te wonen. Via de WMO kunt u hulp krijgen bij woningaanpassingen zoals trapliften, drempelhulpen, of badkameraanpassingen.</p>
+                <ul>
+                  <li>Aanvraag loopt via uw gemeente</li>
+                  <li>Eigen bijdrage is vaak laag (€19-€150 per maand)</li>
+                  <li>Wij begeleiden u door het hele proces</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <button class="faq-question" onclick="toggleFAQ('subsidie-regel')" itemprop="name">
+              <span>Hoe regel ik subsidie voor woningaanpassingen?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="subsidie-regel-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Er zijn verschillende mogelijkheden: WMO via gemeente, Blijverslening via bank, of eigen financiering. Wij zorgen dat u niets over het hoofd ziet.</p>
+                <ul>
+                  <li>Gratis subsidiecheck bij thuisbezoek</li>
+                  <li>Wij vullen formulieren voor u in</li>
+                  <li>Contact met gemeente namens u</li>
+                  <li>Alternatieve financieringsmogelijkheden</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <button class="faq-question" onclick="toggleFAQ('aanpassingen-welke')" itemprop="name">
+              <span>Welke woningaanpassingen zijn er allemaal?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="aanpassingen-welke-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Van kleine aanpassingen tot grote verbouwingen — wij kijken wat écht nodig is voor uw veiligheid en comfort.</p>
+                <ul>
+                  <li><strong>Kleine aanpassingen:</strong> leuningen, drempelhulpen, antislip-strips</li>
+                  <li><strong>Sanitaire ruimte:</strong> douche-instap, verhoogde toilet, beugels</li>
+                  <li><strong>Toegankelijkheid:</strong> trapliften, platformliften, hellingen</li>
+                  <li><strong>Veiligheid:</strong> alarmering, betere verlichting, slimme sensoren</li>
+                  <li><strong>Comfort:</strong> airconditioning, automatische gordijnen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <button class="faq-question" onclick="toggleFAQ('kosten-wat')" itemprop="name">
+              <span>Wat kosten woningaanpassingen gemiddeld?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="kosten-wat-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Kosten variëren sterk, maar veel aanpassingen worden (gedeeltelijk) vergoed via WMO of Blijverslening.</p>
+                <ul>
+                  <li><strong>Kleine aanpassingen:</strong> €100 - €500 (vaak volledig vergoed)</li>
+                  <li><strong>Traplift recht:</strong> €3.500 - €5.000 (WMO-eigen bijdrage €19-150/mnd)</li>
+                  <li><strong>Traplift gebogen:</strong> €8.500 - €12.000 (afhankelijk van trapconfiguratie)</li>
+                  <li><strong>Badkameraanpassing:</strong> €2.000 - €8.000 (vaak WMO-vergoed)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- Testimonials Section -->
     <section class="section testimonials-section">
       <div class="container">
-        <h2 class="section-title">Wat onze klanten zeggen</h2>
+        <div class="testimonials-header">
+          <h2 class="section-title">Wat onze klanten zeggen</h2>
+          <div class="social-proof">
+            <div class="proof-item">
+              <span class="proof-number">500+</span>
+              <span class="proof-text">mensen geholpen via WMO</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-number">15+</span>
+              <span class="proof-text">jaar ervaring</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-number">4.9</span>
+              <span class="proof-text">gemiddelde beoordeling</span>
+            </div>
+          </div>
+        </div>
         <p class="section-subtitle">
           Lees de ervaringen van onze tevreden klanten die dankzij LeefZeker 
           weer veilig en zelfstandig kunnen wonen.
@@ -380,14 +821,307 @@ import Footer from '../components/Footer.astro';
             </a>
             <a href="/offerte" class="btn btn-secondary btn-large" id="cta-offerte-hero">Gratis Offerte</a>
           </div>
-          <p class="cta-note">Binnen 24 uur reactie gegarandeerd</p>
+          <p class="cta-note">Binnen 24 uur contact — ook 's avonds of op zaterdag mogelijk</p>
         </div>
       </div>
     </section>
   </main>
 
   <Footer />
+
+  <!-- Sticky CTA -->
+  <div id="sticky-cta" class="sticky-cta">
+    <div class="sticky-content">
+      <span class="sticky-text">Klaar om te beginnen met veilig wonen?</span>
+      <a href="/contact" class="btn btn-primary btn-small">Plan gratis thuisadvies</a>
+    </div>
+  </div>
 </Layout>
+
+<script>
+  // Enhanced Step-by-Step Quiz functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    let currentStep = 1;
+    const totalSteps = 5;
+    let quizData = {};
+    let selectedThemes = new Set();
+
+    // Initialize quiz
+    initializeQuiz();
+
+    function initializeQuiz() {
+      updateProgress();
+      showVisualContent();
+      
+      // Add click listeners to all option buttons
+      document.querySelectorAll('.option-button').forEach(button => {
+        button.addEventListener('click', handleOptionClick);
+      });
+    }
+
+    function handleOptionClick(event) {
+      const button = event.currentTarget;
+      const step = button.closest('.quiz-step');
+      const stepNumber = parseInt(step.dataset.step);
+      const theme = button.dataset.theme;
+      const answer = button.dataset.answer;
+
+      // Remove selected class from all options in this step
+      step.querySelectorAll('.option-button').forEach(opt => {
+        opt.classList.remove('selected');
+      });
+
+      // Add selected class to clicked option
+      button.classList.add('selected');
+
+      // Store answer
+      quizData[`step${stepNumber}`] = {
+        answer: answer,
+        theme: theme,
+        button: button.cloneNode(true)
+      };
+
+      // Add theme to set if it exists
+      if (theme) {
+        selectedThemes.add(theme);
+      }
+
+      // Auto-advance after short delay
+      setTimeout(() => {
+        if (stepNumber < totalSteps) {
+          nextStep();
+        } else {
+          showResults();
+        }
+      }, 600);
+    }
+
+    function nextStep() {
+      // Hide current step
+      document.querySelector('.quiz-step.active').classList.remove('active');
+      
+      currentStep++;
+      
+      // Show next step with animation
+      const nextStepEl = document.querySelector(`[data-step="${currentStep}"]`);
+      if (nextStepEl) {
+        nextStepEl.classList.add('active', 'animate-in');
+        
+        // Remove animation class after animation completes
+        setTimeout(() => {
+          nextStepEl.classList.remove('animate-in');
+        }, 400);
+      }
+
+      updateProgress();
+      showVisualContent();
+    }
+
+    function updateProgress() {
+      const progressFill = document.getElementById('quiz-progress-fill');
+      const progressText = document.getElementById('quiz-progress-text');
+      
+      if (progressFill && progressText) {
+        const progress = (currentStep / totalSteps) * 100;
+        progressFill.style.width = `${progress}%`;
+        
+        if (currentStep <= totalSteps) {
+          progressText.textContent = `Vraag ${currentStep} van ${totalSteps}`;
+        } else {
+          progressText.textContent = 'Resultaten';
+        }
+      }
+    }
+
+    function showVisualContent() {
+      const visualIcon = document.getElementById('visual-icon');
+      const visualText = document.getElementById('visual-text');
+      const visualContent = document.getElementById('visual-content');
+
+      const contentMap = {
+        1: { icon: '🏠', text: 'Traplopen & mobiliteit' },
+        2: { icon: '⚠️', text: 'Veiligheid & valpreventie' },
+        3: { icon: '🌡️', text: 'Klimaatcomfort' },
+        4: { icon: '🔒', text: 'Digitale veiligheid' },
+        5: { icon: '📋', text: 'WMO & subsidies' }
+      };
+
+      const content = contentMap[currentStep];
+      if (content && visualIcon && visualText && visualContent) {
+        // Hide content first
+        visualContent.classList.remove('show');
+        
+        // Update content after brief delay
+        setTimeout(() => {
+          visualIcon.textContent = content.icon;
+          visualText.textContent = content.text;
+          visualContent.classList.add('show');
+        }, 150);
+      }
+    }
+
+    function showResults() {
+      // Hide current step
+      document.querySelector('.quiz-step.active').classList.remove('active');
+      
+      // Show results step
+      const resultsStep = document.querySelector('.quiz-results-step');
+      if (resultsStep) {
+        resultsStep.classList.add('active', 'animate-in');
+        
+        setTimeout(() => {
+          resultsStep.classList.remove('animate-in');
+        }, 400);
+      }
+
+      // Update progress to completed
+      currentStep = totalSteps + 1;
+      updateProgress();
+
+      // Generate personalized results
+      generateResults();
+      
+      // Update visual
+      showResultsVisual();
+    }
+
+    function generateResults() {
+      const summaryEl = document.getElementById('quiz-results-summary');
+      const themesEl = document.getElementById('quiz-results-themes');
+
+      if (summaryEl) {
+        summaryEl.innerHTML = generatePersonalizedMessage();
+      }
+
+      if (themesEl) {
+        const themeTexts = {
+          'mobiliteit': { icon: '🚶', text: 'Trapondersteuning & mobiliteitshulpmiddelen' },
+          'valpreventie': { icon: '🛡️', text: 'Valpreventie & woningveiligheid' },
+          'alarmering': { icon: '📞', text: 'Slimme alarmering & sensoren' },
+          'klimaat': { icon: '🌡️', text: 'Klimaat & comfort oplossingen' },
+          'toegang': { icon: '🔒', text: 'Toegangscontrole & digitale veiligheid' },
+          'subsidie': { icon: '💰', text: 'WMO-begeleiding & subsidieadvies' }
+        };
+
+        themesEl.innerHTML = '';
+        selectedThemes.forEach(theme => {
+          if (themeTexts[theme]) {
+            const themeDiv = document.createElement('div');
+            themeDiv.className = 'results-theme';
+            themeDiv.innerHTML = `
+              <span style="font-size: 1.25rem;">${themeTexts[theme].icon}</span>
+              <span>${themeTexts[theme].text}</span>
+            `;
+            themesEl.appendChild(themeDiv);
+          }
+        });
+      }
+    }
+
+    function generatePersonalizedMessage() {
+      const answers = Object.values(quizData).map(d => d.answer);
+      
+      if (answers.includes('difficult') && selectedThemes.has('subsidie')) {
+        return '<p><strong>U bent onzeker met traplopen en heeft vragen over subsidie</strong> — een traplift met WMO-begeleiding zou goed kunnen helpen. Wij adviseren een persoonlijk gesprek om alle mogelijkheden te bespreken.</p>';
+      } else if (answers.includes('fell-home') || answers.includes('fell-alone')) {
+        return '<p><strong>U heeft ervaring met vallen</strong> — valpreventie-maatregelen en mogelijk alarmering kunnen u helpen om veiliger te wonen. Laten we samen kijken naar de beste oplossingen.</p>';
+      } else if (answers.includes('hot-summer') || answers.includes('cold-winter')) {
+        return '<p><strong>Klimaatproblemen kunnen vervelend zijn</strong> — wij kunnen u adviseren over airconditioning, verwarming en andere comfort-oplossingen die geschikt zijn voor uw situatie.</p>';
+      } else if (selectedThemes.has('toegang')) {
+        return '<p><strong>Digitale veiligheid is belangrijk</strong> — wij helpen u graag met veilige toegangscontrole en bescherming tegen online oplichting en inbraak.</p>';
+      } else if (selectedThemes.has('subsidie')) {
+        return '<p><strong>WMO en subsidies kunnen ingewikkeld zijn</strong> — wij begeleiden u graag door het hele proces en zorgen dat u niets over het hoofd ziet.</p>';
+      }
+      
+      return '<p><strong>Op basis van uw antwoorden</strong> kunnen wij u helpen met verschillende aspecten van veilig wonen. Een gratis adviesgesprek geeft duidelijkheid over de beste oplossingen voor uw situatie.</p>';
+    }
+
+    function showResultsVisual() {
+      const visualIcon = document.getElementById('visual-icon');
+      const visualText = document.getElementById('visual-text');
+      const visualContent = document.getElementById('visual-content');
+
+      if (visualIcon && visualText && visualContent) {
+        visualContent.classList.remove('show');
+        
+        setTimeout(() => {
+          visualIcon.textContent = '🎯';
+          visualText.textContent = 'Uw persoonlijke oplossingen';
+          visualContent.classList.add('show');
+        }, 150);
+      }
+    }
+  });
+
+  // Funding accordion functionality
+  function toggleFunding(id) {
+    const content = document.getElementById(id + '-content');
+    const header = content.previousElementSibling;
+    const icon = header.querySelector('.funding-icon');
+    
+    // Close all other items
+    document.querySelectorAll('.funding-content').forEach(item => {
+      if (item !== content) {
+        item.classList.remove('show');
+        item.previousElementSibling.classList.remove('active');
+      }
+    });
+    
+    // Toggle current item
+    content.classList.toggle('show');
+    header.classList.toggle('active');
+  }
+
+  // Make toggleFunding globally available
+  window.toggleFunding = toggleFunding;
+
+  // FAQ functionality
+  function toggleFAQ(id) {
+    const answer = document.getElementById(id + '-answer');
+    const question = answer.previousElementSibling;
+    const icon = question.querySelector('.faq-icon');
+    
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-answer').forEach(item => {
+      if (item !== answer) {
+        item.classList.remove('show');
+        item.previousElementSibling.classList.remove('active');
+      }
+    });
+    
+    // Toggle current item
+    answer.classList.toggle('show');
+    question.classList.toggle('active');
+  }
+
+  // Make toggleFAQ globally available
+  window.toggleFAQ = toggleFAQ;
+
+  // Sticky CTA functionality
+  function initStickyCtа() {
+    const stickyCtа = document.getElementById('sticky-cta');
+    const heroSection = document.querySelector('.hero');
+    
+    if (!stickyCtа || !heroSection) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          stickyCtа.classList.add('show');
+        } else {
+          stickyCtа.classList.remove('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(heroSection);
+  }
+
+  // Initialize sticky CTA after DOM loads
+  document.addEventListener('DOMContentLoaded', function() {
+    initStickyCtа();
+  });
+</script>
 
 <style>
   .hero {
@@ -412,11 +1146,23 @@ import Footer from '../components/Footer.astro';
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.4;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
     color: var(--text-gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-quote {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--primary-green);
     margin-bottom: 2rem;
+    border-left: 3px solid var(--primary-green);
+    background: #f0f9f4;
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
   }
 
   .highlight {
@@ -787,6 +1533,780 @@ import Footer from '../components/Footer.astro';
     }
   }
 
+  /* New Sections Styling */
+  .intro-section {
+    background-color: var(--warm-gray);
+    padding: 3rem 0;
+  }
+
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+
+  .intro-quote {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--primary-green);
+    border-left: 3px solid var(--primary-green);
+    padding-left: 1.5rem;
+    margin: 0;
+    background: none;
+  }
+
+  .intro-quote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-gray);
+  }
+
+  .solutions-section {
+    background-color: var(--white);
+  }
+
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .solution-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .solution-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .solution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.03) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .solution-card:hover::before {
+    opacity: 1;
+  }
+
+  .solution-icon {
+    background: var(--primary-green);
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .solution-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .solution-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .solution-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .solution-cta {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .solution-cta:hover {
+    color: var(--primary-green-dark);
+    text-decoration: underline;
+  }
+
+  /* Enhanced Quiz Section */
+  .quiz-section {
+    background-color: var(--warm-gray);
+    padding: 4rem 0;
+  }
+
+  .quiz-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+
+  .quiz-container {
+    background: var(--white);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  /* Quiz Header */
+  .quiz-header {
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .quiz-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .quiz-subtitle {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  /* Progress Bar */
+  .quiz-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .progress-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green) 0%, #66bb6a 100%);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+    width: 20%;
+  }
+
+  .progress-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary-green);
+    white-space: nowrap;
+  }
+
+  /* Quiz Steps */
+  .quiz-steps {
+    position: relative;
+  }
+
+  .quiz-step {
+    padding: 2rem;
+    display: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+  }
+
+  .quiz-step.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .quiz-step.animate-in {
+    animation: slideIn 0.4s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Question Elements */
+  .question-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .question-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .question-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Option Buttons */
+  .option-button {
+    background: var(--white);
+    border: 2px solid var(--border-light);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    min-height: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .option-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .option-button:hover::before {
+    left: 100%;
+  }
+
+  .option-button:hover {
+    border-color: var(--primary-green);
+    background: #f8fdf8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.15);
+  }
+
+  .option-button.selected {
+    border-color: var(--primary-green);
+    background: var(--primary-green);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+  }
+
+  .option-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .option-text {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* Results Screen */
+  .quiz-results-step {
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .results-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .results-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .results-summary {
+    background: var(--warm-gray);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-green);
+    text-align: left;
+  }
+
+  .results-themes {
+    margin-bottom: 2rem;
+  }
+
+  .results-theme {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .results-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .results-note {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    font-style: italic;
+  }
+
+  /* Visual Side */
+  .quiz-visual {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .visual-container {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .quiz-visual-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .visual-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 2rem;
+    color: white;
+  }
+
+  .visual-content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+
+  .visual-content.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .visual-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .visual-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .funding-section {
+    background-color: var(--white);
+  }
+
+  .funding-accordion {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .funding-item {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .funding-header {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: left;
+  }
+
+  .funding-header:hover {
+    color: var(--primary-green);
+  }
+
+  .funding-icon {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    transition: transform 0.3s ease;
+  }
+
+  .funding-header.active .funding-icon {
+    transform: rotate(45deg);
+  }
+
+  .funding-content {
+    padding: 0 0 1.5rem 0;
+    display: none;
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  .funding-content.show {
+    display: block;
+  }
+
+  .funding-content ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .funding-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .funding-cta {
+    text-align: center;
+  }
+
+  .how-it-works-section {
+    background-color: var(--warm-gray);
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .step-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .step-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+
+
+  /* Social Proof */
+  .testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .social-proof {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .proof-item {
+    text-align: center;
+  }
+
+  .proof-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    line-height: 1;
+  }
+
+  .proof-text {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    white-space: nowrap;
+  }
+
+  /* Enhanced Solutions */
+  .solution-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    white-space: nowrap;
+    min-height: 44px;
+  }
+
+  /* Enhanced Funding CTA */
+  .funding-cta-highlight {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 1rem;
+  }
+
+  .highlight-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--white);
+  }
+
+  .highlight-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+  }
+
+  .highlight-text {
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  .highlight-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+
+  .highlight-text p {
+    opacity: 0.9;
+    margin-bottom: 0;
+  }
+
+  .funding-cta-highlight .btn {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border-color: var(--white);
+    flex-shrink: 0;
+  }
+
+
+
+  /* FAQ Section */
+  .faq-section {
+    background-color: var(--white);
+  }
+
+  .faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: left;
+  }
+
+  .faq-question:hover {
+    color: var(--primary-green);
+  }
+
+  .faq-icon {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-question.active .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    padding: 0 0 1.5rem 0;
+    display: none;
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  .faq-answer.show {
+    display: block;
+  }
+
+  .faq-answer ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .faq-answer li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Sticky CTA */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sticky-cta.show {
+    transform: translateY(0);
+  }
+
+  .sticky-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .sticky-text {
+    font-weight: 500;
+  }
+
+  .sticky-cta .btn {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border-color: var(--white);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  @media (min-width: 1200px) {
+    .solutions-grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 768px) {
+    .solutions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .quiz-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .quiz-image {
+      order: -1;
+    }
+
+    .solutions-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .steps-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2rem;
@@ -805,9 +2325,18 @@ import Footer from '../components/Footer.astro';
       gap: 1rem;
     }
 
-    .products-grid,
+    .solutions-grid,
     .testimonials-grid {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .solution-card {
+      padding: 1.5rem;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-4px) scale(1.01);
     }
 
     .cta-title {
@@ -819,10 +2348,101 @@ import Footer from '../components/Footer.astro';
       align-items: center;
     }
 
-    .product-actions {
+    .quiz-options {
       flex-direction: column;
+    }
+
+    .quiz-option {
+      width: 100%;
+      text-align: center;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .intro-text {
+      font-size: 1.125rem;
+    }
+
+
+
+    .testimonials-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       gap: 1rem;
+    }
+
+    .social-proof {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .solution-actions {
+      flex-direction: column;
       align-items: stretch;
+    }
+
+    .highlight-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    /* Enhanced Quiz Mobile */
+    .quiz-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .quiz-visual {
+      order: -1;
+      position: static;
+    }
+
+    .visual-container {
+      height: 250px;
+    }
+
+    .quiz-container {
+      border-radius: 1rem;
+    }
+
+    .quiz-header {
+      padding: 1.5rem 1.5rem 1rem;
+    }
+
+    .quiz-title {
+      font-size: 1.5rem;
+    }
+
+    .quiz-step {
+      padding: 1.5rem;
+    }
+
+    .question-title {
+      font-size: 1.25rem;
+    }
+
+    .option-button {
+      padding: 1rem 1.25rem;
+      min-height: 56px;
+    }
+
+    .results-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .sticky-content {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .sticky-text {
+      font-size: 0.875rem;
     }
   }
 </style>

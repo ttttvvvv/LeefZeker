@@ -24,53 +24,37 @@ const currentPath = Astro.url.pathname;
             <a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a href="/producten" class={`nav-link ${currentPath.startsWith('/producten') ? 'active' : ''}`}>
-              Producten
+            <a href="/oplossingen" class={`nav-link ${currentPath.startsWith('/oplossingen') ? 'active' : ''}`}>
+              Oplossingen
               <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6,9 12,15 18,9"></polyline>
               </svg>
             </a>
             <div class="dropdown-menu">
-              <a href="/producten/trapliften" class="dropdown-link">Trapliften</a>
-              <a href="/producten/platformliften" class="dropdown-link">Platformliften</a>
-              <a href="/producten/hulpmiddelen" class="dropdown-link">Mobiliteitshulpmiddelen</a>
-              <a href="/producten/tweedehands" class="dropdown-link">Tweedehands Trapliften</a>
-              <a href="/producten/verhuur" class="dropdown-link">Verhuur & Lease</a>
-              <a href="/producten/onderdelen" class="dropdown-link">Onderdelen & Accessoires</a>
+              <a href="/oplossingen/valpreventie" class="dropdown-link">Valpreventie & woningveiligheid</a>
+              <a href="/oplossingen/alarmering" class="dropdown-link">Slimme alarmering & sensoren</a>
+              <a href="/oplossingen/klimaat" class="dropdown-link">Klimaat & comfort</a>
+              <a href="/oplossingen/toegang-veiligheid" class="dropdown-link">Toegangscontrole & digitale veiligheid</a>
+              <a href="/oplossingen/mobiliteit" class="dropdown-link">Mobiliteit & trapondersteuning</a>
+              <a href="/oplossingen/mantelzorg" class="dropdown-link">Mantelzorg & coördinatie</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a href="/diensten" class={`nav-link ${currentPath === '/diensten' ? 'active' : ''}`}>
-              Diensten
+            <a href="#" class={`nav-link ${currentPath.startsWith('/subsidie') || currentPath.startsWith('/producten') || currentPath.startsWith('/faq') || currentPath.startsWith('/blog') ? 'active' : ''}`}>
+              Advies & informatie
               <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6,9 12,15 18,9"></polyline>
               </svg>
             </a>
             <div class="dropdown-menu">
-              <a href="/diensten" class="dropdown-link">Installatie</a>
-              <a href="/onderhoud" class="dropdown-link">Onderhoud & Service</a>
-              <a href="/reparatie" class="dropdown-link">Reparatie Service</a>
-              <a href="/nooddienst" class="dropdown-link">24/7 Nooddienst</a>
-              <a href="/financiering" class="dropdown-link">Financiering & Subsidies</a>
+              <a href="/financiering" class="dropdown-link">Subsidie & WMO</a>
+              <a href="/producten" class="dropdown-link">Alle producten</a>
+              <a href="/faq" class="dropdown-link">Veelgestelde vragen</a>
+              <a href="/blog" class="dropdown-link">Blog & kennisbank</a>
             </div>
           </li>
           <li class="nav-item">
-            <a href="/blog" class={`nav-link ${currentPath.startsWith('/blog') ? 'active' : ''}`}>Blog</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="/over-ons" class={`nav-link ${currentPath === '/over-ons' ? 'active' : ''}`}>
-              Info
-              <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6,9 12,15 18,9"></polyline>
-              </svg>
-            </a>
-            <div class="dropdown-menu">
-              <a href="/over-ons" class="dropdown-link">Over LeefZeker</a>
-              <a href="/faq" class="dropdown-link">Veelgestelde Vragen</a>
-              <a href="/garantie" class="dropdown-link">Garantie</a>
-              <a href="/veiligheid" class="dropdown-link">Veiligheid & Certificeringen</a>
-              <a href="/installatie-proces" class="dropdown-link">Installatie Proces</a>
-            </div>
+            <a href="/over-ons" class={`nav-link ${currentPath === '/over-ons' ? 'active' : ''}`}>Over ons</a>
           </li>
           <li class="nav-item">
             <a href="/contact" class={`nav-link ${currentPath === '/contact' ? 'active' : ''}`}>Contact</a>
@@ -83,7 +67,7 @@ const currentPath = Astro.url.pathname;
           <span class="phone-label">Vragen? Bel ons op</span>
           <a href="tel:+31201234567" class="phone-number">020 123 45 67</a>
         </div>
-        <a href="/offerte" class="btn btn-primary">Gratis Offerte</a>
+        <a href="/contact" class="btn btn-primary">Plan adviesgesprek</a>
       </div>
 
       <label for="mobile-menu-checkbox" class="mobile-menu-toggle">

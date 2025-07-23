@@ -1,0 +1,851 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Slimme Alarmering & Sensoren voor Ouderen | LeefZeker"
+  description="Personenalarmering met meldkamer, valdetectie technologie en slimme sensoren. 24/7 beveiliging voor ouderen thuis. WMO-subsidie mogelijk."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero alarmering-theme">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="breadcrumb">
+              <a href="/">Home</a> > <a href="/oplossingen">Oplossingen</a> > Alarmering
+            </div>
+            <div class="hero-icon">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h1 class="hero-title">Slimme alarmering & sensoren</h1>
+            <p class="hero-subtitle">
+              24/7 zekerheid met moderne personenalarmering en slimme sensoren die automatisch 
+              hulp inschakelen wanneer u die nodig heeft.
+            </p>
+            <div class="hero-features">
+              <span>✓ 24/7 professionele meldkamer</span>
+              <span>✓ Automatische valdetectie</span>
+              <span>✓ Familie-app koppeling</span>
+            </div>
+            <div class="hero-actions">
+              <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+              <a href="tel:020-123-45-67" class="btn btn-secondary btn-large">020 123 45 67</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/src/assets/valdetectie.png" alt="Senior met persoonlijk alarm en valdetectie horloge voor veiligheid thuis" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section intro-section">
+      <div class="container">
+        <div class="intro-content">
+          <h2>Wanneer is alarmering relevant?</h2>
+          <p class="intro-text">
+            Veel ouderen willen graag zelfstandig blijven wonen, maar maken zich zorgen over wat er gebeurt 
+            als ze hulp nodig hebben en niemand in de buurt is. Moderne alarmering biedt die zekerheid.
+          </p>
+          
+          <div class="warning-signs">
+            <h3>Herkent u deze zorgen?</h3>
+            <div class="signs-grid">
+              <div class="sign-item">
+                <div class="sign-icon">😟</div>
+                <span>Bang om te vallen als niemand thuis is</span>
+              </div>
+              <div class="sign-item">
+                <div class="sign-icon">📱</div>
+                <span>Telefoon ligt soms te ver weg</span>
+              </div>
+              <div class="sign-item">
+                <div class="sign-icon">👨‍👩‍👧‍👦</div>
+                <span>Familie maakt zich zorgen</span>
+              </div>
+              <div class="sign-item">
+                <div class="sign-icon">🚨</div>
+                <span>Onzeker bij medische noodgevallen</span>
+              </div>
+            </div>
+            <p class="signs-conclusion">
+              Slimme alarmering geeft u én uw familie de rust die u verdient.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section">
+      <div class="container">
+        <h2 class="section-title">Wat kunnen we voor u betekenen?</h2>
+        <p class="section-subtitle">Persoonlijk advies voor de beste alarmeringsoplossing</p>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-number">1</div>
+            <h3>Gratis adviesgesprek aan huis</h3>
+            <p>
+              We bespreken uw situatie, gewoontes en zorgen. Welke alarmering past 
+              het beste bij úw leven?
+            </p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-number">2</div>
+            <h3>Demonstratie verschillende systemen</h3>
+            <p>
+              U kunt verschillende alarmeringen uitproberen voordat u kiest. 
+              We laten zien hoe alles werkt.
+            </p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-number">3</div>
+            <h3>Installatie & instructie</h3>
+            <p>
+              Professionele installatie en uitgebreide instructie voor u én 
+              uw familie over het gebruik.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">4</div>
+            <h3>24/7 ondersteuning & monitoring</h3>
+            <p>
+              Continue monitoring via professionele meldkamer en technische 
+              ondersteuning wanneer nodig.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products-section">
+      <div class="container">
+        <h2 class="section-title">Welke alarmeringssystemen zijn er?</h2>
+        <p class="section-subtitle">Van eenvoudige paniekknop tot geavanceerde valdetectie</p>
+        
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/src/assets/img_site/ouderenalarm.jpg" alt="Draagbare alarmknop voor ouderen" loading="lazy" />
+              <div class="product-badge">Meest gekozen</div>
+            </div>
+            <div class="product-content">
+              <h3>Draagbare alarmknop</h3>
+              <p>
+                Klassieke en betrouwbare alarmering. Druk op de knop en u bent 
+                direct verbonden met de meldkamer.
+              </p>
+              <ul class="product-features">
+                <li>Waterdicht (ook onder douche)</li>
+                <li>Groot bereik (100+ meter)</li>
+                <li>Lange batterijduur (1+ jaar)</li>
+                <li>Ook als polsband verkrijgbaar</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price">€19/maand</span>
+                <span class="wmo-note">Mogelijk WMO-vergoed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/src/assets/valdetectie.png" alt="Valdetectie horloge voor automatische alarmering" loading="lazy" />
+              <div class="product-badge">Geavanceerd</div>
+            </div>
+            <div class="product-content">
+              <h3>Valdetectie horloge</h3>
+              <p>
+                Detecteert automatisch een val en belt hulp, zelfs als u bewusteloos bent. 
+                Met GPS-locatie voor buitenshuis.
+              </p>
+              <ul class="product-features">
+                <li>Automatische valdetectie</li>
+                <li>GPS-tracking buitenshuis</li>
+                <li>Spraakverbinding via horloge</li>
+                <li>Familie-app met meldingen</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price">€35/maand</span>
+                <span class="wmo-note">WMO-aanvraag mogelijk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="Slimme rookmelder met alarmering koppeling" loading="lazy" />
+            </div>
+            <div class="product-content">
+              <h3>Slimme rookmelders</h3>
+              <p>
+                Rookmelders die direct gekoppeld zijn aan de meldkamer. 
+                Bij alarm wordt automatisch hulp ingeschakeld.
+              </p>
+              <ul class="product-features">
+                <li>Directe meldkamer-koppeling</li>
+                <li>Ook CO-detectie mogelijk</li>
+                <li>Batterij-backup bij stroomuitval</li>
+                <li>Familie krijgt direct melding</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price">€8/maand</span>
+                <span class="wmo-note">Per extra melder</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="Slimme sensoren voor automatische bewaking ouderen thuis" loading="lazy" />
+            </div>
+            <div class="product-content">
+              <h3>Slimme woning-sensoren</h3>
+              <p>
+                Discrete sensoren die ongewone patronen detecteren. Bijvoorbeeld 
+                als u 's ochtends niet opstaat of de voordeur niet opent.
+              </p>
+              <ul class="product-features">
+                <li>Bewegingssensoren per kamer</li>
+                <li>Deur/raam contacten</li>
+                <li>Patronen-herkenning</li>
+                <li>Geleidelijke alarm-escalatie</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price">€25/maand</span>
+                <span class="wmo-note">Afhankelijk van opstelling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WMO Section -->
+    <section class="section wmo-section">
+      <div class="container">
+        <div class="wmo-content">
+          <div class="wmo-info">
+            <h2>WMO & subsidie bij alarmering</h2>
+            <p>
+              Personenalarmering valt vaak onder de WMO als u een verhoogd valrisico heeft 
+              of medische problemen. Wij helpen u met de aanvraag.
+            </p>
+            
+            <div class="wmo-details">
+              <div class="wmo-item">
+                <div class="wmo-icon">✅</div>
+                <div>
+                  <h4>Basispakket vaak volledig vergoed</h4>
+                  <p>Draagbare alarmknop via WMO-beschikking</p>
+                </div>
+              </div>
+              
+              <div class="wmo-item">
+                <div class="wmo-icon">💰</div>
+                <div>
+                  <h4>Eigen bijdrage beperkt</h4>
+                  <p>€19-€40 per maand voor uitgebreide pakketten</p>
+                </div>
+              </div>
+              
+              <div class="wmo-item">
+                <div class="wmo-icon">📋</div>
+                <div>
+                  <h4>Medische indicatie</h4>
+                  <p>Arts kan valrisico of chronische ziekte bevestigen</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wmo-cta">
+              <a href="/financiering" class="btn btn-secondary">Meer over WMO & subsidies</a>
+            </div>
+          </div>
+          
+          <div class="wmo-visual">
+            <div class="subsidy-highlight">
+              <div class="highlight-icon">📞</div>
+              <h3>Gratis proefperiode</h3>
+              <p>Test 30 dagen gratis voordat u zich vastlegt. Ervaar de zekerheid zelf.</p>
+              <a href="/contact" class="btn btn-primary">Start proefperiode</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog-section">
+      <div class="container">
+        <h2 class="section-title">Gerelateerde artikelen</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="/src/assets/valdetectie.png" alt="Verschil persoonlijke alarmering valdetectie" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3><a href="/blog/paniekknop-vs-valdetectie">Paniekknop of valdetectie: wat is het verschil?</a></h3>
+              <p>Uitleg over de verschillende mogelijkheden en wanneer welke het beste werkt...</p>
+              <span class="blog-date">12 januari 2024</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Familie rust door ouderen alarmering" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3><a href="/blog/familie-rust-door-alarmering">Hoe alarmering ook de familie rust geeft</a></h3>
+              <p>De psychologische voordelen van alarmering voor zowel ouderen als hun familie...</p>
+              <span class="blog-date">5 januari 2024</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="/src/assets/img_site/pexels-pixabay-33786.jpg" alt="Moderne alarmering technologie voor ouderen" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3><a href="/blog/moderne-alarmering-technologie">Moderne alarmering: meer dan een knopje</a></h3>
+              <p>Ontdek de nieuwste technologie in personenalarmering en valdetectie...</p>
+              <span class="blog-date">28 december 2023</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section cta-section alarmering-theme">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Klaar voor meer zekerheid?</h2>
+          <p class="cta-description">
+            Vraag een gratis adviesgesprek aan. We laten verschillende systemen zien 
+            en u kunt 30 dagen gratis testen.
+          </p>
+          <div class="cta-actions">
+            <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+            <a href="/oplossingen" class="btn btn-secondary btn-large">Andere oplossingen</a>
+          </div>
+          <p class="cta-note">📞 Ook bereikbaar op 020 123 45 67 — 24/7 voor urgente vragen</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .alarmering-theme {
+    --theme-color: #2196F3;
+    --theme-color-light: #42A5F5;
+    --theme-color-bg: #f0f8ff;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--theme-color-bg) 0%, #ffffff 100%);
+    padding: 3rem 0 4rem;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .breadcrumb {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: var(--theme-color);
+    text-decoration: none;
+  }
+
+  .hero-icon {
+    background: var(--theme-color);
+    color: var(--white);
+    width: 90px;
+    height: 90px;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-features span {
+    font-size: 0.875rem;
+    color: var(--theme-color);
+    font-weight: 500;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .intro-section {
+    background: var(--white);
+    padding: 4rem 0;
+  }
+
+  .intro-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+
+  .warning-signs {
+    background: var(--theme-color-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid var(--theme-color);
+  }
+
+  .warning-signs h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .signs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sign-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .sign-icon {
+    font-size: 1.5rem;
+  }
+
+  .signs-conclusion {
+    font-weight: 500;
+    color: var(--theme-color-light);
+    font-style: italic;
+    margin-bottom: 0;
+  }
+
+  .services-section {
+    background: var(--warm-gray);
+    padding: 4rem 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+
+  .service-number {
+    width: 50px;
+    height: 50px;
+    background: var(--theme-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .products-section {
+    background: var(--white);
+    padding: 4rem 0;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .product-card {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--theme-color);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .product-content {
+    padding: 2rem;
+  }
+
+  .product-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .product-content p {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .product-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-gray);
+    font-size: 0.875rem;
+  }
+
+  .product-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--theme-color);
+    font-weight: bold;
+  }
+
+  .product-pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--theme-color);
+  }
+
+  .wmo-note {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    background: var(--theme-color-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .wmo-section {
+    background: var(--theme-color-bg);
+    padding: 4rem 0;
+  }
+
+  .wmo-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .wmo-details {
+    margin: 2rem 0;
+  }
+
+  .wmo-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .wmo-icon {
+    font-size: 1.5rem;
+    color: var(--theme-color);
+  }
+
+  .wmo-item h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+  }
+
+  .subsidy-highlight {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .highlight-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .subsidy-highlight h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .blog-section {
+    background: var(--white);
+    padding: 4rem 0;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .blog-card {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .blog-image {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .blog-content {
+    padding: 1.5rem;
+  }
+
+  .blog-content h3 {
+    margin-bottom: 1rem;
+  }
+
+  .blog-content h3 a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .blog-content h3 a:hover {
+    color: var(--theme-color);
+  }
+
+  .blog-content p {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .blog-date {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--theme-color), var(--theme-color-light));
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+
+  .cta-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .cta-note {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    font-style: italic;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .cta-section .btn-secondary {
+    background-color: var(--white);
+    color: var(--theme-color);
+    border-color: var(--white);
+  }
+
+  .cta-section .btn-secondary:hover {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-content,
+    .wmo-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .products-grid,
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .signs-grid,
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 
