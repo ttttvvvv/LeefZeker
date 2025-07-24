@@ -5,43 +5,80 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout 
-  title="Slimme Alarmering & Sensoren voor Ouderen | LeefZeker"
-  description="Personenalarmering met meldkamer, valdetectie technologie en slimme sensoren. 24/7 beveiliging voor ouderen thuis. WMO-subsidie mogelijk."
+  title="Mobiliteit & Trapondersteuning voor Ouderen | Trapliften | LeefZeker"
+  description="Mobiliteitsoplossingen voor ouderen: trapliften, platformliften, rollators en wandbeugels. WMO-subsidie mogelijk. Gratis advies aan huis voor optimale mobiliteit."
 >
   <Header />
   
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mobiliteit & Trapondersteuning",
+    "description": "Mobiliteitsoplossingen voor ouderen: trapliften, platformliften en mobiliteitshulpmiddelen voor zelfstandig wonen",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "LeefZeker"
+    },
+    "areaServed": "Nederland",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Mobiliteit Producten",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "name": "Rechte trapliften",
+          "description": "WMO-trapliften voor rechte trappen met professionele installatie"
+        },
+        {
+          "@type": "Product",
+          "name": "Gebogen trapliften",
+          "description": "Maatwerk trapliften voor bochtige trappen"
+        },
+        {
+          "@type": "Product",
+          "name": "Platformliften",
+          "description": "Verticale liften voor rolstoelgebruikers"
+        }
+      ]
+    }
+  }
+  </script>
+
   <main>
     <!-- Hero Section -->
-    <section class="hero alarmering-theme">
+    <section class="hero mobiliteit-theme">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
             <div class="breadcrumb">
-              <a href="/">Home</a> > <a href="/oplossingen">Oplossingen</a> > Alarmering
+              <a href="/">Home</a> > <a href="/oplossingen">Oplossingen</a> > Mobiliteit & trapondersteuning
             </div>
             <div class="hero-icon">
               <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                <path d="M8 12h8"></path>
               </svg>
             </div>
-            <h1 class="hero-title">Slimme alarmering & sensoren</h1>
+            <h1 class="hero-title">Mobiliteit & trapondersteuning</h1>
             <p class="hero-subtitle">
-              24/7 zekerheid met moderne personenalarmering en slimme sensoren die automatisch 
-              hulp inschakelen wanneer u die nodig heeft.
+              Van trapliften tot rollators — wij helpen u veilig en zelfstandig te bewegen 
+              in én om het huis. Voor behoud van uw vrijheid en onafhankelijkheid.
             </p>
             <div class="hero-features">
-              <span>✓ 24/7 professionele meldkamer</span>
-              <span>✓ Automatische valdetectie</span>
-              <span>✓ Familie-app koppeling</span>
+              <span>✓ WMO-subsidiemogelijk</span>
+              <span>✓ Professionele installatie</span>
+              <span>✓ 5 jaar garantie</span>
             </div>
             <div class="hero-actions">
-              <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+              <a href="/contact" class="btn btn-primary btn-large">Plan gratis mobiliteitsscan</a>
               <a href="tel:020-123-45-67" class="btn btn-secondary btn-large">020 123 45 67</a>
             </div>
           </div>
           <div class="hero-image">
-            <img src="/src/assets/img_site/ouderenalarm.jpg" alt="Senior met persoonlijk alarm en valdetectie horloge voor veiligheid thuis" loading="lazy" />
+            <img src="/src/assets/img_site/stairlift.jpg" alt="Senior die veilig gebruik maakt van traplift voor zelfstandige mobiliteit thuis" loading="lazy" />
           </div>
         </div>
       </div>
@@ -51,34 +88,35 @@ import Footer from '../../components/Footer.astro';
     <section class="section intro-section">
       <div class="container">
         <div class="intro-content">
-          <h2>Wanneer is alarmering relevant?</h2>
+          <h2>Wanneer is mobiliteitshulp relevant?</h2>
           <p class="intro-text">
-            Veel ouderen willen graag zelfstandig blijven wonen, maar maken zich zorgen over wat er gebeurt 
-            als ze hulp nodig hebben en niemand in de buurt is. Moderne alarmering biedt die zekerheid.
+            Mobiliteit is de basis van zelfstandig wonen. Wanneer traplopen moeilijk wordt 
+            of boodschappen doen een uitdaging, is het tijd voor slimme hulpmiddelen. 
+            Dit voorkomt vallen en helpt u langer thuis te blijven wonen.
           </p>
           
           <div class="warning-signs">
-            <h3>Herkent u deze zorgen?</h3>
+            <h3>Herkent u deze situaties?</h3>
             <div class="signs-grid">
               <div class="sign-item">
-                <div class="sign-icon">😟</div>
-                <span>Bang om te vallen als niemand thuis is</span>
+                <div class="sign-icon">🪜</div>
+                <span>Traplopen wordt steeds zwaarder</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">📱</div>
-                <span>Telefoon ligt soms te ver weg</span>
+                <div class="sign-icon">😰</div>
+                <span>Bang om te vallen op de trap</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">👨‍👩‍👧‍👦</div>
-                <span>Familie maakt zich zorgen</span>
+                <div class="sign-icon">🦽</div>
+                <span>Rollator of rolstoel nodig</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">🚨</div>
-                <span>Onzeker bij medische noodgevallen</span>
+                <div class="sign-icon">🏠</div>
+                <span>Vermijdt bepaalde delen van huis</span>
               </div>
             </div>
             <p class="signs-conclusion">
-              Slimme alarmering geeft u én uw familie de rust die u verdient.
+              Dan kunnen mobiliteitshulpmiddelen uw vrijheid en zelfstandigheid terugbrengen.
             </p>
           </div>
         </div>
@@ -89,42 +127,42 @@ import Footer from '../../components/Footer.astro';
     <section class="section services-section">
       <div class="container">
         <h2 class="section-title">Wat kunnen we voor u betekenen?</h2>
-        <p class="section-subtitle">Persoonlijk advies voor de beste alarmeringsoplossing</p>
+        <p class="section-subtitle">Persoonlijk advies voor optimale mobiliteit</p>
         
         <div class="services-grid">
           <div class="service-card">
             <div class="service-number">1</div>
-            <h3>Gratis adviesgesprek aan huis</h3>
+            <h3>Gratis mobiliteitsscan</h3>
             <p>
-              We bespreken uw situatie, gewoontes en zorgen. Welke alarmering past 
-              het beste bij úw leven?
+              We bekijken uw woning, trap en mobiliteitsbehoefte. U krijgt direct 
+              advies over mogelijke oplossingen.
             </p>
           </div>
           
           <div class="service-card">
             <div class="service-number">2</div>
-            <h3>Demonstratie verschillende systemen</h3>
+            <h3>Maatwerk oplossingen</h3>
             <p>
-              U kunt verschillende alarmeringen uitproberen voordat u kiest. 
-              We laten zien hoe alles werkt.
+              Elke trap en elke persoon is anders. We maken een plan dat perfect 
+              past bij uw situatie en wensen.
             </p>
           </div>
           
           <div class="service-card">
             <div class="service-number">3</div>
-            <h3>Installatie & instructie</h3>
+            <h3>WMO-trajectbegeleiding</h3>
             <p>
-              Professionele installatie en uitgebreide instructie voor u én 
-              uw familie over het gebruik.
+              Veel mobiliteitshulpmiddelen worden (deels) vergoed via de WMO. 
+              Wij regelen de hele aanvraag voor u.
             </p>
           </div>
 
           <div class="service-card">
             <div class="service-number">4</div>
-            <h3>24/7 ondersteuning & monitoring</h3>
+            <h3>Installatie & nazorg</h3>
             <p>
-              Continue monitoring via professionele meldkamer en technische 
-              ondersteuning wanneer nodig.
+              Professionele installatie, uitgebreide instructie en 5 jaar garantie 
+              met regelmatig onderhoud.
             </p>
           </div>
         </div>
@@ -134,77 +172,145 @@ import Footer from '../../components/Footer.astro';
     <!-- Products Section -->
     <section class="section products-section">
       <div class="container">
-        <h2 class="section-title">Welke alarmeringssystemen zijn er?</h2>
-        <p class="section-subtitle">Van eenvoudige paniekknop tot geavanceerde valdetectie</p>
+        <h2 class="section-title">Welke mobiliteitshulpmiddelen zijn er?</h2>
+        <p class="section-subtitle">Van traplift tot rollator — voor elke mobiliteitsbehoefte een oplossing</p>
         
         <div class="products-grid">
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/img_site/ouderenalarm.jpg" alt="Draagbare alarmknop voor ouderen" loading="lazy" />
+              <img src="/src/assets/img_site/stairlift.jpg" alt="Rechte traplift voor veilig naar boven" loading="lazy" />
               <div class="product-badge">Meest gekozen</div>
             </div>
             <div class="product-content">
-              <h3>Draagbare alarmknop</h3>
+              <h3>Rechte trapliften</h3>
               <p>
-                Klassieke en betrouwbare alarmering. Druk op de knop en u bent 
-                direct verbonden met de meldkamer.
+                Voor rechte trappen zonder bochten. Snelle installatie, 
+                betrouwbaar en vaak volledig WMO-vergoed.
               </p>
               <ul class="product-features">
-                <li>Waterdicht (ook onder douche)</li>
-                <li>Groot bereik (100+ meter)</li>
-                <li>Lange batterijduur (1+ jaar)</li>
-                <li>Ook als polsband verkrijgbaar</li>
+                <li>Installatie binnen 1 dag</li>
+                <li>Draagkracht tot 136kg</li>
+                <li>Inklapbare zitting en voetsteun</li>
+                <li>Batterij-backup bij stroomuitval</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€19/maand</span>
-                <span class="wmo-note">Mogelijk WMO-vergoed</span>
+                <span class="price">Vanaf €3.500</span>
+                <span class="wmo-note">Vaak volledig WMO-vergoed</span>
               </div>
             </div>
           </div>
 
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/valdetectie.png" alt="Valdetectie horloge voor automatische alarmering" loading="lazy" />
-              <div class="product-badge">Geavanceerd</div>
+              <img src="/src/assets/img_site/senioronstairlift].webp" alt="Gebogen traplift voor bochtige trappen" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3>Valdetectie horloge</h3>
+              <h3>Gebogen trapliften</h3>
               <p>
-                Detecteert automatisch een val en belt hulp, zelfs als u bewusteloos bent. 
-                Met GPS-locatie voor buitenshuis.
+                Op maat gemaakte rail voor trappen met bochten. Ook voor 
+                smalle trappen en complexe trapconfiguraties.
               </p>
               <ul class="product-features">
-                <li>Automatische valdetectie</li>
-                <li>GPS-tracking buitenshuis</li>
-                <li>Spraakverbinding via horloge</li>
-                <li>Familie-app met meldingen</li>
+                <li>100% maatwerk per trap</li>
+                <li>Ook voor smalle trappen (70cm+)</li>
+                <li>Meerdere stops mogelijk</li>
+                <li>Buitenkant of binnenkant bocht</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€35/maand</span>
-                <span class="wmo-note">WMO-aanvraag mogelijk</span>
+                <span class="price">Vanaf €8.500</span>
+                <span class="wmo-note">WMO-bijdrage €19-150/mnd</span>
               </div>
             </div>
           </div>
 
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/valdetectie.png" alt="Slimme sensoren voor automatische bewaking ouderen thuis" loading="lazy" />
+              <img src="/src/assets/img_site/Wheelchair-Lift-Installation-Process-DME-Elevators-Lifts-scaled-1.jpg" alt="Platformlift voor rolstoelgebruikers" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3>Slimme woning-sensoren</h3>
+              <h3>Platformliften</h3>
               <p>
-                Discrete sensoren die ongewone patronen detecteren. Bijvoorbeeld 
-                als u 's ochtends niet opstaat of de voordeur niet opent.
+                Verticale liften voor rolstoelgebruikers of bij beperkte trapruimte. 
+                Voor binnen en buiten.
               </p>
               <ul class="product-features">
-                <li>Bewegingssensoren per kamer</li>
-                <li>Deur/raam contacten</li>
-                <li>Patronen-herkenning</li>
-                <li>Geleidelijke alarm-escalatie</li>
+                <li>Voor rolstoel en scootmobiel</li>
+                <li>Binnen- en buitenuitvoering</li>
+                <li>Tot 3 meter hefhoogte</li>
+                <li>Verschillende platform-afmetingen</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€25/maand</span>
-                <span class="wmo-note">Afhankelijk van opstelling</span>
+                <span class="price">Vanaf €12.000</span>
+                <span class="wmo-note">Vaak WMO-subsidie mogelijk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Rollators en mobiliteitshulpmiddelen" loading="lazy" />
+            </div>
+            <div class="product-content">
+              <h3>Rollators & wandhulpmiddelen</h3>
+              <p>
+                Rollators, looprekjes, wandelstokken en andere hulpmiddelen 
+                voor veilig lopen binnen en buiten.
+              </p>
+              <ul class="product-features">
+                <li>Binnen- en buitenrollators</li>
+                <li>Verstelbare wandelstokken</li>
+                <li>Looprekjes en driewielscooters</li>
+                <li>Ergonomische handgrepen</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price">Vanaf €120</span>
+                <span class="wmo-note">Vaak WMO-hulpmiddel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="Scootmobielen voor grotere afstanden" loading="lazy" />
+            </div>
+            <div class="product-content">
+              <h3>Scootmobielen</h3>
+              <p>
+                Elektrische scootmobielen voor binnen en buiten. 
+                Voor mensen die langere afstanden moeilijk vinden.
+              </p>
+              <ul class="product-features">
+                <li>3- en 4-wiel modellen</li>
+                <li>Binnen- en buitenuitvoering</li>
+                <li>Opvouwbare varianten</li>
+                <li>Tot 15 km/h snelheid</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price">Vanaf €1.200</span>
+                <span class="wmo-note">WMO-vergoeding mogelijk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/src/assets/img_site/pexels-pixabay-302083.jpg" alt="Drempelhulpen en toegankelijkheidsmaatregelen" loading="lazy" />
+            </div>
+            <div class="product-content">
+              <h3>Hellingen & drempelhulpen</h3>
+              <p>
+                Opritten en hellingen voor rolstoelen en rollators. 
+                Maak uw woning volledig toegankelijk.
+              </p>
+              <ul class="product-features">
+                <li>Mobiele oprijplaten</li>
+                <li>Vaste hellingen (binnen/buiten)</li>
+                <li>Drempelhulpen voor kleine hoogtes</li>
+                <li>Antislip oppervlakten</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price">Vanaf €85</span>
+                <span class="wmo-note">Vaak volledig vergoed</span>
               </div>
             </div>
           </div>
@@ -217,34 +323,34 @@ import Footer from '../../components/Footer.astro';
       <div class="container">
         <div class="wmo-content">
           <div class="wmo-info">
-            <h2>WMO & subsidie bij alarmering</h2>
+            <h2>WMO & subsidie bij mobiliteitshulpmiddelen</h2>
             <p>
-              Personenalarmering valt vaak onder de WMO als u een verhoogd valrisico heeft 
-              of medische problemen. Wij helpen u met de aanvraag.
+              Mobiliteitshulpmiddelen vallen vaak onder de WMO. Van rollators tot trapliften — 
+              veel kan (gedeeltelijk) vergoed worden als het medisch noodzakelijk is.
             </p>
             
             <div class="wmo-details">
               <div class="wmo-item">
                 <div class="wmo-icon">✅</div>
                 <div>
-                  <h4>Basispakket vaak volledig vergoed</h4>
-                  <p>Draagbare alarmknop via WMO-beschikking</p>
+                  <h4>Rechte trapliften vaak volledig vergoed</h4>
+                  <p>Bij medische noodzaak geen eigen bijdrage</p>
                 </div>
               </div>
               
               <div class="wmo-item">
                 <div class="wmo-icon">💰</div>
                 <div>
-                  <h4>Eigen bijdrage beperkt</h4>
-                  <p>€19-€40 per maand voor uitgebreide pakketten</p>
+                  <h4>Gebogen trapliften</h4>
+                  <p>€19-€150 per maand eigen bijdrage</p>
                 </div>
               </div>
               
               <div class="wmo-item">
-                <div class="wmo-icon">📋</div>
+                <div class="wmo-icon">🦽</div>
                 <div>
-                  <h4>Medische indicatie</h4>
-                  <p>Arts kan valrisico of chronische ziekte bevestigen</p>
+                  <h4>Hulpmiddelen</h4>
+                  <p>Rollators, wandelstokken vaak volledig vergoed</p>
                 </div>
               </div>
             </div>
@@ -256,10 +362,10 @@ import Footer from '../../components/Footer.astro';
           
           <div class="wmo-visual">
             <div class="subsidy-highlight">
-              <div class="highlight-icon">📞</div>
-              <h3>Gratis proefperiode</h3>
-              <p>Test 30 dagen gratis voordat u zich vastlegt. Ervaar de zekerheid zelf.</p>
-              <a href="/contact" class="btn btn-primary">Start proefperiode</a>
+              <div class="highlight-icon">🏠</div>
+              <h3>Gratis traplift-check</h3>
+              <p>Laat ons uw trap bekijken en ontdek direct of een traplift WMO-vergoed kan worden</p>
+              <a href="/contact" class="btn btn-primary">Plan trap-inspectie</a>
             </div>
           </div>
         </div>
@@ -273,34 +379,34 @@ import Footer from '../../components/Footer.astro';
         <div class="blog-grid">
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/valdetectie.png" alt="Verschil persoonlijke alarmering valdetectie" loading="lazy" />
+              <img src="/src/assets/img_site/stairlift installation.jpg" alt="Traplift installatie proces uitleg" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/paniekknop-vs-valdetectie">Paniekknop of valdetectie: wat is het verschil?</a></h3>
-              <p>Uitleg over de verschillende mogelijkheden en wanneer welke het beste werkt...</p>
-              <span class="blog-date">12 januari 2024</span>
+              <h3><a href="/blog/traplift-installatie-proces">Hoe verloopt een traplift-installatie?</a></h3>
+              <p>Stap voor stap uitleg van het hele proces: van aanvraag tot gebruik van uw nieuwe traplift...</p>
+              <span class="blog-date">25 januari 2024</span>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Familie rust door ouderen alarmering" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Traplift vs platformlift vergelijking" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/familie-rust-door-alarmering">Hoe alarmering ook de familie rust geeft</a></h3>
-              <p>De psychologische voordelen van alarmering voor zowel ouderen als hun familie...</p>
-              <span class="blog-date">5 januari 2024</span>
+              <h3><a href="/blog/traplift-vs-platformlift">Traplift of platformlift: wat past bij u?</a></h3>
+              <p>De verschillen tussen trapliften en platformliften en wanneer welke oplossing het beste werkt...</p>
+              <span class="blog-date">19 januari 2024</span>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/img_site/pexels-pixabay-33786.jpg" alt="Moderne alarmering technologie voor ouderen" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="WMO aanvraag traplift tips" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/moderne-alarmering-technologie">Moderne alarmering: meer dan een knopje</a></h3>
-              <p>Ontdek de nieuwste technologie in personenalarmering en valdetectie...</p>
-              <span class="blog-date">28 december 2023</span>
+              <h3><a href="/blog/wmo-aanvraag-traplift">WMO-aanvraag voor traplift: complete gids</a></h3>
+              <p>Alles wat u moet weten over het aanvragen van WMO-vergoeding voor uw traplift...</p>
+              <span class="blog-date">13 januari 2024</span>
             </div>
           </article>
         </div>
@@ -308,19 +414,19 @@ import Footer from '../../components/Footer.astro';
     </section>
 
     <!-- Final CTA -->
-    <section class="section cta-section alarmering-theme">
+    <section class="section cta-section mobiliteit-theme">
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Klaar voor meer zekerheid?</h2>
+          <h2 class="cta-title">Klaar om uw mobiliteit terug te krijgen?</h2>
           <p class="cta-description">
-            Vraag een gratis adviesgesprek aan. We laten verschillende systemen zien 
-            en u kunt 30 dagen gratis testen.
+            Plan een gratis mobiliteitsscan. We bekijken uw situatie en adviseren 
+            de beste oplossingen voor uw vrijheid en zelfstandigheid.
           </p>
           <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+            <a href="/contact" class="btn btn-primary btn-large">Plan gratis mobiliteitsscan</a>
             <a href="/oplossingen" class="btn btn-secondary btn-large">Andere oplossingen</a>
           </div>
-          <p class="cta-note">📞 Ook bereikbaar op 020 123 45 67 — 24/7 voor urgente vragen</p>
+          <p class="cta-note">🚶 Ook bereikbaar op 020 123 45 67 — ook voor spoedige mobiliteitsvragen</p>
         </div>
       </div>
     </section>
@@ -330,10 +436,10 @@ import Footer from '../../components/Footer.astro';
 </Layout>
 
 <style>
-  .alarmering-theme {
-    --theme-color: #2196F3;
-    --theme-color-light: #42A5F5;
-    --theme-color-bg: #f0f8ff;
+  .mobiliteit-theme {
+    --theme-color: #607D8B;
+    --theme-color-light: #78909C;
+    --theme-color-bg: #f0f4f7;
   }
 
   .hero {

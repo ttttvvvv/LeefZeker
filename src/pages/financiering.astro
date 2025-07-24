@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SubsidieCheck from '../components/SubsidieCheck.astro';
+import KnowledgeCard from '../components/KnowledgeCard.astro';
 ---
 
 <Layout 
@@ -32,7 +33,7 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
   </script>
 
   <main>
-    <!-- Hero Section -->
+    <!-- Blok 1: Hero + USP's -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
@@ -45,19 +46,19 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
             
             <div class="hero-benefits">
               <div class="benefit-item">
-                <div class="benefit-icon">✅</div>
+                <span class="benefit-check">✅</span>
                 <span>Gratis subsidie-check</span>
               </div>
               <div class="benefit-item">
-                <div class="benefit-icon">✅</div>
+                <span class="benefit-check">✅</span>
                 <span>WMO-begeleiding van A tot Z</span>
               </div>
               <div class="benefit-item">
-                <div class="benefit-icon">✅</div>
+                <span class="benefit-check">✅</span>
                 <span>Alternatieve financiering</span>
               </div>
               <div class="benefit-item">
-                <div class="benefit-icon">✅</div>
+                <span class="benefit-check">✅</span>
                 <span>Persoonlijk advies aan huis</span>
               </div>
             </div>
@@ -68,14 +69,20 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
           </div>
 
           <div class="hero-subsidie-check">
-            <SubsidieCheck variant="full" showTitle={true} />
+            <SubsidieCheck 
+              title="Gratis subsidiecheck"
+              description="Binnen 5 minuten weten of u in aanmerking komt voor WMO-vergoeding"
+              buttonText="Start nu"
+              icon="🏠"
+              linkUrl="#subsidie-check"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WMO Uitleg Section -->
-    <section class="section wmo-section">
+    <!-- Blok 2: "Wat is WMO?" (info-sectie) -->
+    <section class="section wmo-info-section">
       <div class="container">
         <h2 class="section-title">Wat is WMO?</h2>
         <div class="wmo-content">
@@ -87,26 +94,26 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
             </p>
             
             <div class="wmo-highlights">
-              <div class="highlight-box highlight-green">
+              <a href="#wmo-proces" class="highlight-box highlight-green">
                 <h3>Vaak volledige vergoeding</h3>
                 <p>Bij medische noodzaak krijgt u vaak 100% vergoeding</p>
-              </div>
-              <div class="highlight-box highlight-blue">
+              </a>
+              <a href="#financieringsopties" class="highlight-box highlight-blue">
                 <h3>Lage eigen bijdrage</h3>
                 <p>Meestal €0 - €150 per maand, afhankelijk van inkomen</p>
-              </div>
-              <div class="highlight-box highlight-orange">
+              </a>
+              <a href="#wmo-proces" class="highlight-box highlight-orange">
                 <h3>Snelle afhandeling</h3>
                 <p>Beslissing binnen 8 weken, wij begeleiden u</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stap voor Stap Section -->
-    <section class="section steps-section">
+    <!-- Blok 3: Stappenplan "Zo werkt het" -->
+    <section id="wmo-proces" class="section steps-section">
       <div class="container">
         <h2 class="section-title">WMO-aanvraag: Zo werkt het</h2>
         <p class="section-subtitle">Wij begeleiden u door het hele proces — van aanvraag tot installatie</p>
@@ -159,8 +166,8 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
       </div>
     </section>
 
-    <!-- Financieringsopties Section -->
-    <section class="section financing-section">
+    <!-- Blok 4: Alle financieringsmogelijkheden -->
+    <section id="financieringsopties" class="section financing-section">
       <div class="container">
         <h2 class="section-title">Alle financieringsmogelijkheden</h2>
         <p class="section-subtitle">Ook zonder WMO-vergoeding zijn er altijd oplossingen</p>
@@ -168,104 +175,109 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
         <div class="financing-grid">
           <div class="financing-card featured">
             <div class="financing-icon">🏛️</div>
+            <div class="financing-badge">Meest gekozen</div>
             <h3 class="financing-title">WMO-subsidie</h3>
             <div class="financing-details">
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Vergoeding:</span>
                 <span class="detail-value">Vaak 100%</span>
               </div>
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Eigen bijdrage:</span>
                 <span class="detail-value">€0 - €150/mnd</span>
               </div>
-              <div class="detail-item">
-                <span class="detail-label">Geschikt voor:</span>
+              <div class="detail-row">
+                <span class="detail-label">Doelgroep:</span>
                 <span class="detail-value">Medische noodzaak</span>
               </div>
             </div>
             <ul class="financing-benefits">
-              <li>Geen terugbetaling</li>
-              <li>Wij regelen aanvraag</li>
-              <li>Snelle afhandeling</li>
+              <li>✅ Geen terugbetaling</li>
+              <li>✅ Wij regelen aanvraag</li>
+              <li>✅ Snelle afhandeling</li>
             </ul>
+            <a href="/contact" class="btn btn-primary btn-full">Plan advies</a>
           </div>
 
           <div class="financing-card">
             <div class="financing-icon">🏦</div>
             <h3 class="financing-title">Blijverslening</h3>
             <div class="financing-details">
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Bedrag:</span>
                 <span class="detail-value">€5.000 - €50.000</span>
               </div>
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Rente:</span>
                 <span class="detail-value">Vaak onder 2%</span>
               </div>
-              <div class="detail-item">
-                <span class="detail-label">Geschikt voor:</span>
+              <div class="detail-row">
+                <span class="detail-label">Doelgroep:</span>
                 <span class="detail-value">55-plussers</span>
               </div>
             </div>
             <ul class="financing-benefits">
-              <li>Geen maandlasten</li>
-              <li>Pas terugbetalen bij verkoop</li>
-              <li>Lage rente</li>
+              <li>✅ Geen maandlasten</li>
+              <li>✅ Pas terugbetalen bij verkoop</li>
+              <li>✅ Lage rente</li>
             </ul>
+            <a href="/contact" class="btn btn-secondary btn-full">Bekijk voorbeeld</a>
           </div>
 
           <div class="financing-card">
             <div class="financing-icon">💳</div>
             <h3 class="financing-title">Termijnbetaling</h3>
             <div class="financing-details">
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Bedrag:</span>
                 <span class="detail-value">Tot €5.000</span>
               </div>
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Rente:</span>
                 <span class="detail-value">0% rente</span>
               </div>
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Looptijd:</span>
                 <span class="detail-value">12-36 maanden</span>
               </div>
             </div>
             <ul class="financing-benefits">
-              <li>Geen rente</li>
-              <li>Flexibele termijnen</li>
-              <li>Direct eigendom</li>
+              <li>✅ Geen rente</li>
+              <li>✅ Flexibele termijnen</li>
+              <li>✅ Direct eigendom</li>
             </ul>
+            <a href="/contact" class="btn btn-secondary btn-full">Plan advies</a>
           </div>
 
           <div class="financing-card">
             <div class="financing-icon">🏠</div>
             <h3 class="financing-title">Huurkoop</h3>
             <div class="financing-details">
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Looptijd:</span>
                 <span class="detail-value">36-60 maanden</span>
               </div>
-              <div class="detail-item">
+              <div class="detail-row">
                 <span class="detail-label">Voordeel:</span>
                 <span class="detail-value">Belastingaftrek</span>
               </div>
-              <div class="detail-item">
-                <span class="detail-label">Geschikt voor:</span>
+              <div class="detail-row">
+                <span class="detail-label">Doelgroep:</span>
                 <span class="detail-value">Vast inkomen</span>
               </div>
             </div>
             <ul class="financing-benefits">
-              <li>Eigendom na afloop</li>
-              <li>Lage maandlasten</li>
-              <li>BTW-voordeel mogelijk</li>
+              <li>✅ Eigendom na afloop</li>
+              <li>✅ Lage maandlasten</li>
+              <li>✅ BTW-voordeel mogelijk</li>
             </ul>
+            <a href="/contact" class="btn btn-secondary btn-full">Bekijk voorbeeld</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Gemeente Informatie Section -->
+    <!-- Blok 5: WMO per gemeente -->
     <section class="section gemeente-section">
       <div class="container">
         <h2 class="section-title">WMO per gemeente</h2>
@@ -275,7 +287,7 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
           <div class="gemeente-card">
             <div class="gemeente-header">
               <h3>Amsterdam</h3>
-              <div class="gemeente-badge">Uitgebreide regeling</div>
+              <div class="gemeente-badge green">Uitgebreide regeling</div>
             </div>
             <ul class="gemeente-details">
               <li><strong>Vergoeding:</strong> Vaak 100%</li>
@@ -288,7 +300,7 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
           <div class="gemeente-card">
             <div class="gemeente-header">
               <h3>Rotterdam</h3>
-              <div class="gemeente-badge">Snelle afhandeling</div>
+              <div class="gemeente-badge blue">Snelle afhandeling</div>
             </div>
             <ul class="gemeente-details">
               <li><strong>Vergoeding:</strong> Tot €12.000</li>
@@ -300,153 +312,259 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
 
           <div class="gemeente-card">
             <div class="gemeente-header">
-              <h3>Utrecht</h3>
-              <div class="gemeente-badge">Persoonlijke benadering</div>
+              <h3>Den Haag</h3>
+              <div class="gemeente-badge orange">Persoonlijke aanpak</div>
             </div>
             <ul class="gemeente-details">
-              <li><strong>Vergoeding:</strong> Volledige vergoeding</li>
-              <li><strong>Eigen bijdrage:</strong> €0 - €18/mnd</li>
-              <li><strong>Doorlooptijd:</strong> 6-8 weken</li>
+              <li><strong>Vergoeding:</strong> Vaak volledig</li>
+              <li><strong>Eigen bijdrage:</strong> €0 - €22/mnd</li>
+              <li><strong>Doorlooptijd:</strong> 6-7 weken</li>
               <li><strong>Bijzonderheid:</strong> Uitgebreid huisbezoek</li>
             </ul>
           </div>
 
           <div class="gemeente-card">
             <div class="gemeente-header">
-              <h3>Den Haag</h3>
-              <div class="gemeente-badge">Efficiënte service</div>
+              <h3>Utrecht</h3>
+              <div class="gemeente-badge purple">Innovatief</div>
             </div>
             <ul class="gemeente-details">
-              <li><strong>Vergoeding:</strong> Tot €10.000</li>
-              <li><strong>Eigen bijdrage:</strong> €0 - €16/mnd</li>
-              <li><strong>Doorlooptijd:</strong> 4-6 weken</li>
+              <li><strong>Vergoeding:</strong> Tot €15.000</li>
+              <li><strong>Eigen bijdrage:</strong> €0 - €25/mnd</li>
+              <li><strong>Doorlooptijd:</strong> 5-6 weken</li>
               <li><strong>Bijzonderheid:</strong> Online tracking</li>
             </ul>
           </div>
 
-          <div class="gemeente-card highlight">
+          <div class="gemeente-card">
+            <div class="gemeente-header">
+              <h3>Eindhoven</h3>
+              <div class="gemeente-badge teal">Flexibel</div>
+            </div>
+            <ul class="gemeente-details">
+              <li><strong>Vergoeding:</strong> Naar behoefte</li>
+              <li><strong>Eigen bijdrage:</strong> €0 - €30/mnd</li>
+              <li><strong>Doorlooptijd:</strong> 6-8 weken</li>
+              <li><strong>Bijzonderheid:</strong> Technologie-vriendelijk</li>
+            </ul>
+          </div>
+
+          <div class="gemeente-card special">
             <div class="gemeente-header">
               <h3>Uw gemeente</h3>
-              <div class="gemeente-badge gemeente-badge-primary">Informatie op maat</div>
+              <div class="gemeente-badge default">Ook mogelijk</div>
             </div>
-            <div class="gemeente-cta">
-              <p>Wilt u weten wat de regels zijn in uw gemeente?</p>
-              <a href="/contact" class="btn btn-primary btn-small">Gratis advies</a>
+            <div class="gemeente-special-content">
+              <p>Wij kennen de regels van elke Nederlandse gemeente. Plan een gratis adviesgesprek en ontdek wat er in uw situatie mogelijk is.</p>
+              <a href="/contact" class="btn btn-primary">Plan gratis advies</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Blok 6: Subsidie-check module -->
+    <section id="subsidie-check" class="section subsidie-check-section">
+      <div class="container">
+        <div class="subsidie-check-content">
+          <div class="subsidie-check-intro">
+            <h2 class="section-title">Subsidie-check: In 5 minuten meer weten</h2>
+            <p class="section-subtitle">
+              Beantwoord een paar eenvoudige vragen en ontdek direct welke subsidies 
+              en financieringsopties bij uw situatie passen.
+            </p>
+            <div class="check-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="check-progress-fill"></div>
+              </div>
+              <span class="progress-text" id="check-progress-text">Vraag 1 van 3</span>
+            </div>
+          </div>
+
+          <div class="subsidie-check-widget">
+            <div class="check-step active" id="step-1">
+              <h3>Stap 1: Wat heeft u nodig?</h3>
+              <div class="check-options">
+                <label class="check-option">
+                  <input type="radio" name="need" value="traplift">
+                  <span class="option-content">
+                    <span class="option-icon">🏃</span>
+                    <span class="option-text">Traplift</span>
+                  </span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="need" value="badkamer">
+                  <span class="option-content">
+                    <span class="option-icon">🛁</span>
+                    <span class="option-text">Badkamer aanpassing</span>
+                  </span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="need" value="drempels">
+                  <span class="option-content">
+                    <span class="option-icon">🚪</span>
+                    <span class="option-text">Drempels wegwerken</span>
+                  </span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="need" value="anders">
+                  <span class="option-content">
+                    <span class="option-icon">❓</span>
+                    <span class="option-text">Iets anders</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="check-step" id="step-2">
+              <h3>Stap 2: Wat is uw leeftijd?</h3>
+              <div class="check-options">
+                <label class="check-option">
+                  <input type="radio" name="age" value="under-55">
+                  <span class="option-content">
+                    <span class="option-text">Onder 55 jaar</span>
+                  </span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="age" value="55-75">
+                  <span class="option-content">
+                    <span class="option-text">55-75 jaar</span>
+                  </span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="age" value="over-75">
+                  <span class="option-content">
+                    <span class="option-text">Boven 75 jaar</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="check-step" id="step-3">
+              <h3>Stap 3: Heeft u een medische indicatie?</h3>
+              <div class="check-options">
+                <label class="check-option">
+                  <input type="radio" name="medical" value="yes">
+                  <span class="option-content">
+                    <span class="option-text">Ja, van arts/fysiotherapeut</span>
+                  </span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="medical" value="no">
+                  <span class="option-content">
+                    <span class="option-text">Nee, maar wel problemen</span>
+                  </span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="medical" value="unknown">
+                  <span class="option-content">
+                    <span class="option-text">Weet ik niet zeker</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="check-step" id="result">
+              <div class="check-result">
+                <div class="result-icon">🎉</div>
+                <h3>Uw resultaat</h3>
+                <div class="result-content" id="result-content">
+                  <!-- JavaScript fills this -->
+                </div>
+                <div class="result-actions">
+                  <a href="/contact" class="btn btn-primary">Plan gratis adviesgesprek</a>
+                  <button class="btn btn-secondary" onclick="restartCheck()">Opnieuw starten</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="check-navigation">
+              <button class="btn btn-secondary" id="prev-btn" onclick="prevStep()" style="display: none;">Vorige</button>
+              <button class="btn btn-primary" id="next-btn" onclick="nextStep()">Volgende</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blok 7: Veelgestelde vragen -->
     <section class="section faq-section">
       <div class="container">
         <h2 class="section-title">Veelgestelde vragen</h2>
-        
         <div class="faq-grid">
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ('wmo-voorwaarden')">
-              <span>Wat zijn de voorwaarden voor WMO-vergoeding?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer" id="wmo-voorwaarden-answer">
-              <p>Voor WMO-vergoeding moet u voldoen aan deze voorwaarden:</p>
-              <ul>
-                <li>Medische noodzaak aangetoond door arts/ergotherapeut</li>
-                <li>De woningaanpassing is effectief en noodzakelijk</li>
-                <li>U woont permanent in de woning</li>
-                <li>Er is geen andere oplossing beschikbaar</li>
-                <li>U bent ingeschreven in de gemeente</li>
-              </ul>
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <h3 class="faq-question" itemprop="name">Hoe lang duurt een WMO-aanvraag?</h3>
+            <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Een WMO-aanvraag duurt wettelijk maximaal 8 weken. In de praktijk krijgt u vaak binnen 6 weken antwoord. Wij begeleiden u door het hele proces.</p>
+              </div>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ('eigen-bijdrage')">
-              <span>Hoe wordt de eigen bijdrage berekend?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer" id="eigen-bijdrage-answer">
-              <p>De eigen bijdrage hangt af van uw inkomen en vermogen:</p>
-              <ul>
-                <li>Laag inkomen: vaak €0 eigen bijdrage</li>
-                <li>AOW-pensioen: meestal €19-75 per maand</li>
-                <li>Hoger inkomen: tot €150 per maand</li>
-                <li>Vermogen boven €26.000 (2024): extra bijdrage mogelijk</li>
-              </ul>
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <h3 class="faq-question" itemprop="name">Wat kost een WMO-aanvraag?</h3>
+            <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Een WMO-aanvraag kost niets. Onze begeleiding is gratis. U betaalt alleen de eventuele eigen bijdrage na goedkeuring.</p>
+              </div>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ('aanvraag-afgewezen')">
-              <span>Wat als mijn WMO-aanvraag wordt afgewezen?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer" id="aanvraag-afgewezen-answer">
-              <p>Bij afwijzing heeft u nog deze mogelijkheden:</p>
-              <ul>
-                <li>Bezwaar indienen binnen 6 weken</li>
-                <li>Nieuwe aanvraag met aanvullende informatie</li>
-                <li>Alternatieve financiering via Blijverslening</li>
-                <li>Termijnbetaling of huurkoop</li>
-                <li>Wij begeleiden u bij alle stappen</li>
-              </ul>
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <h3 class="faq-question" itemprop="name">Wat is het CAK?</h3>
+            <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Het CAK (Centraal Administratie Kantoor) bepaalt uw eigen bijdrage voor WMO-voorzieningen op basis van uw inkomen en vermogen.</p>
+              </div>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ('blijverslening-voorwaarden')">
-              <span>Voor wie is de Blijverslening geschikt?</span>
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer" id="blijverslening-voorwaarden-answer">
-              <p>De Blijverslening is ideaal voor:</p>
-              <ul>
-                <li>55-plussers die eigenaar zijn van hun woning</li>
-                <li>Aanpassingen vanaf €5.000</li>
-                <li>Mensen die geen maandlasten willen</li>
-                <li>Bij afwijzing WMO-aanvraag</li>
-                <li>Maximaal €50.000 per huishouden</li>
-              </ul>
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <h3 class="faq-question" itemprop="name">Kan ik WMO krijgen als huurder?</h3>
+            <div class="faq-answer" itemscope itemtype="https://Schema.org/Answer">
+              <div itemprop="text">
+                <p>Ja, ook huurders kunnen WMO-voorzieningen aanvragen. De gemeente regelt dan de toestemming met uw verhuurder.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <h3 class="faq-question" itemprop="name">Wat als ik eerder WMO kreeg?</h3>
+            <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Als u eerder WMO-voorzieningen kreeg, kunt u opnieuw een aanvraag doen voor nieuwe of aanvullende hulpmiddelen.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+            <h3 class="faq-question" itemprop="name">Wat als mijn aanvraag wordt afgewezen?</h3>
+            <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Bij afwijzing kunt u bezwaar aantekenen. Wij helpen u hierbij en zoeken naar alternatieve financieringsopties.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Blok 8: Slotblok — Advies & Contact -->
     <section class="section cta-section">
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Gratis persoonlijk advies</h2>
+          <h2 class="cta-title">Klaar om uw subsidie-aanvraag te starten?</h2>
           <p class="cta-description">
-            Weet u niet welke financiering het beste bij u past? 
-            Onze adviseurs komen gratis bij u langs voor advies op maat.
+            Plan een gratis adviesgesprek en ontdek welke financieringsopties 
+            het beste bij uw situatie passen. Wij regelen de hele aanvraag voor u.
           </p>
-          <div class="cta-stats">
-            <div class="stat-item">
-              <span class="stat-number">500+</span>
-              <span class="stat-text">WMO-aanvragen begeleid</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">95%</span>
-              <span class="stat-text">goedgekeurde aanvragen</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">15+</span>
-              <span class="stat-text">jaar ervaring</span>
-            </div>
-          </div>
           <div class="cta-actions">
-            <a href="tel:020-123-45-67" class="btn btn-primary btn-large">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              Bel direct: 020 123 45 67
-            </a>
-            <a href="/contact" class="btn btn-secondary btn-large">Plan thuisadvies</a>
+            <a href="/contact" class="btn btn-primary btn-large">Plan gratis adviesgesprek</a>
+            <a href="tel:020-123-4567" class="btn btn-secondary btn-large">Direct bellen</a>
           </div>
-          <p class="cta-note">📞 Bereikbaar tot 20:00 - Ook 's avonds en weekends mogelijk</p>
+          <p class="cta-note">
+            📱 Ook bereikbaar via WhatsApp — snel een antwoord op uw vragen
+          </p>
         </div>
       </div>
     </section>
@@ -456,62 +574,361 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
 </Layout>
 
 <script>
-  // FAQ functionality
-  function toggleFAQ(id) {
-    const answer = document.getElementById(id + '-answer');
-    const question = answer.previousElementSibling;
-    const icon = question.querySelector('.faq-icon');
-    
-    // Close all other FAQ items
-    document.querySelectorAll('.faq-answer').forEach(item => {
-      if (item !== answer) {
-        item.classList.remove('show');
-        item.previousElementSibling.classList.remove('active');
-      }
-    });
-    
-    // Toggle current item
-    answer.classList.toggle('show');
-    question.classList.toggle('active');
-  }
+  // Subsidie-check functionaliteit
+  document.addEventListener('DOMContentLoaded', function() {
+    let currentStep = 1;
+    const totalSteps = 3;
+    const answers = {};
 
-  // Make toggleFAQ globally available
-  window.toggleFAQ = toggleFAQ;
+    // Initialiseer event listeners
+    initializeSubsidieCheck();
+    updateProgress();
+
+    function initializeSubsidieCheck() {
+      // Event listeners voor radio buttons (voor automatische doorgang)
+      document.querySelectorAll('.check-option input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+          const stepElement = this.closest('.check-step');
+          const stepNumber = parseInt(stepElement.id.split('-')[1]);
+          
+          // Verwijder selected class van alle opties in deze stap
+          stepElement.querySelectorAll('.check-option').forEach(option => {
+            option.classList.remove('selected');
+          });
+          
+          // Voeg selected class toe aan gekozen optie
+          this.closest('.check-option').classList.add('selected');
+          
+          // Sla antwoord op
+          answers[this.name] = this.value;
+          
+          // Auto-advance na korte delay
+          setTimeout(() => {
+            if (stepNumber < totalSteps) {
+              nextStep();
+            } else {
+              showResult();
+            }
+          }, 600);
+        });
+      });
+
+      // Event listeners voor navigatie knoppen
+      const nextBtn = document.getElementById('next-btn');
+      const prevBtn = document.getElementById('prev-btn');
+      
+      if (nextBtn) {
+        nextBtn.addEventListener('click', nextStep);
+      }
+      
+      if (prevBtn) {
+        prevBtn.addEventListener('click', prevStep);
+      }
+
+      // Event listener voor restart button
+      const restartBtn = document.querySelector('button[onclick="restartCheck()"]');
+      if (restartBtn) {
+        restartBtn.addEventListener('click', restartCheck);
+        restartBtn.removeAttribute('onclick'); // Verwijder inline onclick
+      }
+    }
+
+    function nextStep() {
+      const currentStepEl = document.getElementById(`step-${currentStep}`);
+      const inputs = currentStepEl.querySelectorAll('input[type="radio"]');
+      const selectedInput = Array.from(inputs).find(input => input.checked);
+      
+      if (!selectedInput && currentStep <= totalSteps) {
+        alert('Maak eerst een keuze voordat u verder gaat.');
+        return;
+      }
+
+      if (selectedInput) {
+        answers[selectedInput.name] = selectedInput.value;
+      }
+
+      if (currentStep < totalSteps) {
+        // Verberg huidige stap
+        currentStepEl.classList.remove('active');
+        currentStep++;
+        
+        // Toon volgende stap
+        const nextStepEl = document.getElementById(`step-${currentStep}`);
+        if (nextStepEl) {
+          nextStepEl.classList.add('active');
+        }
+        
+        // Update navigatie
+        updateNavigation();
+      } else if (currentStep === totalSteps) {
+        // Toon resultaat
+        currentStepEl.classList.remove('active');
+        showResult();
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        document.getElementById(`step-${currentStep}`).classList.remove('active');
+        currentStep--;
+        document.getElementById(`step-${currentStep}`).classList.add('active');
+        
+        updateNavigation();
+      }
+    }
+
+    function updateNavigation() {
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      if (prevBtn) {
+        prevBtn.style.display = currentStep > 1 ? 'inline-block' : 'none';
+      }
+      
+      if (nextBtn) {
+        nextBtn.textContent = currentStep === totalSteps ? 'Toon resultaat' : 'Volgende';
+      }
+      
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const progressFill = document.getElementById('check-progress-fill');
+      const progressText = document.getElementById('check-progress-text');
+      
+      if (progressFill && progressText) {
+        const progress = (currentStep / totalSteps) * 100;
+        progressFill.style.width = `${progress}%`;
+        
+        if (currentStep <= totalSteps) {
+          progressText.textContent = `Vraag ${currentStep} van ${totalSteps}`;
+        } else {
+          progressText.textContent = 'Resultaten';
+        }
+      }
+    }
+
+    function showResult() {
+      const resultStep = document.getElementById('result');
+      const navigation = document.querySelector('.check-navigation');
+      
+      if (resultStep) {
+        resultStep.classList.add('active');
+      }
+      
+      if (navigation) {
+        navigation.style.display = 'none';
+      }
+      
+      // Bepaal resultaat op basis van antwoorden
+      generateResult();
+    }
+
+    function generateResult() {
+      const resultContent = document.getElementById('result-content');
+      if (!resultContent) return;
+      
+      let resultHtml = '';
+
+      if (answers.medical === 'yes') {
+        resultHtml = `
+          <div class="result-positive">
+            <h4>🎉 Grote kans op WMO-vergoeding!</h4>
+            <p>Met een medische indicatie heeft u een zeer goede kans op (volledige) WMO-vergoeding.</p>
+            <ul>
+              <li>✅ Waarschijnlijk 100% vergoeding</li>
+              <li>✅ Eigen bijdrage €0-150/maand</li>
+              <li>✅ Wij regelen de hele aanvraag</li>
+            </ul>
+          </div>
+        `;
+      } else if (answers.age === 'over-75' || answers.age === '55-75') {
+        resultHtml = `
+          <div class="result-good">
+            <h4>👍 Goede kansen op subsidie</h4>
+            <p>Voor uw leeftijdsgroep zijn er verschillende financieringsopties beschikbaar.</p>
+            <ul>
+              <li>✅ WMO-aanvraag mogelijk</li>
+              <li>✅ Blijverslening beschikbaar</li>
+              <li>✅ Termijnbetaling zonder rente</li>
+            </ul>
+          </div>
+        `;
+      } else if (answers.need === 'traplift' && answers.age === 'under-55') {
+        resultHtml = `
+          <div class="result-neutral">
+            <h4>💡 Alternatieve financiering mogelijk</h4>
+            <p>Voor uw leeftijd zijn er verschillende financieringsopties buiten WMO om.</p>
+            <ul>
+              <li>✅ Termijnbetaling 0% rente</li>
+              <li>✅ Huurkoop mogelijk</li>
+              <li>✅ Persoonlijk financieringsplan</li>
+            </ul>
+          </div>
+        `;
+      } else {
+        resultHtml = `
+          <div class="result-neutral">
+            <h4>🤔 Maatwerk-advies nodig</h4>
+            <p>Uw situatie vereist persoonlijk advies om de beste financieringsoptie te vinden.</p>
+            <ul>
+              <li>✅ Gratis adviesgesprek</li>
+              <li>✅ Alle opties op een rij</li>
+              <li>✅ Persoonlijk financieringsplan</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      resultContent.innerHTML = resultHtml;
+    }
+
+    function restartCheck() {
+      // Reset alles
+      currentStep = 1;
+      Object.keys(answers).forEach(key => delete answers[key]);
+      
+      // Verberg alle stappen behalve de eerste
+      document.querySelectorAll('.check-step').forEach(step => step.classList.remove('active'));
+      const firstStep = document.getElementById('step-1');
+      if (firstStep) {
+        firstStep.classList.add('active');
+      }
+      
+      // Reset navigatie
+      const navigation = document.querySelector('.check-navigation');
+      if (navigation) {
+        navigation.style.display = 'flex';
+      }
+      
+      updateNavigation();
+      
+      // Reset alle radio buttons en selected states
+      document.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.checked = false;
+      });
+      
+      document.querySelectorAll('.check-option').forEach(option => {
+        option.classList.remove('selected');
+      });
+    }
+
+    // Maak functies globaal beschikbaar
+    window.nextStep = nextStep;
+    window.prevStep = prevStep;
+    window.restartCheck = restartCheck;
+  });
+
+  // FAQ accordeon functionaliteit
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.closest('.faq-item');
+        const isOpen = faqItem.classList.contains('open');
+        
+        // Sluit alle andere FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+        
+        // Toggle huidige item
+        if (!isOpen) {
+          faqItem.classList.add('open');
+        }
+      });
+    });
+  });
+
+  // Smooth scroll voor anchor links
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
 </script>
 
 <style>
-  .hero {
-    background: linear-gradient(135deg, var(--warm-gray) 0%, #ffffff 100%);
+  :root {
+    --primary-green: #2E7D32;
+    --primary-green-light: #4CAF50;
+    --secondary-blue: #1976D2;
+    --accent-orange: #FF9800;
+    --text-dark: #212121;
+    --text-gray: #666;
+    --background-light: #f8f9fa;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+  }
+
+  /* Layout & Typography */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section {
     padding: 4rem 0;
-    overflow: hidden;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Blok 1: Hero */
+  .hero {
+    background: linear-gradient(135deg, #f0f9f4 0%, #ffffff 100%);
+    padding: 6rem 0 4rem;
   }
 
   .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 400px;
     gap: 4rem;
-    align-items: flex-start;
+    align-items: start;
   }
 
   .hero-title {
     font-size: 3rem;
     font-weight: 700;
-    line-height: 1.2;
     color: var(--text-dark);
     margin-bottom: 1rem;
+    line-height: 1.2;
   }
 
   .hero-subtitle {
     font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.6;
     color: var(--text-gray);
     margin-bottom: 2rem;
+    line-height: 1.5;
   }
 
   .hero-benefits {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 2rem;
   }
@@ -520,37 +937,28 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: var(--white);
     padding: 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .benefit-icon {
-    background: var(--primary-green);
-    color: var(--white);
-    padding: 0.5rem;
+    background: var(--white);
     border-radius: 0.5rem;
-    flex-shrink: 0;
-    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
-  .benefit-item span {
+  .benefit-check {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .benefit-item span:last-child {
     font-weight: 500;
     color: var(--text-dark);
-    font-size: 0.875rem;
   }
 
   .hero-quote {
-    font-size: 1.125rem;
     font-style: italic;
-    color: var(--primary-green);
-    border-left: 3px solid var(--primary-green);
-    background: #f0f9f4;
-    padding: 1rem 1rem 1rem 2rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    margin-bottom: 0;
+    color: var(--text-gray);
+    border-left: 4px solid var(--primary-green);
+    padding-left: 1rem;
+    margin: 0;
   }
 
   .hero-subsidie-check {
@@ -558,66 +966,76 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
     top: 2rem;
   }
 
-  .wmo-section {
-    background-color: var(--white);
+  /* Blok 2: WMO Info */
+  .wmo-info-section {
+    background: var(--white);
   }
 
   .wmo-intro {
-    font-size: 1.25rem;
-    line-height: 1.6;
+    font-size: 1.125rem;
     color: var(--text-gray);
-    margin-bottom: 2rem;
     text-align: center;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
   }
 
   .wmo-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 
   .highlight-box {
+    background: var(--white);
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
-    color: var(--white);
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .highlight-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   }
 
   .highlight-green {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    border-color: var(--primary-green);
   }
 
   .highlight-blue {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-color: var(--secondary-blue);
   }
 
   .highlight-orange {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-color: var(--accent-orange);
   }
 
   .highlight-box h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: var(--white);
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
   }
 
   .highlight-box p {
-    opacity: 0.9;
-    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    margin: 0;
   }
 
+  /* Blok 3: Stappenplan */
   .steps-section {
-    background-color: var(--warm-gray);
+    background: var(--background-light);
   }
 
   .steps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
 
@@ -625,16 +1043,16 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
     background: var(--white);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
-    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
 
   .step-number {
     width: 60px;
     height: 60px;
-    background: var(--primary-green);
-    color: var(--white);
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -653,285 +1071,443 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
 
   .step-description {
     color: var(--text-gray);
-    line-height: 1.6;
+    line-height: 1.5;
+    margin: 0;
   }
 
+  /* Blok 4: Financieringsopties */
   .financing-section {
-    background-color: var(--white);
+    background: var(--white);
   }
 
   .financing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
   .financing-card {
     background: var(--white);
-    border: 2px solid var(--border-light);
+    border: 2px solid var(--border-color);
     border-radius: 1rem;
     padding: 2rem;
+    position: relative;
     transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
   }
 
   .financing-card:hover {
-    border-color: var(--primary-green);
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   }
 
   .financing-card.featured {
     border-color: var(--primary-green);
-    background: linear-gradient(135deg, #f8fdf8 0%, var(--white) 100%);
+    box-shadow: 0 4px 20px rgba(46, 125, 50, 0.15);
+  }
+
+  .financing-badge {
+    position: absolute;
+    top: -10px;
+    right: 2rem;
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .financing-icon {
     font-size: 3rem;
-    text-align: center;
     margin-bottom: 1rem;
+    display: block;
   }
 
   .financing-title {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    text-align: center;
+    margin-bottom: 1rem;
   }
 
   .financing-details {
     margin-bottom: 1.5rem;
   }
 
-  .detail-item {
+  .detail-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid #f0f0f0;
   }
 
-  .detail-item:last-child {
+  .detail-row:last-child {
     border-bottom: none;
   }
 
   .detail-label {
     color: var(--text-gray);
-    font-size: 0.875rem;
+    font-size: 0.9rem;
   }
 
   .detail-value {
     font-weight: 600;
-    color: var(--primary-green);
+    color: var(--text-dark);
   }
 
   .financing-benefits {
     list-style: none;
-    margin-top: auto;
+    padding: 0;
+    margin: 0 0 2rem 0;
   }
 
   .financing-benefits li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
     color: var(--text-gray);
   }
 
-  .financing-benefits li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--success-green);
-    font-weight: bold;
+  .btn-full {
+    width: 100%;
+    justify-content: center;
   }
 
+  /* Blok 5: Gemeente overzicht */
   .gemeente-section {
-    background-color: var(--warm-gray);
+    background: var(--background-light);
   }
 
   .gemeente-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
   .gemeente-card {
     background: var(--white);
     border-radius: 1rem;
-    overflow: hidden;
+    padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
   }
 
-  .gemeente-card:hover {
-    transform: translateY(-2px);
-  }
-
-  .gemeente-card.highlight {
-    border: 2px solid var(--primary-green);
-    background: linear-gradient(135deg, #f8fdf8 0%, var(--white) 100%);
+  .gemeente-card.special {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+    color: var(--white);
   }
 
   .gemeente-header {
-    padding: 1.5rem 2rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5rem;
   }
 
   .gemeente-header h3 {
+    margin: 0;
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 0;
   }
 
   .gemeente-badge {
-    background: var(--primary-green);
-    color: var(--white);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
-  .gemeente-badge-primary {
-    background: var(--primary-green-dark);
-  }
+  .gemeente-badge.green { background: #e8f5e8; color: var(--primary-green); }
+  .gemeente-badge.blue { background: #e3f2fd; color: var(--secondary-blue); }
+  .gemeente-badge.orange { background: #fff3e0; color: var(--accent-orange); }
+  .gemeente-badge.purple { background: #f3e5f5; color: #7B1FA2; }
+  .gemeente-badge.teal { background: #e0f2f1; color: #00695C; }
+  .gemeente-badge.default { background: var(--white); color: var(--primary-green); }
 
   .gemeente-details {
     list-style: none;
-    padding: 0 2rem 2rem;
+    padding: 0;
+    margin: 0;
   }
 
   .gemeente-details li {
     padding: 0.5rem 0;
-    color: var(--text-gray);
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
   }
 
   .gemeente-details li:last-child {
     border-bottom: none;
   }
 
-  .gemeente-cta {
-    padding: 0 2rem 2rem;
+  .gemeente-special-content {
     text-align: center;
   }
 
-  .gemeente-cta p {
+  .gemeente-special-content p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  /* Blok 6: Subsidie-check widget */
+  .subsidie-check-section {
+    background: var(--white);
+  }
+
+  .check-progress {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .progress-bar {
+    background: #e0e0e0;
+    border-radius: 1rem;
+    height: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    background: linear-gradient(90deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+    height: 100%;
+    width: 33.33%;
+    border-radius: 1rem;
+    transition: width 0.3s ease;
+  }
+
+  .progress-text {
+    font-size: 0.875rem;
     color: var(--text-gray);
+    font-weight: 500;
+  }
+
+  .subsidie-check-widget {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--background-light);
+    border-radius: 1rem;
+    padding: 3rem;
+  }
+
+  .check-step {
+    display: none;
+  }
+
+  .check-step.active {
+    display: block;
+  }
+
+  .check-step h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .check-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .check-option {
+    cursor: pointer;
+  }
+
+  .check-option input {
+    display: none;
+  }
+
+  .option-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .check-option:hover .option-content {
+    border-color: var(--primary-green);
+  }
+
+  .check-option input:checked + .option-content,
+  .check-option.selected .option-content {
+    border-color: var(--primary-green);
+    background: #f0f9f4;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+  }
+
+  .option-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .option-text {
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+
+  .check-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .check-result {
+    text-align: center;
+  }
+
+  .result-icon {
+    font-size: 4rem;
     margin-bottom: 1rem;
   }
 
+  .result-content {
+    margin: 2rem 0;
+  }
+
+  .result-positive, .result-good, .result-neutral {
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: left;
+  }
+
+  .result-positive {
+    background: #e8f5e8;
+    border: 2px solid var(--primary-green);
+  }
+
+  .result-good {
+    background: #e3f2fd;
+    border: 2px solid var(--secondary-blue);
+  }
+
+  .result-neutral {
+    background: #fff3e0;
+    border: 2px solid var(--accent-orange);
+  }
+
+  .result-content h4 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .result-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+
+  .result-content li {
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+
+  .result-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* Blok 7: FAQ */
   .faq-section {
-    background-color: var(--white);
+    background: var(--background-light);
   }
 
   .faq-grid {
+    display: grid;
+    gap: 1rem;
     max-width: 800px;
     margin: 0 auto;
   }
 
   .faq-item {
-    border-bottom: 1px solid var(--border-light);
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+  .faq-item.open .faq-question {
+    background: #f8f9fa;
   }
 
   .faq-question {
-    width: 100%;
-    padding: 1.5rem 0;
-    background: none;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+    padding: 1.5rem;
+    margin: 0;
     font-size: 1.125rem;
     font-weight: 600;
     color: var(--text-dark);
+    cursor: pointer;
+    position: relative;
+    background: var(--white);
+    border: none;
+    width: 100%;
     text-align: left;
+    transition: background-color 0.3s ease;
   }
 
   .faq-question:hover {
-    color: var(--primary-green);
+    background: #f8f9fa;
   }
 
-  .faq-icon {
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 1.5rem;
     color: var(--primary-green);
     transition: transform 0.3s ease;
   }
 
-  .faq-question.active .faq-icon {
-    transform: rotate(45deg);
+  .faq-item.open .faq-question::after {
+    transform: translateY(-50%) rotate(45deg);
   }
 
   .faq-answer {
-    padding: 0 0 1.5rem 0;
-    display: none;
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 200px;
+  }
+
+  .faq-answer p {
     color: var(--text-gray);
     line-height: 1.6;
+    margin: 0;
   }
 
-  .faq-answer.show {
-    display: block;
-  }
-
-  .faq-answer ul {
-    margin-top: 1rem;
-    padding-left: 1.5rem;
-  }
-
-  .faq-answer li {
-    margin-bottom: 0.5rem;
-  }
-
+  /* Blok 8: Final CTA */
   .cta-section {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
-    color: var(--white);
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e8 100%);
     text-align: center;
   }
 
   .cta-title {
     font-size: 2.5rem;
     font-weight: 700;
+    color: var(--text-dark);
     margin-bottom: 1rem;
-    color: var(--white);
   }
 
   .cta-description {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    color: var(--text-gray);
     margin-bottom: 2rem;
-    opacity: 0.9;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .cta-stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--white);
-    line-height: 1;
-  }
-
-  .stat-text {
-    font-size: 0.875rem;
-    opacity: 0.9;
   }
 
   .cta-actions {
@@ -939,27 +1515,56 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
     gap: 1rem;
     justify-content: center;
     margin-bottom: 1rem;
-    flex-wrap: wrap;
   }
 
   .cta-note {
     font-size: 0.875rem;
-    opacity: 0.8;
+    color: var(--text-gray);
     font-style: italic;
   }
 
-  .cta-section .btn-secondary {
-    background-color: var(--white);
-    color: var(--primary-green);
-    border-color: var(--white);
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
   }
 
-  .cta-section .btn-secondary:hover {
-    background-color: transparent;
+  .btn-primary {
+    background: var(--primary-green);
     color: var(--white);
-    border-color: var(--white);
+    border-color: var(--primary-green);
   }
 
+  .btn-primary:hover {
+    background: var(--primary-green-light);
+    border-color: var(--primary-green-light);
+  }
+
+  .btn-secondary {
+    background: var(--white);
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+
+  .btn-secondary:hover {
+    background: var(--primary-green);
+    color: var(--white);
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  /* Responsive */
   @media (max-width: 1024px) {
     .hero-content {
       grid-template-columns: 1fr;
@@ -974,8 +1579,8 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
       grid-template-columns: 1fr;
     }
 
-    .cta-stats {
-      gap: 2rem;
+    .financing-grid {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -990,8 +1595,11 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
 
     .wmo-highlights,
     .steps-grid,
-    .financing-grid,
     .gemeente-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .check-options {
       grid-template-columns: 1fr;
     }
 
@@ -1000,9 +1608,8 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
       align-items: center;
     }
 
-    .cta-stats {
+    .result-actions {
       flex-direction: column;
-      gap: 1rem;
     }
 
     .hero-benefits {
@@ -1011,10 +1618,6 @@ import SubsidieCheck from '../components/SubsidieCheck.astro';
 
     .benefit-item {
       padding: 0.75rem;
-    }
-
-    .benefit-item span {
-      font-size: 0.8rem;
     }
   }
 </style> 

@@ -5,43 +5,83 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout 
-  title="Slimme Alarmering & Sensoren voor Ouderen | LeefZeker"
-  description="Personenalarmering met meldkamer, valdetectie technologie en slimme sensoren. 24/7 beveiliging voor ouderen thuis. WMO-subsidie mogelijk."
+  title="Mantelzorg & Coördinatie Ondersteuning | LeefZeker"
+  description="Ondersteuning voor mantelzorgers en familie bij zorg voor ouderen thuis. Coördinatie, begeleiding en praktische hulp. WMO-ondersteuning. Gratis advies."
 >
   <Header />
   
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mantelzorg & Coördinatie",
+    "description": "Ondersteuning voor mantelzorgers en familie bij coördinatie van zorg en woningaanpassingen voor ouderen thuis",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "LeefZeker"
+    },
+    "areaServed": "Nederland",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Mantelzorg Ondersteuning",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "Coördinatie zorgoplossingen",
+          "description": "Eén aanspreekpunt voor alle woningaanpassingen en zorgverlening"
+        },
+        {
+          "@type": "Service",
+          "name": "WMO-begeleiding familie",
+          "description": "Hulp bij aanvragen en communicatie met gemeente"
+        },
+        {
+          "@type": "Service",
+          "name": "Mantelzorg ondersteuning",
+          "description": "Praktische hulp en advies voor mantelzorgers"
+        }
+      ]
+    }
+  }
+  </script>
+
   <main>
     <!-- Hero Section -->
-    <section class="hero alarmering-theme">
+    <section class="hero mantelzorg-theme">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
             <div class="breadcrumb">
-              <a href="/">Home</a> > <a href="/oplossingen">Oplossingen</a> > Alarmering
+              <a href="/">Home</a> > <a href="/oplossingen">Oplossingen</a> > Mantelzorg & coördinatie
             </div>
             <div class="hero-icon">
               <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                <circle cx="20" cy="12" r="2"/>
+                <path d="M22 12h-4"/>
               </svg>
             </div>
-            <h1 class="hero-title">Slimme alarmering & sensoren</h1>
+            <h1 class="hero-title">Mantelzorg & coördinatie</h1>
             <p class="hero-subtitle">
-              24/7 zekerheid met moderne personenalarmering en slimme sensoren die automatisch 
-              hulp inschakelen wanneer u die nodig heeft.
+              Ondersteuning voor familie, buren en mantelzorgers. Wij coördineren alle zorg 
+              en woningaanpassingen, zodat u zich kunt focussen op wat echt belangrijk is.
             </p>
             <div class="hero-features">
-              <span>✓ 24/7 professionele meldkamer</span>
-              <span>✓ Automatische valdetectie</span>
-              <span>✓ Familie-app koppeling</span>
+              <span>✓ Eén aanspreekpunt</span>
+              <span>✓ WMO-trajectbegeleiding</span>
+              <span>✓ Praktische ondersteuning</span>
             </div>
             <div class="hero-actions">
-              <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+              <a href="/contact" class="btn btn-primary btn-large">Plan coördinatie-gesprek</a>
               <a href="tel:020-123-45-67" class="btn btn-secondary btn-large">020 123 45 67</a>
             </div>
           </div>
           <div class="hero-image">
-            <img src="/src/assets/img_site/ouderenalarm.jpg" alt="Senior met persoonlijk alarm en valdetectie horloge voor veiligheid thuis" loading="lazy" />
+            <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Mantelzorger in gesprek met adviseur over zorgcoördinatie en woningaanpassingen" loading="lazy" />
           </div>
         </div>
       </div>
@@ -51,34 +91,35 @@ import Footer from '../../components/Footer.astro';
     <section class="section intro-section">
       <div class="container">
         <div class="intro-content">
-          <h2>Wanneer is alarmering relevant?</h2>
+          <h2>Wanneer is coördinatie-ondersteuning relevant?</h2>
           <p class="intro-text">
-            Veel ouderen willen graag zelfstandig blijven wonen, maar maken zich zorgen over wat er gebeurt 
-            als ze hulp nodig hebben en niemand in de buurt is. Moderne alarmering biedt die zekerheid.
+            Mantelzorg geven is mooi, maar kan overweldigend zijn. Van WMO-aanvragen tot 
+            het vinden van de juiste hulpmiddelen — er komt veel bij kijken. Wij nemen de 
+            coördinatie uit handen, zodat u meer tijd heeft voor wat echt telt: uw dierbare.
           </p>
           
           <div class="warning-signs">
-            <h3>Herkent u deze zorgen?</h3>
+            <h3>Herkent u deze situaties?</h3>
             <div class="signs-grid">
               <div class="sign-item">
-                <div class="sign-icon">😟</div>
-                <span>Bang om te vallen als niemand thuis is</span>
+                <div class="sign-icon">😓</div>
+                <span>Mantelzorg wordt een grote belasting</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">📱</div>
-                <span>Telefoon ligt soms te ver weg</span>
+                <div class="sign-icon">📋</div>
+                <span>Verdwalen in WMO-aanvragen en formulieren</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">👨‍👩‍👧‍👦</div>
-                <span>Familie maakt zich zorgen</span>
+                <div class="sign-icon">🤝</div>
+                <span>Niet weten waar hulp te vinden</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">🚨</div>
-                <span>Onzeker bij medische noodgevallen</span>
+                <div class="sign-icon">⏰</div>
+                <span>Geen tijd voor eigen leven</span>
               </div>
             </div>
             <p class="signs-conclusion">
-              Slimme alarmering geeft u én uw familie de rust die u verdient.
+              Dan kan professionele coördinatie u helpen om de balans te hervinden tussen zorg en uw eigen leven.
             </p>
           </div>
         </div>
@@ -89,42 +130,42 @@ import Footer from '../../components/Footer.astro';
     <section class="section services-section">
       <div class="container">
         <h2 class="section-title">Wat kunnen we voor u betekenen?</h2>
-        <p class="section-subtitle">Persoonlijk advies voor de beste alarmeringsoplossing</p>
+        <p class="section-subtitle">Praktische ondersteuning en coördinatie voor mantelzorgers</p>
         
         <div class="services-grid">
           <div class="service-card">
             <div class="service-number">1</div>
-            <h3>Gratis adviesgesprek aan huis</h3>
+            <h3>Intake en behoefteanalyse</h3>
             <p>
-              We bespreken uw situatie, gewoontes en zorgen. Welke alarmering past 
-              het beste bij úw leven?
+              We luisteren naar uw situatie, zorgen en wensen. Samen maken we 
+              een overzicht van wat er nodig is.
             </p>
           </div>
           
           <div class="service-card">
             <div class="service-number">2</div>
-            <h3>Demonstratie verschillende systemen</h3>
+            <h3>Eén aanspreekpunt voor alles</h3>
             <p>
-              U kunt verschillende alarmeringen uitproberen voordat u kiest. 
-              We laten zien hoe alles werkt.
+              Van traplift tot alarmering, van WMO tot installatie — wij coördineren 
+              alles en houden u op de hoogte.
             </p>
           </div>
           
           <div class="service-card">
             <div class="service-number">3</div>
-            <h3>Installatie & instructie</h3>
+            <h3>WMO-trajectbegeleiding</h3>
             <p>
-              Professionele installatie en uitgebreide instructie voor u én 
-              uw familie over het gebruik.
+              Wij nemen alle administratie over: aanvraagformulieren, contact met 
+              gemeente, bezwaar procedures indien nodig.
             </p>
           </div>
 
           <div class="service-card">
             <div class="service-number">4</div>
-            <h3>24/7 ondersteuning & monitoring</h3>
+            <h3>Permanente ondersteuning</h3>
             <p>
-              Continue monitoring via professionele meldkamer en technische 
-              ondersteuning wanneer nodig.
+              Ook na installatie blijven we bereikbaar. Vragen, onderhoud, nieuwe 
+              behoeften — wij helpen altijd.
             </p>
           </div>
         </div>
@@ -134,80 +175,81 @@ import Footer from '../../components/Footer.astro';
     <!-- Products Section -->
     <section class="section products-section">
       <div class="container">
-        <h2 class="section-title">Welke alarmeringssystemen zijn er?</h2>
-        <p class="section-subtitle">Van eenvoudige paniekknop tot geavanceerde valdetectie</p>
+        <h2 class="section-title">Welke ondersteuning bieden we?</h2>
+        <p class="section-subtitle">Van praktische hulp tot emotionele ondersteuning</p>
         
         <div class="products-grid">
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/img_site/ouderenalarm.jpg" alt="Draagbare alarmknop voor ouderen" loading="lazy" />
-              <div class="product-badge">Meest gekozen</div>
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Mantelzorg coördinatie gesprek" loading="lazy" />
+              <div class="product-badge">Basis pakket</div>
             </div>
             <div class="product-content">
-              <h3>Draagbare alarmknop</h3>
+              <h3>Zorgcoördinatie</h3>
               <p>
-                Klassieke en betrouwbare alarmering. Druk op de knop en u bent 
-                direct verbonden met de meldkamer.
+                Wij worden uw vaste aanspreekpunt voor alle zorg-gerelateerde 
+                zaken rond uw dierbare.
               </p>
               <ul class="product-features">
-                <li>Waterdicht (ook onder douche)</li>
-                <li>Groot bereik (100+ meter)</li>
-                <li>Lange batterijduur (1+ jaar)</li>
-                <li>Ook als polsband verkrijgbaar</li>
+                <li>Intake huissituatie en behoeften</li>
+                <li>Coördinatie tussen alle partijen</li>
+                <li>Planning en tijdlijn beheer</li>
+                <li>Reguliere updates naar familie</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€19/maand</span>
-                <span class="wmo-note">Mogelijk WMO-vergoed</span>
+                <span class="price">Gratis</span>
+                <span class="wmo-note">Bij aanschaf producten</span>
               </div>
             </div>
           </div>
 
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/valdetectie.png" alt="Valdetectie horloge voor automatische alarmering" loading="lazy" />
-              <div class="product-badge">Geavanceerd</div>
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="WMO aanvraag ondersteuning familie" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3>Valdetectie horloge</h3>
+              <h3>WMO-trajectbegeleiding</h3>
               <p>
-                Detecteert automatisch een val en belt hulp, zelfs als u bewusteloos bent. 
-                Met GPS-locatie voor buitenshuis.
+                Alle administratieve rompslomp rondom WMO-aanvragen nemen wij 
+                van u over.
               </p>
               <ul class="product-features">
-                <li>Automatische valdetectie</li>
-                <li>GPS-tracking buitenshuis</li>
-                <li>Spraakverbinding via horloge</li>
-                <li>Familie-app met meldingen</li>
+                <li>Invullen van alle formulieren</li>
+                <li>Contact met gemeente namens u</li>
+                <li>Bezwaarprocedures indien nodig</li>
+                <li>Monitoring van de voortgang</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€35/maand</span>
-                <span class="wmo-note">WMO-aanvraag mogelijk</span>
+                <span class="price">Gratis</span>
+                <span class="wmo-note">WMO-service inbegrepen</span>
               </div>
             </div>
           </div>
 
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/valdetectie.png" alt="Slimme sensoren voor automatische bewaking ouderen thuis" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="Mantelzorg ondersteuning en advies" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3>Slimme woning-sensoren</h3>
+              <h3>Mantelzorg-ondersteuning</h3>
               <p>
-                Discrete sensoren die ongewone patronen detecteren. Bijvoorbeeld 
-                als u 's ochtends niet opstaat of de voordeur niet opent.
+                Praktische tips, emotionele steun en advies voor mantelzorgers 
+                die het zwaar hebben.
               </p>
               <ul class="product-features">
-                <li>Bewegingssensoren per kamer</li>
-                <li>Deur/raam contacten</li>
-                <li>Patronen-herkenning</li>
-                <li>Geleidelijke alarm-escalatie</li>
+                <li>Luisterend oor en begrip</li>
+                <li>Praktische tips en tricks</li>
+                <li>Doorverwijzing naar hulp</li>
+                <li>Respijtzorg mogelijkheden</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€25/maand</span>
-                <span class="wmo-note">Afhankelijk van opstelling</span>
+                <span class="price">Op maat</span>
+                <span class="wmo-note">Soms gemeente-budget</span>
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </section>
@@ -217,34 +259,34 @@ import Footer from '../../components/Footer.astro';
       <div class="container">
         <div class="wmo-content">
           <div class="wmo-info">
-            <h2>WMO & subsidie bij alarmering</h2>
+            <h2>WMO & ondersteuning voor mantelzorgers</h2>
             <p>
-              Personenalarmering valt vaak onder de WMO als u een verhoogd valrisico heeft 
-              of medische problemen. Wij helpen u met de aanvraag.
+              Als mantelzorger heeft u ook rechten. Naast vergoedingen voor woningaanpassingen 
+              zijn er ook regelingen voor ondersteuning van mantelzorgers zelf.
             </p>
             
             <div class="wmo-details">
               <div class="wmo-item">
-                <div class="wmo-icon">✅</div>
+                <div class="wmo-icon">🤝</div>
                 <div>
-                  <h4>Basispakket vaak volledig vergoed</h4>
-                  <p>Draagbare alarmknop via WMO-beschikking</p>
+                  <h4>Mantelzorgondersteuning</h4>
+                  <p>Gemeenten hebben budget voor ondersteuning van mantelzorgers</p>
                 </div>
               </div>
               
               <div class="wmo-item">
-                <div class="wmo-icon">💰</div>
+                <div class="wmo-icon">⏰</div>
                 <div>
-                  <h4>Eigen bijdrage beperkt</h4>
-                  <p>€19-€40 per maand voor uitgebreide pakketten</p>
+                  <h4>Respijtzorg</h4>
+                  <p>Tijdelijke vervanging zodat u even kunt ademen</p>
                 </div>
               </div>
               
               <div class="wmo-item">
                 <div class="wmo-icon">📋</div>
                 <div>
-                  <h4>Medische indicatie</h4>
-                  <p>Arts kan valrisico of chronische ziekte bevestigen</p>
+                  <h4>Administratieve ondersteuning</h4>
+                  <p>Wij nemen de WMO-rompslomp volledig van u over</p>
                 </div>
               </div>
             </div>
@@ -256,10 +298,10 @@ import Footer from '../../components/Footer.astro';
           
           <div class="wmo-visual">
             <div class="subsidy-highlight">
-              <div class="highlight-icon">📞</div>
-              <h3>Gratis proefperiode</h3>
-              <p>Test 30 dagen gratis voordat u zich vastlegt. Ervaar de zekerheid zelf.</p>
-              <a href="/contact" class="btn btn-primary">Start proefperiode</a>
+              <div class="highlight-icon">💙</div>
+              <h3>Gratis mantelzorgcheck</h3>
+              <p>Ontdek welke ondersteuning er mogelijk is voor u als mantelzorger</p>
+              <a href="/contact" class="btn btn-primary">Start mantelzorgcheck</a>
             </div>
           </div>
         </div>
@@ -273,34 +315,34 @@ import Footer from '../../components/Footer.astro';
         <div class="blog-grid">
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/valdetectie.png" alt="Verschil persoonlijke alarmering valdetectie" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Mantelzorg tips en ondersteuning" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/paniekknop-vs-valdetectie">Paniekknop of valdetectie: wat is het verschil?</a></h3>
-              <p>Uitleg over de verschillende mogelijkheden en wanneer welke het beste werkt...</p>
-              <span class="blog-date">12 januari 2024</span>
+              <h3><a href="/blog/mantelzorg-tips-voorkomen-uitputting">Mantelzorg: hoe voorkom je uitputting?</a></h3>
+              <p>Praktische tips voor mantelzorgers om te voorkomen dat zorg geven ten koste gaat van je eigen welzijn...</p>
+              <span class="blog-date">28 januari 2024</span>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Familie rust door ouderen alarmering" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="WMO aanvraag familie hulp" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/familie-rust-door-alarmering">Hoe alarmering ook de familie rust geeft</a></h3>
-              <p>De psychologische voordelen van alarmering voor zowel ouderen als hun familie...</p>
-              <span class="blog-date">5 januari 2024</span>
+              <h3><a href="/blog/wmo-aanvraag-namens-ouder">WMO-aanvraag namens uw ouder: wat moet u weten?</a></h3>
+              <p>Stap-voor-stap uitleg hoe u als kind of partner een WMO-aanvraag kunt doen voor uw dierbare...</p>
+              <span class="blog-date">23 januari 2024</span>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/img_site/pexels-pixabay-33786.jpg" alt="Moderne alarmering technologie voor ouderen" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="Familie-overleg over zorg ouderen" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/moderne-alarmering-technologie">Moderne alarmering: meer dan een knopje</a></h3>
-              <p>Ontdek de nieuwste technologie in personenalarmering en valdetectie...</p>
-              <span class="blog-date">28 december 2023</span>
+              <h3><a href="/blog/familie-overleg-zorgkeuzes">Familie-overleg over zorgkeuzes: hoe pak je dat aan?</a></h3>
+              <p>Tips voor moeilijke gesprekken binnen de familie over zorg en zelfstandigheid van ouderen...</p>
+              <span class="blog-date">17 januari 2024</span>
             </div>
           </article>
         </div>
@@ -308,19 +350,19 @@ import Footer from '../../components/Footer.astro';
     </section>
 
     <!-- Final CTA -->
-    <section class="section cta-section alarmering-theme">
+    <section class="section cta-section mantelzorg-theme">
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Klaar voor meer zekerheid?</h2>
+          <h2 class="cta-title">Klaar om de last te delen?</h2>
           <p class="cta-description">
-            Vraag een gratis adviesgesprek aan. We laten verschillende systemen zien 
-            en u kunt 30 dagen gratis testen.
+            Plan een gratis coördinatie-gesprek. We luisteren naar uw situatie en 
+            bekijken hoe we u praktisch kunnen ondersteunen.
           </p>
           <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+            <a href="/contact" class="btn btn-primary btn-large">Plan coördinatie-gesprek</a>
             <a href="/oplossingen" class="btn btn-secondary btn-large">Andere oplossingen</a>
           </div>
-          <p class="cta-note">📞 Ook bereikbaar op 020 123 45 67 — 24/7 voor urgente vragen</p>
+          <p class="cta-note">💙 Ook bereikbaar op 020 123 45 67 — we begrijpen dat mantelzorg geen 9-to-5 baan is</p>
         </div>
       </div>
     </section>
@@ -330,10 +372,10 @@ import Footer from '../../components/Footer.astro';
 </Layout>
 
 <style>
-  .alarmering-theme {
-    --theme-color: #2196F3;
-    --theme-color-light: #42A5F5;
-    --theme-color-bg: #f0f8ff;
+  .mantelzorg-theme {
+    --theme-color: #E91E63;
+    --theme-color-light: #F06292;
+    --theme-color-bg: #fdf0f5;
   }
 
   .hero {

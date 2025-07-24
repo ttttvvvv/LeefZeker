@@ -129,7 +129,7 @@ import Footer from '../components/Footer.astro';
                 </svg>
                 Plan gratis thuisadvies
               </a>
-              <a href="/diensten" class="btn btn-secondary" id="cta-hero-diensten" aria-label="Ontdek onze diensten voor veilig wonen op oudere leeftijd">Wat kunnen we voor u doen?</a>
+              <a href="/oplossingen" class="btn btn-secondary" id="cta-hero-diensten" aria-label="Ontdek onze oplossingen voor veilig wonen op oudere leeftijd">Wat kunnen we voor u doen?</a>
             </div>
             <div class="hero-features">
               <div class="feature-item">
@@ -349,7 +349,6 @@ import Footer from '../components/Footer.astro';
               
               <!-- Question 1 -->
               <div class="quiz-step active" data-step="1">
-                <div class="question-icon">🏠</div>
                 <h3 class="question-title">Hoe gaat het traplopen tegenwoordig?</h3>
                 <div class="question-options">
                   <button class="option-button" data-theme="mobiliteit" data-answer="difficult">
@@ -369,7 +368,6 @@ import Footer from '../components/Footer.astro';
 
               <!-- Question 2 -->
               <div class="quiz-step" data-step="2">
-                <div class="question-icon">⚠️</div>
                 <h3 class="question-title">Is er weleens iets gebeurd waardoor u zich minder zeker voelt?</h3>
                 <div class="question-options">
                   <button class="option-button" data-theme="valpreventie" data-answer="fell-home">
@@ -389,7 +387,6 @@ import Footer from '../components/Footer.astro';
 
               <!-- Question 3 -->
               <div class="quiz-step" data-step="3">
-                <div class="question-icon">🌡️</div>
                 <h3 class="question-title">Heeft u last van hitte in de zomer of kou in de winter?</h3>
                 <div class="question-options">
                   <button class="option-button" data-theme="klimaat" data-answer="hot-summer">
@@ -409,7 +406,6 @@ import Footer from '../components/Footer.astro';
 
               <!-- Question 4 -->
               <div class="quiz-step" data-step="4">
-                <div class="question-icon">🔒</div>
                 <h3 class="question-title">Voelt u zich altijd veilig als het om digitale dingen gaat?</h3>
                 <div class="question-options">
                   <button class="option-button" data-theme="toegang" data-answer="often-unsure">
@@ -429,7 +425,6 @@ import Footer from '../components/Footer.astro';
 
               <!-- Question 5 -->
               <div class="quiz-step" data-step="5">
-                <div class="question-icon">📋</div>
                 <h3 class="question-title">Vindt u het prettig als iemand u helpt met WMO of vergoeding?</h3>
                 <div class="question-options">
                   <button class="option-button" data-theme="subsidie" data-answer="yes-help">
@@ -449,7 +444,6 @@ import Footer from '../components/Footer.astro';
 
               <!-- Results Screen -->
               <div class="quiz-step quiz-results-step" data-step="6">
-                <div class="results-icon">✨</div>
                 <h3 class="results-title">Op basis van uw antwoorden</h3>
                 <div class="results-summary" id="quiz-results-summary"></div>
                 <div class="results-themes" id="quiz-results-themes"></div>
@@ -461,7 +455,7 @@ import Footer from '../components/Footer.astro';
                     </svg>
                     Plan gratis thuisadvies
                   </a>
-                  <a href="/diensten" class="btn btn-secondary" id="quiz-secondary-cta">Bekijk eerst onze oplossingen</a>
+                  <a href="/oplossingen" class="btn btn-secondary" id="quiz-secondary-cta">Bekijk eerst onze oplossingen</a>
                 </div>
                 <div class="results-note">
                   💬 Wij komen vrijblijvend bij u langs voor persoonlijk advies op maat
@@ -1045,7 +1039,7 @@ import Footer from '../components/Footer.astro';
         visualContent.classList.remove('show');
         
         setTimeout(() => {
-          visualIcon.textContent = '🎯';
+          visualIcon.textContent = '✓';
           visualText.textContent = 'Uw persoonlijke oplossingen';
           visualContent.classList.add('show');
         }, 150);
@@ -1675,7 +1669,8 @@ import Footer from '../components/Footer.astro';
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: flex-start;
+    align-items: stretch;
+    min-height: 600px;
   }
 
   .quiz-container {
@@ -1683,6 +1678,9 @@ import Footer from '../components/Footer.astro';
     border-radius: 1.5rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   /* Quiz Header */
@@ -1737,6 +1735,9 @@ import Footer from '../components/Footer.astro';
   /* Quiz Steps */
   .quiz-steps {
     position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
   }
 
   .quiz-step {
@@ -1745,6 +1746,7 @@ import Footer from '../components/Footer.astro';
     opacity: 0;
     transform: translateX(20px);
     transition: all 0.3s ease;
+    width: 100%;
   }
 
   .quiz-step.active {
@@ -1769,17 +1771,11 @@ import Footer from '../components/Footer.astro';
   }
 
   /* Question Elements */
-  .question-icon {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
   .question-title {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-align: center;
     line-height: 1.4;
   }
@@ -1854,11 +1850,6 @@ import Footer from '../components/Footer.astro';
     padding: 2.5rem 2rem;
   }
 
-  .results-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-  }
-
   .results-title {
     font-size: 1.75rem;
     font-weight: 600;
@@ -1914,7 +1905,8 @@ import Footer from '../components/Footer.astro';
     position: relative;
     border-radius: 1.5rem;
     overflow: hidden;
-    height: 500px;
+    height: 100%;
+    min-height: 600px;
   }
 
   .quiz-visual-image {
@@ -2402,7 +2394,8 @@ import Footer from '../components/Footer.astro';
     }
 
     .visual-container {
-      height: 250px;
+      height: 300px;
+      min-height: 300px;
     }
 
     .quiz-container {

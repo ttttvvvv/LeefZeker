@@ -5,43 +5,80 @@ import Footer from '../../components/Footer.astro';
 ---
 
 <Layout 
-  title="Slimme Alarmering & Sensoren voor Ouderen | LeefZeker"
-  description="Personenalarmering met meldkamer, valdetectie technologie en slimme sensoren. 24/7 beveiliging voor ouderen thuis. WMO-subsidie mogelijk."
+  title="Toegangscontrole & Digitale Veiligheid voor Ouderen | LeefZeker"
+  description="Veilige toegang en digitale bescherming voor ouderen: slimme sloten, deuropeners, anti-oplichting bescherming. WMO-subsidie mogelijk. Gratis advies aan huis."
 >
   <Header />
   
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Toegangscontrole & Digitale Veiligheid",
+    "description": "Veilige toegang en digitale bescherming voor ouderen: slimme sloten, deuropeners en anti-oplichting maatregelen",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "LeefZeker"
+    },
+    "areaServed": "Nederland",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Veiligheid Producten",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "name": "Slimme deuropeners",
+          "description": "Automatische deuropening voor zorgverleners en familie"
+        },
+        {
+          "@type": "Product",
+          "name": "Digitale beveiliging",
+          "description": "Bescherming tegen online oplichting en fraude"
+        },
+        {
+          "@type": "Product",
+          "name": "Toegangscontrole",
+          "description": "Veilige toegang met sleutelcode of smartphone"
+        }
+      ]
+    }
+  }
+  </script>
+
   <main>
     <!-- Hero Section -->
-    <section class="hero alarmering-theme">
+    <section class="hero toegang-theme">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
             <div class="breadcrumb">
-              <a href="/">Home</a> > <a href="/oplossingen">Oplossingen</a> > Alarmering
+              <a href="/">Home</a> > <a href="/oplossingen">Oplossingen</a> > Toegangscontrole & digitale veiligheid
             </div>
             <div class="hero-icon">
               <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <circle cx="12" cy="16" r="1"></circle>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
               </svg>
             </div>
-            <h1 class="hero-title">Slimme alarmering & sensoren</h1>
+            <h1 class="hero-title">Toegangscontrole & digitale veiligheid</h1>
             <p class="hero-subtitle">
-              24/7 zekerheid met moderne personenalarmering en slimme sensoren die automatisch 
-              hulp inschakelen wanneer u die nodig heeft.
+              Veilige toegang voor hulpverleners en familie, plus bescherming tegen digitale 
+              oplichting. Voor meer zelfstandigheid én veiligheid.
             </p>
             <div class="hero-features">
-              <span>✓ 24/7 professionele meldkamer</span>
-              <span>✓ Automatische valdetectie</span>
-              <span>✓ Familie-app koppeling</span>
+              <span>✓ Veilige hulpverlenertoegang</span>
+              <span>✓ Anti-oplichtingsschutz</span>
+              <span>✓ WMO-subsidie mogelijk</span>
             </div>
             <div class="hero-actions">
-              <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+              <a href="/contact" class="btn btn-primary btn-large">Plan gratis veiligheidscheck</a>
               <a href="tel:020-123-45-67" class="btn btn-secondary btn-large">020 123 45 67</a>
             </div>
           </div>
           <div class="hero-image">
-            <img src="/src/assets/img_site/ouderenalarm.jpg" alt="Senior met persoonlijk alarm en valdetectie horloge voor veiligheid thuis" loading="lazy" />
+            <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="Senior met slimme toegangscontrole en digitale veiligheid thuis" loading="lazy" />
           </div>
         </div>
       </div>
@@ -51,34 +88,35 @@ import Footer from '../../components/Footer.astro';
     <section class="section intro-section">
       <div class="container">
         <div class="intro-content">
-          <h2>Wanneer is alarmering relevant?</h2>
+          <h2>Wanneer is toegangscontrole relevant?</h2>
           <p class="intro-text">
-            Veel ouderen willen graag zelfstandig blijven wonen, maar maken zich zorgen over wat er gebeurt 
-            als ze hulp nodig hebben en niemand in de buurt is. Moderne alarmering biedt die zekerheid.
+            Ouderen willen zelfstandig wonen, maar hebben soms hulp nodig. Veilige toegang voor 
+            zorgverleners is essentieel. Tegelijk moeten we oppassen voor digitale en fysieke 
+            oplichting. Slimme oplossingen bieden beide: veiligheid én toegankelijkheid.
           </p>
           
           <div class="warning-signs">
-            <h3>Herkent u deze zorgen?</h3>
+            <h3>Herkent u deze situaties?</h3>
             <div class="signs-grid">
               <div class="sign-item">
-                <div class="sign-icon">😟</div>
-                <span>Bang om te vallen als niemand thuis is</span>
+                <div class="sign-icon">🔑</div>
+                <span>Moeite om de deur open te maken</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">📱</div>
-                <span>Telefoon ligt soms te ver weg</span>
+                <div class="sign-icon">👨‍⚕️</div>
+                <span>Zorgverleners moeten binnen kunnen</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">👨‍👩‍👧‍👦</div>
-                <span>Familie maakt zich zorgen</span>
+                <div class="sign-icon">📞</div>
+                <span>Zorgen over telefonische oplichting</span>
               </div>
               <div class="sign-item">
-                <div class="sign-icon">🚨</div>
-                <span>Onzeker bij medische noodgevallen</span>
+                <div class="sign-icon">🚪</div>
+                <span>Ongewenste bezoekers aan de deur</span>
               </div>
             </div>
             <p class="signs-conclusion">
-              Slimme alarmering geeft u én uw familie de rust die u verdient.
+              Dan helpen slimme toegangs- en veiligheidsoplossingen u om veilig én zelfstandig te blijven wonen.
             </p>
           </div>
         </div>
@@ -89,42 +127,42 @@ import Footer from '../../components/Footer.astro';
     <section class="section services-section">
       <div class="container">
         <h2 class="section-title">Wat kunnen we voor u betekenen?</h2>
-        <p class="section-subtitle">Persoonlijk advies voor de beste alarmeringsoplossing</p>
+        <p class="section-subtitle">Persoonlijk advies voor optimale veiligheid en toegankelijkheid</p>
         
         <div class="services-grid">
           <div class="service-card">
             <div class="service-number">1</div>
-            <h3>Gratis adviesgesprek aan huis</h3>
+            <h3>Gratis veiligheidscheck</h3>
             <p>
-              We bespreken uw situatie, gewoontes en zorgen. Welke alarmering past 
-              het beste bij úw leven?
+              We bekijken uw huidige toegangssituatie en geven advies over fysieke 
+              en digitale veiligheidsmaatregelen.
             </p>
           </div>
           
           <div class="service-card">
             <div class="service-number">2</div>
-            <h3>Demonstratie verschillende systemen</h3>
+            <h3>Maatwerk oplossingen</h3>
             <p>
-              U kunt verschillende alarmeringen uitproberen voordat u kiest. 
-              We laten zien hoe alles werkt.
+              Elke woonsituatie is anders. We maken een plan dat past bij uw 
+              woning, gewoontes en zorgbehoeften.
             </p>
           </div>
           
           <div class="service-card">
             <div class="service-number">3</div>
-            <h3>Installatie & instructie</h3>
+            <h3>WMO-begeleiding</h3>
             <p>
-              Professionele installatie en uitgebreide instructie voor u én 
-              uw familie over het gebruik.
+              Veel toegangsaanpassingen kunnen via de WMO vergoed worden. 
+              Wij helpen u met de aanvraag.
             </p>
           </div>
 
           <div class="service-card">
             <div class="service-number">4</div>
-            <h3>24/7 ondersteuning & monitoring</h3>
+            <h3>Training & ondersteuning</h3>
             <p>
-              Continue monitoring via professionele meldkamer en technische 
-              ondersteuning wanneer nodig.
+              We leren u (en uw familie) hoe alles werkt en bieden permanente 
+              technische ondersteuning.
             </p>
           </div>
         </div>
@@ -134,80 +172,81 @@ import Footer from '../../components/Footer.astro';
     <!-- Products Section -->
     <section class="section products-section">
       <div class="container">
-        <h2 class="section-title">Welke alarmeringssystemen zijn er?</h2>
-        <p class="section-subtitle">Van eenvoudige paniekknop tot geavanceerde valdetectie</p>
+        <h2 class="section-title">Welke veiligheidsoplossingen zijn er?</h2>
+        <p class="section-subtitle">Van eenvoudige codeslot tot complete digitale beveiliging</p>
         
         <div class="products-grid">
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/img_site/ouderenalarm.jpg" alt="Draagbare alarmknop voor ouderen" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="Slimme deuropener voor hulpverleners" loading="lazy" />
               <div class="product-badge">Meest gekozen</div>
             </div>
             <div class="product-content">
-              <h3>Draagbare alarmknop</h3>
+              <h3>Slimme deuropeners</h3>
               <p>
-                Klassieke en betrouwbare alarmering. Druk op de knop en u bent 
-                direct verbonden met de meldkamer.
+                Automatische deuropening via code, smartphone of sleutelkaart. 
+                Perfect voor zorgverleners en familie.
               </p>
               <ul class="product-features">
-                <li>Waterdicht (ook onder douche)</li>
-                <li>Groot bereik (100+ meter)</li>
-                <li>Lange batterijduur (1+ jaar)</li>
-                <li>Ook als polsband verkrijgbaar</li>
+                <li>Toegang via code of app</li>
+                <li>Tijdelijke codes mogelijk</li>
+                <li>Log van bezoekers</li>
+                <li>Noodsleutel backup</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€19/maand</span>
-                <span class="wmo-note">Mogelijk WMO-vergoed</span>
+                <span class="price">Vanaf €350</span>
+                <span class="wmo-note">WMO-vergoed mogelijk</span>
               </div>
             </div>
           </div>
 
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/valdetectie.png" alt="Valdetectie horloge voor automatische alarmering" loading="lazy" />
-              <div class="product-badge">Geavanceerd</div>
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Video deurbel met intercom voor veilige communicatie" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3>Valdetectie horloge</h3>
+              <h3>Video deurbel & intercom</h3>
               <p>
-                Detecteert automatisch een val en belt hulp, zelfs als u bewusteloos bent. 
-                Met GPS-locatie voor buitenshuis.
+                Zien en spreken met bezoekers voordat u opendoet. Ook koppeling 
+                met smartphone van familie mogelijk.
               </p>
               <ul class="product-features">
-                <li>Automatische valdetectie</li>
-                <li>GPS-tracking buitenshuis</li>
-                <li>Spraakverbinding via horloge</li>
-                <li>Familie-app met meldingen</li>
+                <li>HD camera met nachtzicht</li>
+                <li>Twee-weg audio communicatie</li>
+                <li>Smartphone koppeling</li>
+                <li>Opname van bezoekers</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€35/maand</span>
-                <span class="wmo-note">WMO-aanvraag mogelijk</span>
+                <span class="price">Vanaf €180</span>
+                <span class="wmo-note">Vaak WMO-geschikt</span>
               </div>
             </div>
           </div>
 
           <div class="product-card">
             <div class="product-image">
-              <img src="/src/assets/valdetectie.png" alt="Slimme sensoren voor automatische bewaking ouderen thuis" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-pixabay-302083.jpg" alt="Anti-oplichting telefoon bescherming" loading="lazy" />
             </div>
             <div class="product-content">
-              <h3>Slimme woning-sensoren</h3>
+              <h3>Anti-oplichting bescherming</h3>
               <p>
-                Discrete sensoren die ongewone patronen detecteren. Bijvoorbeeld 
-                als u 's ochtends niet opstaat of de voordeur niet opent.
+                Bescherming tegen telefonische en digitale oplichting. 
+                Blokkering van verdachte nummers en websites.
               </p>
               <ul class="product-features">
-                <li>Bewegingssensoren per kamer</li>
-                <li>Deur/raam contacten</li>
-                <li>Patronen-herkenning</li>
-                <li>Geleidelijke alarm-escalatie</li>
+                <li>Automatische spam-blokkering</li>
+                <li>Whitelist van vertrouwde nummers</li>
+                <li>Website-bescherming</li>
+                <li>24/7 ondersteuning bij twijfel</li>
               </ul>
               <div class="product-pricing">
-                <span class="price">€25/maand</span>
-                <span class="wmo-note">Afhankelijk van opstelling</span>
+                <span class="price">Vanaf €15/maand</span>
+                <span class="wmo-note">Preventie besparing</span>
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </section>
@@ -217,34 +256,34 @@ import Footer from '../../components/Footer.astro';
       <div class="container">
         <div class="wmo-content">
           <div class="wmo-info">
-            <h2>WMO & subsidie bij alarmering</h2>
+            <h2>WMO & subsidie bij toegangsoplossingen</h2>
             <p>
-              Personenalarmering valt vaak onder de WMO als u een verhoogd valrisico heeft 
-              of medische problemen. Wij helpen u met de aanvraag.
+              Toegangsaanpassingen vallen vaak onder de WMO, vooral wanneer ze nodig zijn 
+              voor thuiszorg of bij verminderde mobiliteit.
             </p>
             
             <div class="wmo-details">
               <div class="wmo-item">
                 <div class="wmo-icon">✅</div>
                 <div>
-                  <h4>Basispakket vaak volledig vergoed</h4>
-                  <p>Draagbare alarmknop via WMO-beschikking</p>
+                  <h4>Vaak volledig vergoed</h4>
+                  <p>Deuropeners en video-intercom bij zorgbehoefte</p>
                 </div>
               </div>
               
               <div class="wmo-item">
                 <div class="wmo-icon">💰</div>
                 <div>
-                  <h4>Eigen bijdrage beperkt</h4>
-                  <p>€19-€40 per maand voor uitgebreide pakketten</p>
+                  <h4>Lage eigen bijdrage</h4>
+                  <p>€19-€50 per maand voor uitgebreide systemen</p>
                 </div>
               </div>
               
               <div class="wmo-item">
-                <div class="wmo-icon">📋</div>
+                <div class="wmo-icon">🛡️</div>
                 <div>
-                  <h4>Medische indicatie</h4>
-                  <p>Arts kan valrisico of chronische ziekte bevestigen</p>
+                  <h4>Preventieve maatregelen</h4>
+                  <p>Anti-oplichting ook via preventie-budget gemeente</p>
                 </div>
               </div>
             </div>
@@ -256,10 +295,10 @@ import Footer from '../../components/Footer.astro';
           
           <div class="wmo-visual">
             <div class="subsidy-highlight">
-              <div class="highlight-icon">📞</div>
-              <h3>Gratis proefperiode</h3>
-              <p>Test 30 dagen gratis voordat u zich vastlegt. Ervaar de zekerheid zelf.</p>
-              <a href="/contact" class="btn btn-primary">Start proefperiode</a>
+              <div class="highlight-icon">🔒</div>
+              <h3>Gratis veiligheidscan</h3>
+              <p>Laat ons uw huidige veiligheid checken en ontdek welke verbeteringen WMO-gefinancierd kunnen worden</p>
+              <a href="/contact" class="btn btn-primary">Plan veiligheidscheck</a>
             </div>
           </div>
         </div>
@@ -273,34 +312,34 @@ import Footer from '../../components/Footer.astro';
         <div class="blog-grid">
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/valdetectie.png" alt="Verschil persoonlijke alarmering valdetectie" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Herkennen telefonische oplichting ouderen" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/paniekknop-vs-valdetectie">Paniekknop of valdetectie: wat is het verschil?</a></h3>
-              <p>Uitleg over de verschillende mogelijkheden en wanneer welke het beste werkt...</p>
-              <span class="blog-date">12 januari 2024</span>
+              <h3><a href="/blog/oplichting-herkennen-voorkomen">Oplichting herkennen en voorkomen</a></h3>
+              <p>Hoe ouderen zichzelf kunnen beschermen tegen de nieuwste oplichting-trucs...</p>
+              <span class="blog-date">22 januari 2024</span>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/img_site/pexels-kampus-7551667.jpg" alt="Familie rust door ouderen alarmering" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-kampus-7551684.jpg" alt="Slimme toegang zorgverleners thuis" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/familie-rust-door-alarmering">Hoe alarmering ook de familie rust geeft</a></h3>
-              <p>De psychologische voordelen van alarmering voor zowel ouderen als hun familie...</p>
-              <span class="blog-date">5 januari 2024</span>
+              <h3><a href="/blog/slimme-toegang-zorgverleners">Slimme toegang voor zorgverleners</a></h3>
+              <p>Hoe technologie het mogelijk maakt om veilig en zelfstandig thuis te blijven wonen...</p>
+              <span class="blog-date">16 januari 2024</span>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="/src/assets/img_site/pexels-pixabay-33786.jpg" alt="Moderne alarmering technologie voor ouderen" loading="lazy" />
+              <img src="/src/assets/img_site/pexels-matthiaszomer-339620.jpg" alt="Digitale veiligheid tips ouderen" loading="lazy" />
             </div>
             <div class="blog-content">
-              <h3><a href="/blog/moderne-alarmering-technologie">Moderne alarmering: meer dan een knopje</a></h3>
-              <p>Ontdek de nieuwste technologie in personenalarmering en valdetectie...</p>
-              <span class="blog-date">28 december 2023</span>
+              <h3><a href="/blog/digitale-veiligheid-ouderen">Digitale veiligheid voor beginners</a></h3>
+              <p>Praktische tips om veilig online te gaan en digitale valkuilen te vermijden...</p>
+              <span class="blog-date">9 januari 2024</span>
             </div>
           </article>
         </div>
@@ -308,19 +347,19 @@ import Footer from '../../components/Footer.astro';
     </section>
 
     <!-- Final CTA -->
-    <section class="section cta-section alarmering-theme">
+    <section class="section cta-section toegang-theme">
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Klaar voor meer zekerheid?</h2>
+          <h2 class="cta-title">Klaar voor meer veiligheid en gemak?</h2>
           <p class="cta-description">
-            Vraag een gratis adviesgesprek aan. We laten verschillende systemen zien 
-            en u kunt 30 dagen gratis testen.
+            Plan een gratis veiligheidscheck. We bekijken uw situatie en adviseren 
+            de beste oplossingen voor veilige toegang en bescherming.
           </p>
           <div class="cta-actions">
-            <a href="/contact" class="btn btn-primary btn-large">Vraag alarmeringsadvies</a>
+            <a href="/contact" class="btn btn-primary btn-large">Plan gratis veiligheidscheck</a>
             <a href="/oplossingen" class="btn btn-secondary btn-large">Andere oplossingen</a>
           </div>
-          <p class="cta-note">📞 Ook bereikbaar op 020 123 45 67 — 24/7 voor urgente vragen</p>
+          <p class="cta-note">🔒 Ook bereikbaar op 020 123 45 67 — ook voor spoedvragen over veiligheid</p>
         </div>
       </div>
     </section>
@@ -330,10 +369,10 @@ import Footer from '../../components/Footer.astro';
 </Layout>
 
 <style>
-  .alarmering-theme {
-    --theme-color: #2196F3;
-    --theme-color-light: #42A5F5;
-    --theme-color-bg: #f0f8ff;
+  .toegang-theme {
+    --theme-color: #9C27B0;
+    --theme-color-light: #BA68C8;
+    --theme-color-bg: #f8f0ff;
   }
 
   .hero {

@@ -2,68 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "5 Tips voor het kiezen van de juiste traplift",
-    excerpt: "Het kiezen van een traplift is een belangrijke beslissing. Lees onze praktische tips om de beste keuze te maken voor uw situatie.",
-    image: "https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "15 maart 2024",
-    category: "Tips & Advies",
-    readTime: "5 min"
-  },
-  {
-    id: 2,
-    title: "Veilig wonen: Hoe u uw huis seniorvriendelijk maakt",
-    excerpt: "Ontdek praktische aanpassingen die u kunt maken om uw huis veiliger en toegankelijker te maken voor senioren.",
-    image: "https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "10 maart 2024",
-    category: "Veiligheid",
-    readTime: "7 min"
-  },
-  {
-    id: 3,
-    title: "Onderhoud van uw traplift: Wat u moet weten",
-    excerpt: "Regelmatig onderhoud zorgt ervoor dat uw traplift optimaal blijft functioneren. Lees hier alles over onderhoud en service.",
-    image: "https://images.pexels.com/photos/6195124/pexels-photo-6195124.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "5 maart 2024",
-    category: "Onderhoud",
-    readTime: "4 min"
-  },
-  {
-    id: 4,
-    title: "Subsidies en vergoedingen voor trapliften",
-    excerpt: "Informatie over mogelijke subsidies en vergoedingen van zorgverzekeraars voor de aanschaf van een traplift.",
-    image: "https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "28 februari 2024",
-    category: "Financiering",
-    readTime: "6 min"
-  },
-  {
-    id: 5,
-    title: "Platformliften vs Trapliften: Wat is het verschil?",
-    excerpt: "Leer het verschil tussen platformliften en trapliften en ontdek welke oplossing het beste bij uw situatie past.",
-    image: "https://images.pexels.com/photos/7551660/pexels-photo-7551660.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "20 februari 2024",
-    category: "Producten",
-    readTime: "5 min"
-  },
-  {
-    id: 6,
-    title: "Installatie van een traplift: Wat kunt u verwachten?",
-    excerpt: "Een stap-voor-stap overzicht van het installatieproces van een traplift, van eerste bezoek tot eindcontrole.",
-    image: "https://images.pexels.com/photos/6195123/pexels-photo-6195123.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "15 februari 2024",
-    category: "Installatie",
-    readTime: "8 min"
-  }
-];
-
-const categories = ["Alle", "Tips & Advies", "Veiligheid", "Onderhoud", "Financiering", "Producten", "Installatie"];
+import KnowledgeCard from '../../components/KnowledgeCard.astro';
 ---
 
-<Layout title="Blog - LeefZeker Tips & Advies voor Senioren">
+<Layout title="Kennisbank - LeefZeker WMO & Subsidie Gidsen voor Senioren">
   <Header />
   
   <main>
@@ -71,72 +13,310 @@ const categories = ["Alle", "Tips & Advies", "Veiligheid", "Onderhoud", "Financi
     <section class="page-hero">
       <div class="container">
         <div class="hero-content">
-          <h1 class="hero-title">Blog & Tips</h1>
+          <h1 class="hero-title">Kennisbank</h1>
           <p class="hero-description">
-            Ontdek nuttige tips, advies en informatie over trapliften, veilig wonen en mobiliteit voor senioren.
+            Complete gidsen, stappenplannen en tips over WMO, subsidies, trapliften en veilig wonen voor ouderen en mantelzorgers.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Featured Post -->
-    <section class="section">
+    <!-- Knowledge Base Section -->
+    <section class="section knowledge-section">
       <div class="container">
-        <div class="featured-post">
-          <div class="featured-image">
-            <img src={blogPosts[0].image} alt={blogPosts[0].title} />
-            <div class="featured-badge">Uitgelicht</div>
-          </div>
-          <div class="featured-content">
-            <div class="post-meta">
-              <span class="post-category">{blogPosts[0].category}</span>
-              <span class="post-date">{blogPosts[0].date}</span>
-              <span class="post-read-time">{blogPosts[0].readTime} lezen</span>
+        <div class="knowledge-header-section">
+          <h2 class="section-title">Kennisbank WMO & Subsidies</h2>
+          <p class="section-subtitle">
+            Praktische gidsen, stappenplannen en ervaringsverhalen voor ouderen en mantelzorgers
+          </p>
+          
+          <!-- Search and Filter -->
+          <div class="knowledge-controls">
+            <div class="knowledge-search">
+              <input 
+                type="text" 
+                id="knowledge-search" 
+                placeholder="Zoek in de kennisbank..." 
+                class="search-input"
+              />
+              <button class="search-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </button>
             </div>
-            <h2 class="featured-title">{blogPosts[0].title}</h2>
-            <p class="featured-excerpt">{blogPosts[0].excerpt}</p>
-            <a href={`/blog/${blogPosts[0].id}`} class="btn btn-primary">Lees Meer</a>
+            
+            <div class="knowledge-filters">
+              <button class="filter-btn active" data-category="all">Alles</button>
+              <button class="filter-btn" data-category="wmo-per-gemeente">WMO per gemeente</button>
+              <button class="filter-btn" data-category="stap-voor-stap">Stappenplannen</button>
+              <button class="filter-btn" data-category="knelpunten">Knelpunten</button>
+              <button class="filter-btn" data-category="subsidieopties">Subsidie-opties</button>
+              <button class="filter-btn" data-category="ervaringen">Ervaringen</button>
+              <button class="filter-btn" data-category="tips-advies">Tips & Advies</button>
+              <button class="filter-btn" data-category="producten">Producten</button>
+              <button class="filter-btn" data-category="installatie">Installatie</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Blog Posts -->
-    <section class="section blog-section">
-      <div class="container">
-        <!-- Category Filter -->
-        <div class="category-filter">
-          {categories.map(category => (
-            <button class={`filter-btn ${category === 'Alle' ? 'active' : ''}`} data-category={category}>
-              {category}
-            </button>
-          ))}
+        <div class="knowledge-grid" id="knowledge-grid">
+          
+          <!-- WMO per gemeente -->
+          <KnowledgeCard
+            title="WMO-aanvraag in Amsterdam: complete gids"
+            audience="🧓 Voor senioren"
+            category="wmo-per-gemeente"
+            tags={["wmo", "amsterdam", "gemeente"]}
+            summary="Alles wat u moet weten over WMO-aanvragen in Amsterdam: procedures, wachttijden, contactgegevens en wat wel/niet wordt vergoed."
+            icon="🏛️"
+            downloadLink="/downloads/wmo-amsterdam-gids.pdf"
+            blogLink="/blog/wmo-amsterdam-2025"
+            ctaText="Hulp nodig?"
+            ctaLink="/contact"
+          />
+
+          <KnowledgeCard
+            title="Rotterdam WMO-loket: zo werkt het"
+            audience="👨‍👩‍👧 Voor mantelzorgers"
+            category="wmo-per-gemeente"
+            tags={["wmo", "rotterdam", "digitaal"]}
+            summary="Rotterdam heeft een digitaal WMO-loket. Ontdek hoe u online een aanvraag doet voor uw ouders en welke documenten u nodig heeft."
+            icon="💻"
+            downloadLink="/downloads/rotterdam-wmo-stappenplan.pdf"
+            blogLink="/blog/digitale-wmo-aanvraag-rotterdam"
+            ctaText="Probeer online"
+            ctaLink="https://rotterdam.nl/wmo"
+          />
+
+          <!-- Stap-voor-stap handleidingen -->
+          <KnowledgeCard
+            title="Traplift aanvragen via WMO in 5 stappen"
+            audience="🧓 Voor senioren"
+            category="stap-voor-stap"
+            tags={["traplift", "wmo", "stappenplan"]}
+            summary="Van eerste overweging tot installatie: dit stappenplan laat zien hoe u een traplift via de WMO aanvraagt, inclusief benodigde documenten."
+            icon="🏗️"
+            downloadLink="/downloads/traplift-aanvraag-checklist.pdf"
+            blogLink="/blog/traplift-wmo-stappenplan"
+            ctaText="Gratis advies"
+            ctaLink="/contact"
+          />
+
+          <KnowledgeCard
+            title="Scootmobiel-vergoeding: wat heb ik nodig?"
+            audience="🧓 Voor senioren"
+            category="stap-voor-stap"
+            tags={["scootmobiel", "vergoeding", "documenten"]}
+            summary="Welke medische verklaring heb ik nodig? Wat zijn de voorwaarden? Complete uitleg over scootmobiel-vergoeding via WMO of zorgverzekering."
+            icon="🛵"
+            downloadLink="/downloads/scootmobiel-vergoeding-gids.pdf"
+            blogLink="/blog/scootmobiel-vergoeding-2025"
+            ctaText="Informatie aanvragen"
+            ctaLink="/producten/hulpmiddelen"
+          />
+
+          <!-- Veelvoorkomende knelpunten -->
+          <KnowledgeCard
+            title="WMO-aanvraag afgewezen: wat nu?"
+            audience="👨‍👩‍👧 Voor mantelzorgers"
+            category="knelpunten"
+            tags={["afwijzing", "bezwaar", "juridisch"]}
+            summary="Uw aanvraag is afgewezen? Ontdek wanneer u bezwaar kunt maken, hoe dat proces werkt en welke alternatieven u heeft."
+            icon="⚖️"
+            downloadLink="/downloads/bezwaar-wmo-template.pdf"
+            blogLink="/blog/wmo-afwijzing-bezwaar-maken"
+            ctaText="Juridische hulp"
+            ctaLink="/contact"
+          />
+
+          <KnowledgeCard
+            title="Lange wachttijd bij gemeente: tips"
+            audience="🧓 Voor senioren"
+            category="knelpunten"
+            tags={["wachttijd", "gemeente", "spoedaanvraag"]}
+            summary="Wacht u al maanden op een beslissing? Leer wanneer u kunt aandringen, hoe spoedaanvragen werken en wat uw rechten zijn."
+            icon="⏰"
+            blogLink="/blog/lange-wachttijd-wmo-aanvraag"
+            ctaText="Situatie bespreken"
+            ctaLink="/contact"
+          />
+
+          <!-- Subsidieopties buiten WMO -->
+          <KnowledgeCard
+            title="Blijverslening uitgelegd in 3 minuten"
+            audience="👨‍👩‍👧 Voor mantelzorgers"
+            category="subsidieopties"
+            tags={["blijverslening", "55-plus", "financiering"]}
+            summary="Uw ouders vallen buiten de WMO? De Blijverslening biedt een uitkomst: lenen tegen de waarde van het huis, zonder maandlasten."
+            icon="🏦"
+            downloadLink="/downloads/blijverslening-factsheet.pdf"
+            blogLink="/blog/blijverslening-uitgelegd"
+            ctaText="Meer informatie"
+            ctaLink="/financiering#blijverslening"
+          />
+
+          <KnowledgeCard
+            title="Belastingvoordeel bij woningaanpassingen"
+            audience="🧓 Voor senioren"
+            category="subsidieopties"
+            tags={["belasting", "aftrek", "zorgkosten"]}
+            summary="Wist u dat woningaanpassingen vaak aftrekbaar zijn als zorgkosten? Plus informatie over BTW-vrijstelling bij medische noodzaak."
+            icon="📊"
+            downloadLink="/downloads/belastingvoordeel-gids.pdf"
+            blogLink="/blog/belastingvoordeel-woningaanpassingen"
+            ctaText="Bereken voordeel"
+            ctaLink="/contact"
+          />
+
+          <!-- Casestudies/ervaringen -->
+          <KnowledgeCard
+            title="Ervaringsverhaal: Van WMO-aanvraag tot traplift"
+            audience="🧓 Voor senioren"
+            category="ervaringen"
+            tags={["ervaringsverhaal", "traplift", "succes"]}
+            summary="Meneer De Graaf (78) vertelt hoe hij via de WMO een traplift kreeg geïnstalleerd. Van eerste aanvraag tot eindresultaat: een eerlijk verhaal."
+            icon="👤"
+            blogLink="/blog/ervaringsverhaal-meneer-de-graaf"
+            ctaText="Lees verhaal"
+            ctaLink="/blog/ervaringsverhaal-meneer-de-graaf"
+          />
+
+          <KnowledgeCard
+            title="Mantelzorger helpt moeder met WMO-PGB"
+            audience="👨‍👩‍👧 Voor mantelzorgers"
+            category="ervaringen"
+            tags={["mantelzorg", "pgb", "badkamer"]}
+            summary="Hoe dochter Maria haar moeder hielp bij het regelen van een WMO-PGB voor badkameraanpassingen. Praktische tips en valkuilen."
+            icon="🛁"
+            blogLink="/blog/mantelzorger-wmo-pgb-ervaring"
+            ctaText="Lees verhaal"
+            ctaLink="/blog/mantelzorger-wmo-pgb-ervaring"
+          />
+
+          <KnowledgeCard
+            title="Van afwijzing naar alsnog goedkeuring"
+            audience="👨‍👩‍👧 Voor mantelzorgers"
+            category="ervaringen"
+            tags={["afwijzing", "bezwaar", "succes"]}
+            summary="Familie Jansen kreeg eerst een afwijzing voor een platformlift. Via bezwaar en extra medische onderbouwing lukte het alsnog."
+            icon="✅"
+            blogLink="/blog/van-afwijzing-naar-goedkeuring"
+            ctaText="Lees verhaal"
+            ctaLink="/blog/van-afwijzing-naar-goedkeuring"
+          />
+
+          <!-- Gemeente zoeker -->
+          <KnowledgeCard
+            title="WMO-regels in uw gemeente opzoeken"
+            audience="🧓 Voor senioren"
+            category="wmo-per-gemeente"
+            tags={["gemeente", "regels", "zoeken"]}
+            summary="Elke gemeente heeft eigen WMO-regels. Gebruik onze gemeente-zoeker om te ontdekken wat de regels zijn in uw woonplaats."
+            icon="📍"
+            ctaText="Zoek uw gemeente"
+            ctaLink="/gemeente-zoeker"
+          />
+
+          <!-- Voormalige blog posts als kennisbank items -->
+          <KnowledgeCard
+            title="5 Tips voor het kiezen van de juiste traplift"
+            audience="🧓 Voor senioren"
+            category="tips-advies"
+            tags={["traplift", "keuze", "tips", "advies"]}
+            summary="Het kiezen van een traplift is een belangrijke beslissing. Lees onze praktische tips om de beste keuze te maken voor uw situatie."
+            icon="💡"
+            blogLink="/blog/1"
+            ctaText="Lees tips"
+            ctaLink="/blog/1"
+          />
+
+          <KnowledgeCard
+            title="Veilig wonen: Hoe u uw huis seniorvriendelijk maakt"
+            audience="🧓 Voor senioren"
+            category="tips-advies"
+            tags={["veilig wonen", "seniorvriendelijk", "woningaanpassingen"]}
+            summary="Ontdek praktische aanpassingen die u kunt maken om uw huis veiliger en toegankelijker te maken voor senioren."
+            icon="🏠"
+            blogLink="/blog/2"
+            ctaText="Veiligheid tips"
+            ctaLink="/blog/2"
+          />
+
+          <KnowledgeCard
+            title="Onderhoud van uw traplift: Wat u moet weten"
+            audience="🧓 Voor senioren"
+            category="tips-advies"
+            tags={["onderhoud", "traplift", "service", "tips"]}
+            summary="Regelmatig onderhoud zorgt ervoor dat uw traplift optimaal blijft functioneren. Lees hier alles over onderhoud en service."
+            icon="🔧"
+            blogLink="/blog/3"
+            ctaText="Onderhoud info"
+            ctaLink="/blog/3"
+          />
+
+          <KnowledgeCard
+            title="Subsidies en vergoedingen voor trapliften"
+            audience="👨‍👩‍👧 Voor mantelzorgers"
+            category="subsidieopties"
+            tags={["subsidie", "vergoeding", "traplift", "financiering"]}
+            summary="Informatie over mogelijke subsidies en vergoedingen van zorgverzekeraars voor de aanschaf van een traplift."
+            icon="💰"
+            blogLink="/blog/4"
+            ctaText="Bekijk subsidies"
+            ctaLink="/blog/4"
+          />
+
+          <KnowledgeCard
+            title="Platformliften vs Trapliften: Wat is het verschil?"
+            audience="🧓 Voor senioren"
+            category="producten"
+            tags={["platformlift", "traplift", "verschil", "keuze"]}
+            summary="Leer het verschil tussen platformliften en trapliften en ontdek welke oplossing het beste bij uw situatie past."
+            icon="⚖️"
+            blogLink="/blog/5"
+            ctaText="Vergelijk opties"
+            ctaLink="/blog/5"
+          />
+
+          <KnowledgeCard
+            title="Installatie van een traplift: Wat kunt u verwachten?"
+            audience="🧓 Voor senioren"
+            category="installatie"
+            tags={["installatie", "traplift", "proces", "verwachting"]}
+            summary="Een stap-voor-stap overzicht van het installatieproces van een traplift, van eerste bezoek tot eindcontrole."
+            icon="🛠️"
+            blogLink="/blog/6"
+            ctaText="Installatie info"
+            ctaLink="/blog/6"
+          />
+
         </div>
 
-        <!-- Posts Grid -->
-        <div class="posts-grid">
-          {blogPosts.slice(1).map(post => (
-            <article class="post-card" data-category={post.category}>
-              <div class="post-image">
-                <img src={post.image} alt={post.title} />
-              </div>
-              <div class="post-content">
-                <div class="post-meta">
-                  <span class="post-category">{post.category}</span>
-                  <span class="post-date">{post.date}</span>
-                  <span class="post-read-time">{post.readTime} lezen</span>
-                </div>
-                <h3 class="post-title">{post.title}</h3>
-                <p class="post-excerpt">{post.excerpt}</p>
-                <a href={`/blog/${post.id}`} class="read-more">Lees meer →</a>
-              </div>
-            </article>
-          ))}
+        <!-- Geen resultaten -->
+        <div class="no-results" id="no-results" style="display: none;">
+          <div class="no-results-content">
+            <div class="no-results-icon">🔍</div>
+            <h3>Geen resultaten gevonden</h3>
+            <p>Probeer een andere zoekterm of kies een andere categorie</p>
+            <button class="btn btn-secondary" onclick="clearSearch()">Wis filters</button>
+          </div>
         </div>
 
-        <!-- Load More Button -->
-        <div class="load-more-section">
-          <button class="btn btn-secondary">Meer Artikelen Laden</button>
+        <!-- Knowledge CTA -->
+        <div class="knowledge-cta">
+          <div class="knowledge-cta-content">
+            <div class="knowledge-cta-icon">💡</div>
+            <div class="knowledge-cta-text">
+              <h3>Staat uw vraag er niet bij?</h3>
+              <p>Onze adviseurs hebben antwoord op alle WMO- en subsidievragen</p>
+            </div>
+            <div class="knowledge-cta-actions">
+              <a href="tel:020-123-45-67" class="btn btn-primary">Bel direct</a>
+              <a href="/contact" class="btn btn-secondary">Plan gesprek</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -184,178 +364,7 @@ const categories = ["Alle", "Tips & Advies", "Veiligheid", "Onderhoud", "Financi
     margin: 0 auto;
   }
 
-  .featured-post {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    background: var(--white);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  }
 
-  .featured-image {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-  }
-
-  .featured-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .featured-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: var(--primary-red);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-
-  .featured-content {
-    padding: 2rem;
-  }
-
-  .post-meta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-  }
-
-  .post-category {
-    background: var(--primary-red);
-    color: var(--white);
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-weight: 500;
-  }
-
-  .post-date,
-  .post-read-time {
-    color: var(--text-gray);
-  }
-
-  .featured-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-
-  .featured-excerpt {
-    color: var(--text-gray);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    font-size: 1.125rem;
-  }
-
-  .blog-section {
-    background-color: var(--warm-gray);
-  }
-
-  .category-filter {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .filter-btn {
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--border-light);
-    background: var(--white);
-    color: var(--text-gray);
-    border-radius: 2rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: var(--primary-red);
-    color: var(--white);
-    border-color: var(--primary-red);
-  }
-
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .post-card {
-    background: var(--white);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  }
-
-  .post-image {
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .post-card:hover .post-image img {
-    transform: scale(1.05);
-  }
-
-  .post-content {
-    padding: 1.5rem;
-  }
-
-  .post-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    line-height: 1.4;
-  }
-
-  .post-excerpt {
-    color: var(--text-gray);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .read-more {
-    color: var(--primary-red);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-  }
-
-  .read-more:hover {
-    color: var(--primary-red-dark);
-  }
-
-  .load-more-section {
-    text-align: center;
-  }
 
   .newsletter-section {
     background: linear-gradient(135deg, var(--text-dark) 0%, #374151 100%);
@@ -405,14 +414,208 @@ const categories = ["Alle", "Tips & Advies", "Veiligheid", "Onderhoud", "Financi
     border-color: var(--primary-red);
   }
 
+  /* Knowledge Base Section */
+  .knowledge-section {
+    background-color: var(--warm-gray);
+  }
+
+  .knowledge-header-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .knowledge-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .knowledge-search {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    border: 2px solid var(--border-light);
+    border-radius: 2rem;
+    font-size: 1rem;
+    background: var(--white);
+    transition: border-color 0.3s ease;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+  }
+
+  .search-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-button:hover {
+    background: var(--primary-red-dark);
+  }
+
+  .knowledge-filters {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .knowledge-filters .filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-light);
+    background: var(--white);
+    color: var(--text-gray);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .knowledge-filters .filter-btn:hover {
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+  }
+
+  .knowledge-filters .filter-btn.active {
+    background: var(--primary-red);
+    color: var(--white);
+    border-color: var(--primary-red);
+  }
+
+  .knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .no-results-content {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .no-results-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+
+  .no-results h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .no-results p {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+  }
+
+  .knowledge-cta {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .knowledge-cta-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .knowledge-cta-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+  }
+
+  .knowledge-cta-text {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .knowledge-cta-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+
+  .knowledge-cta-text p {
+    opacity: 0.9;
+    margin-bottom: 0;
+  }
+
+  .knowledge-cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  .knowledge-cta .btn-secondary {
+    background: var(--white);
+    color: var(--primary-red);
+    border-color: var(--white);
+  }
+
+  .knowledge-cta .btn-secondary:hover {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+  }
+
   @media (max-width: 1024px) {
-    .featured-post,
     .newsletter-content {
       grid-template-columns: 1fr;
     }
 
-    .featured-image {
-      height: 300px;
+    .knowledge-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .knowledge-cta-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .knowledge-cta-text {
+      text-align: center;
+    }
+
+    .knowledge-cta-actions {
+      justify-content: center;
     }
   }
 
@@ -421,53 +624,118 @@ const categories = ["Alle", "Tips & Advies", "Veiligheid", "Onderhoud", "Financi
       font-size: 2rem;
     }
 
-    .featured-title {
-      font-size: 1.5rem;
-    }
-
-    .posts-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .category-filter {
-      justify-content: flex-start;
-      overflow-x: auto;
-      padding-bottom: 1rem;
-    }
-
-    .filter-btn {
-      white-space: nowrap;
-    }
-
     .newsletter-form {
       flex-direction: column;
+    }
+
+    .knowledge-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .knowledge-filters {
+      gap: 0.5rem;
+    }
+
+    .knowledge-filters .filter-btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    .knowledge-cta {
+      padding: 1.5rem;
+    }
+
+    .knowledge-cta-actions {
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const postCards = document.querySelectorAll('.post-card');
+    // Knowledge base search and filter functionality
+    const searchInput = document.getElementById('knowledge-search');
+    const knowledgeFilterButtons = document.querySelectorAll('.knowledge-filters .filter-btn');
+    const knowledgeGrid = document.getElementById('knowledge-grid');
+    const noResults = document.getElementById('no-results');
+    const knowledgeCards = document.querySelectorAll('.knowledge-card');
 
-    filterButtons.forEach(button => {
+    let currentCategory = 'all';
+    let currentSearchTerm = '';
+
+    // Search functionality
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        currentSearchTerm = this.value.toLowerCase().trim();
+        filterKnowledgeCards();
+      });
+    }
+
+    // Filter functionality
+    knowledgeFilterButtons.forEach(button => {
       button.addEventListener('click', function() {
-        const category = this.getAttribute('data-category');
-        
         // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
+        knowledgeFilterButtons.forEach(btn => btn.classList.remove('active'));
         this.classList.add('active');
         
-        // Filter posts
-        postCards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          if (category === 'Alle' || cardCategory === category) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+        currentCategory = this.dataset.category;
+        filterKnowledgeCards();
       });
     });
+
+    function filterKnowledgeCards() {
+      let visibleCount = 0;
+
+      knowledgeCards.forEach(card => {
+        const title = card.querySelector('.knowledge-title')?.textContent.toLowerCase() || '';
+        const summary = card.querySelector('.knowledge-summary')?.textContent.toLowerCase() || '';
+        const category = card.dataset.category || '';
+        const tags = Array.from(card.querySelectorAll('.knowledge-tag')).map(tag => tag.textContent.toLowerCase());
+
+        // Check category filter
+        const categoryMatch = currentCategory === 'all' || category === currentCategory;
+
+        // Check search term
+        const searchMatch = currentSearchTerm === '' || 
+          title.includes(currentSearchTerm) || 
+          summary.includes(currentSearchTerm) ||
+          tags.some(tag => tag.includes(currentSearchTerm));
+
+        if (categoryMatch && searchMatch) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Show/hide no results message
+      if (visibleCount === 0 && knowledgeGrid && noResults) {
+        noResults.style.display = 'block';
+        knowledgeGrid.style.display = 'none';
+      } else if (knowledgeGrid && noResults) {
+        noResults.style.display = 'none';
+        knowledgeGrid.style.display = 'grid';
+      }
+    }
+
+    // Clear search function (global)
+    window.clearSearch = function() {
+      if (searchInput) {
+        searchInput.value = '';
+      }
+      currentSearchTerm = '';
+      currentCategory = 'all';
+      
+      knowledgeFilterButtons.forEach(btn => btn.classList.remove('active'));
+      const allButton = document.querySelector('[data-category="all"]');
+      if (allButton) {
+        allButton.classList.add('active');
+      }
+      
+      filterKnowledgeCards();
+    };
   });
 </script>
